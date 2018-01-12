@@ -1,0 +1,347 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Sahi | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="John Doe">
+    
+    <meta name="description" content="这里总结了几个Sahi使用中可能经常遇到的问题
+异常关闭Sahi后导致浏览器访问不了网页使用Sahi有时候会遇到，Sahi关闭后，无法通过浏览器访问网络了。试了不同的浏览器也访问不了网络。原因是因为Sahi异常关闭，Sahi代理设置没有回滚导致的。我们知道，Sahi需要修改系统或者浏览器的代理设置才">
+    
+    
+    
+    
+    <link rel="alternative" href="/Tinnypp/atom.xml" title="Hexo" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/myLogo.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/myLogo.png">
+    
+
+  
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    
+  
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d182ed77fc48758bf45a33835ee35745";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+      <script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','.............Add your swiftype userID...............');
+</script>
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+                    <ul>
+					 
+						<li><a href="/Tinnypp">首页</a></li>
+					
+						<li><a href="/Tinnypp/archives">归档</a></li>
+					
+					<li>
+					
+						<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="st-search-inpu" maxlength="20" placeholder="Search" />
+						</form>
+					
+					</li>
+                <!--<li><div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div></li>-->
+
+				</ul>
+			</nav>	
+</div>
+    </header>
+    <div id="container" class="clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/03/24/Sahi使用技巧/" title="Sahi" itemprop="url">Sahi</a>
+  </h1>
+  <p class="article-time">
+    <time datetime="2017-03-24T15:07:43.747Z" itemprop="datePublished">2017-03-24</time>
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title"></strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#异常关闭Sahi后导致浏览器访问不了网页"><span class="toc-number">1.</span> <span class="toc-text">异常关闭Sahi后导致浏览器访问不了网页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面下载的文件被拦截"><span class="toc-number">2.</span> <span class="toc-text">页面下载的文件被拦截</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript模态框的处理"><span class="toc-number">3.</span> <span class="toc-text">JavaScript模态框的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何进行浏览器配置"><span class="toc-number">4.</span> <span class="toc-text">如何进行浏览器配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局运行速度设置"><span class="toc-number">5.</span> <span class="toc-text">全局运行速度设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#录制脚本模式java和sahi"><span class="toc-number">6.</span> <span class="toc-text">录制脚本模式java和sahi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#frame、iframe的处理"><span class="toc-number">7.</span> <span class="toc-text">frame、iframe的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用控件封装代码展示"><span class="toc-number">8.</span> <span class="toc-text">常用控件封装代码展示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PO模式"><span class="toc-number">9.</span> <span class="toc-text">PO模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssl设置"><span class="toc-number">10.</span> <span class="toc-text">ssl设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sahitest-com"><span class="toc-number">11.</span> <span class="toc-text">sahitest.com</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#session隔离的妙用"><span class="toc-number">12.</span> <span class="toc-text">session隔离的妙用</span></a></li></ol>
+		</div>
+		
+		<p>这里总结了几个Sahi使用中可能经常遇到的问题</p>
+<h2 id="异常关闭Sahi后导致浏览器访问不了网页"><a href="#异常关闭Sahi后导致浏览器访问不了网页" class="headerlink" title="异常关闭Sahi后导致浏览器访问不了网页"></a>异常关闭Sahi后导致浏览器访问不了网页</h2><p>使用Sahi有时候会遇到，Sahi关闭后，无法通过浏览器访问网络了。试了不同的浏览器也访问不了网络。原因是因为Sahi异常关闭，Sahi代理设置没有回滚导致的。我们知道，Sahi需要修改系统或者浏览器的代理设置才能注入Sahi的脚本到浏览器，以便Sahi进行录制和回放的功能。<strong>这也是Sahi为什么不用像Selenium那样下载那么多浏览器对应的webdriver的原因：通过对不同浏览器进行代理，注入JavaScript的脚本来操作浏览器行为。</strong> 这是Sahi的优势，同样也造就了Sahi会出现没有成功回滚代理设置而导致无法上网的问题。<br>如果通过Sahi的dashboard打开的是Firefox或者Chrome浏览器，不会产生上述的问题，因为这时候打开的这两种浏览器是使用隔离的配置文件。也就是说，这时候在Sahi外打开Firefox、Chrome、IE这些浏览器，不会通过Sahi的代理。<br>然而通过Sahi的dashboard打开的IE浏览器，是修改了系统的代理服务器，所有依赖系统代理的浏览器，访问网络的时候都会经过Sahi的代理。<br>如果这时候关闭了sahi启动时打开的命令窗口，而不是先关闭所有的IE浏览器，再关闭Sahi的dashboard，则会导致上述问题的发生。这两个操作正是回滚系统代理设置的环节。<br>解决的办法也很简单，就是打开Sahi后，通过Sahi dashboard打开IE浏览器，然后关闭IE浏览器，再关闭Sahi dashboard。</p>
+<h2 id="页面下载的文件被拦截"><a href="#页面下载的文件被拦截" class="headerlink" title="页面下载的文件被拦截"></a>页面下载的文件被拦截</h2><p>在使用Sahi的时候，会发现当页面有下载文件的链接，想要下载什么文件的时候，页面闪了一下就没有了，仿佛什么都没有发生，根本无法选择下载的路径。其实这是被Sahi拦截了，Sahi为了回放的方便自动下载文件到了sahi/userdata/temp/download路径下了。这个时候如果你想操作下载的文件，可以通过三个API去处理。<br><strong>_lastDownloadFileName()</strong> 可以返回最后一个下载的文件名。<br><strong>_saveDownloadAs($path)</strong> 可以允许你将下载的文件另存为指定的路径<br><strong>_clearLastDownloadedFileName()</strong> 清除最后下载的文件名<br>如果页面的本意不是下载而是获取文档并显示在页面，却又被Sahi给拦截了。那么可以在 <strong>sahi/userdata/config/download_urls.txt</strong> 的配置文件里增加下载的链接来屏蔽Sahi的拦截。比如下载链接是<a href="http://www.sahitest.com/demo/testsaveas.pdf" target="_blank" rel="external">http://www.sahitest.com/demo/testsaveas.pdf</a> ，则可以在配置文件里添加该路径。路径的编写也支持正则表达式。如果不想拦截所有某一种文件格式的文件，可以在 <strong>download_contenttypes.txt</strong> 配置文件里删除对应的文件格式。比如不想拦截PDF格式的文件，可以删除 <strong>application/pdf</strong> 这个来达到效果。<br>详细说明，可查看官网：<a href="http://sahipro.com/docs/sahi-apis/action-apis.html#File" target="_blank" rel="external">http://sahipro.com/docs/sahi-apis/action-apis.html#File</a> Download</p>
+<hr>
+<h2 id="JavaScript模态框的处理"><a href="#JavaScript模态框的处理" class="headerlink" title="JavaScript模态框的处理"></a>JavaScript模态框的处理</h2><p>录制脚本的时候可能会遇到页面弹出模态框。比如说是confirm弹框，发现录制后的脚本会出现_expectConfirm()这样的函数出现。而回放的时候看不到模态框弹出就执行下一步了。这是因为Sahi认为这些弹框会影响自动化的执行，所以屏蔽了。但是Sahi又提供了相关的API来控制这些弹框的执行走向。比如说confirm框，Sahi默认选择OK（确定），想要弹框时选择Cancel（取消）的话，可以用_expectConfirm()方法来控制。下面的语句就是弹框时选择Cancel。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_expectConfirm(&quot;/question/&quot;, false);</div></pre></td></tr></table></figure></p>
+<h2 id="如何进行浏览器配置"><a href="#如何进行浏览器配置" class="headerlink" title="如何进行浏览器配置"></a>如何进行浏览器配置</h2><p>Sahi可以通过配置来支持对不同的浏览器代理。在浏览器类型里给出了一些浏览器的默认配置，可根据实际浏览器安装路径配置路径，配置的路径（path）一定要正确，否则在dashboard里不会显示对应浏览器的图标。配置文件里的 options的值最好不要修改，否则可能会出一些问题。</p>
+<h2 id="全局运行速度设置"><a href="#全局运行速度设置" class="headerlink" title="全局运行速度设置"></a>全局运行速度设置</h2><p>Sahi里面是可以修改回放时的速度。有时候回放时为了查清脚本执行失败的原因，太快会看不清楚，可以减慢回放的速度，如果觉得回放执行时间太长，则可以加快速度。默认配置是每一步间隔100ms。可以在安装路径下的config文件下的sahi.properties里修改配置，修改后重启Sahi生效。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#Time (in milliseconds) delay between steps</div><div class="line">script.time_between_steps=100</div></pre></td></tr></table></figure></p>
+<h2 id="录制脚本模式java和sahi"><a href="#录制脚本模式java和sahi" class="headerlink" title="录制脚本模式java和sahi"></a>录制脚本模式java和sahi</h2><p>由于Sahi支持java和JavaScript，脚本录制也提供了两种方式，可以修改成java的controller。默认是使用Sahi的controller。这个也可以在安装路径下的config文件下的sahi.properties里修改配置，修改后重启Sahi生效。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Specifies the controller to be used</div><div class="line"># Takes java, ruby and sahi as valid values; default is sahi</div><div class="line"># Set this to java for recorder in java mode.</div><div class="line">controller.mode=sahi</div></pre></td></tr></table></figure></p>
+<h2 id="frame、iframe的处理"><a href="#frame、iframe的处理" class="headerlink" title="frame、iframe的处理"></a>frame、iframe的处理</h2><p>在selenium里面，跨frame或者iframe是需要用switchto这样的方法进入frame或者iframe，才能获取到在frame或者iframe里面的元素，如果要回来则还要跳回来。。。而在Sahi完全不用考虑跨frame和iframe的问题。</p>
+<h2 id="常用控件封装代码展示"><a href="#常用控件封装代码展示" class="headerlink" title="常用控件封装代码展示"></a>常用控件封装代码展示</h2><h2 id="PO模式"><a href="#PO模式" class="headerlink" title="PO模式"></a>PO模式</h2><h2 id="ssl设置"><a href="#ssl设置" class="headerlink" title="ssl设置"></a>ssl设置</h2><h2 id="sahitest-com"><a href="#sahitest-com" class="headerlink" title="sahitest.com"></a>sahitest.com</h2><h2 id="session隔离的妙用"><a href="#session隔离的妙用" class="headerlink" title="session隔离的妙用"></a>session隔离的妙用</h2><p>我们知道，一个浏览器的多个页面是共享session，一旦登录一个账号，之前登录的账号就会被替代。而通过Sahi的dashboard打开的浏览器，session是隔离的。也就是说可以通过Sahi用不同的账号登录同一个被测网站，这对我们测试不同角色账户的权限操作、交易统计等会大有益处，再也不用频繁的登录注销了。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2017/03/24/Sahi使用技巧/" data-title="Sahi | Hexo" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2017/03/24/hello-world/"  title="Hello World">
+ <strong>Old:</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	
+	<div class="ds-thread" data-title="Sahi" data-thread-key="Sahi使用技巧" data-author-key="John Doe" data-url="http://yoursite.com/post/Sahi使用技巧"></div>
+	
+</section>
+
+
+</div>  
+    </div>
+    <footer><div id="footer" >
+	<div class="copyright">
+		<span>Powered by <a href="https://github.com/hexojs/hexo">Hexo</a> and theme by 
+		<a href="https://github.com/levonlin/Tinnypp">Tinnypp</a>.</span>
+		
+			<span>© Levon</span>
+		
+	<div>
+</div></footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  //back to top
+  function backToTop(){
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
+    buttonHTML.appendTo($("body"));
+    var buttonToTop = $("#back-top");
+    // hide #back-top first
+    buttonToTop.hide();
+
+    // fade in #back-top
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                buttonToTop.fadeIn();
+            } else {
+                buttonToTop.fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        buttonToTop.click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+  }
+  backToTop();
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      ta = $('#toc.toc-aside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+        
+    }
+  });
+
+  var show = true;
+  c.click(function(){
+    if(show == true){
+        a.addClass('fadeOut').css('display', 'none');
+        ta.css('display', 'block').addClass('fadeIn');
+        m.addClass('moveMain');  
+    }else{
+        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
+        ta.css('display', 'none'); 
+        m.removeClass('moveMain');
+        $('#toc.toc-aside').css('display', 'none');
+    }
+    show = !show;
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,240-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"tinnypp"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';    //change to ds.src = '/js/embed.js'; to add useragent for duoshuo
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+<script type="text/javascript">
+  function footerPosition() {
+    var contentHeight = document.documentElement.scrollHeight,
+        winHeight = window.innerHeight;
+    if(contentHeight <= winHeight) {
+      $('footer').addClass('fixed-bottom');
+    } else {
+      $('footer').removeClass('fixed-bottom');
+    }
+  }
+  footerPosition();
+  $(window).resize(footerPosition);
+</script>
+
+
+  </body>
+</html>
