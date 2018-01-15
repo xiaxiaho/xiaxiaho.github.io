@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | XiaXiaHo</title>
+    <title>[原]Sahi 使用技巧2-高亮查找元素以及正则匹配元素 | XiaXiaHo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="xiaxiaho">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="Sahi 使用技巧2-高亮查找元素以及正则匹配元素Sahi作为一个开源的 Web UI 自动化测试框架，在中国软件测试行业不是很流行。尽管它的知名度不及开源的 Selenium和收费的quicktest pro，用户群也不大（貌似国外的测试人员用的更多），但是有着它的优势，比如基于上下文的页面元素识">
     
     
     
@@ -85,10 +85,10 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/03/24/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2015/08/25/原-Sahi-使用技巧2-高亮查找元素以及正则匹配元素/" title="[原]Sahi 使用技巧2-高亮查找元素以及正则匹配元素" itemprop="url">[原]Sahi 使用技巧2-高亮查找元素以及正则匹配元素</a>
   </h1>
   <p class="article-time">
-    <time datetime="2017-03-24T14:47:35.231Z" itemprop="datePublished">2017年 3月 24日</time>
+    <time datetime="2015-08-25T03:11:36.000Z" itemprop="datePublished">2015年 8月 25日</time>
   </p>
 </header>
 	<div class="article-content">
@@ -96,19 +96,24 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Sahi-使用技巧2-高亮查找元素以及正则匹配元素"><span class="toc-number">1.</span> <span class="toc-text">Sahi 使用技巧2-高亮查找元素以及正则匹配元素</span></a></li></ol>
 		</div>
 		
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-  
+		<h1 id="Sahi-使用技巧2-高亮查找元素以及正则匹配元素"><a href="#Sahi-使用技巧2-高亮查找元素以及正则匹配元素" class="headerlink" title="Sahi 使用技巧2-高亮查找元素以及正则匹配元素"></a>Sahi 使用技巧2-高亮查找元素以及正则匹配元素</h1><p>Sahi作为一个开源的 Web UI 自动化测试框架，在中国软件测试行业不是很流行。尽管它的知名度不及开源的 Selenium和收费的quicktest pro，用户群也不大（貌似国外的测试人员用的更多），但是有着它的优势，比如基于上下文的页面元素识别机制和隐式页面加载响应等待机制等，具体细节可以看<a href="http://www.ibm.com/developerworks/cn/web/1403_yangxb_sahi/" target="_blank" rel="external">这里</a>。</p>
+<p>使用sahi也有一段时间了，把自己使用时遇到的问题和使用心得记录一下想必也是极好的。</p>
+<p>刚开始使用sahi时，觉得sahi好神奇，可以录制脚本然后回放。后来慢慢熟悉sahi后，简单的录制脚本已经不能满足我的要求，所以不得不开始自己写脚本。这里就会遇到一个问题：如何灵活的编写sahi的脚本，让脚本可以在页面发生微小调整后不会因为找不到标签元素而失效。</p>
+<p>正是sahi基于上下文的页面元素识别机制，可以使用_near、_in、_under、_above等api来让sahi灵活的找到目标元素，同时sahi api 规定identifier是支持正则表达式的，这也大大地增加了识别灵活性。如图1，假设想要确定存在且仅存在一条项目名称为123的记录，但是实际上因为各种原因是存在项目名称一样的另一条记录而且该记录在页面也是可见的，如果只是判断存在cell(“123”)就会出现问题。这时如果在同一个表格里，用_near就不是很好的选择，sahi会找到最先出现的cell(“123”)，仍然无法保证唯一确定。用_leftOf把结束日期带进来</p>
+<p><code>_cell(&quot;123&quot;,_leftOf(_cell(&quot;2015-09-24&quot;)))</code></p>
+<p>这样确实可以唯一确定目标cell，但是代价是更复杂的脚本编写和逻辑判断，如果这两个cell仍然不能唯一确定要找的记录，是不是还要加第三个、第四个。。。后来我发现原来可以利用_row来判断整行</p>
+<p><code>_row(&quot;123 2015-09-24 未开始 0 0 0 0%&quot;)</code></p>
+<p>但是identifier 存在不需要的或者可能会发生变化的数据，同样会造成识别的失效，比如_row(“123 2015-09-24 未开始 0 0 0 0%”)里的0%（对应图中的进度）有可能发生变化，如果进度从0%变到10%，这样识别又会失效。所以这里就可以用到正则表达式</p>
+<p><code>_row(&quot;/123 2015-09-24 未开始 0 0 0 .*/&quot;)</code></p>
+<p>这样就可以识别所有以“123 2015-09-24 未开始 0 0 0 ”开头的行。要确保sahi可以正确识别写的正则表达式，可以在Sahi Controller上的Accessor上输入含有正则表达式的目标元素，然后点击Hilight按钮，如果之后目标元素上有红色框短暂显示后，说明识别是正确的。如图2显示 </p>
+<p><img src="http://img.blog.csdn.net/20150825212813356" alt="这里写图片描述"> </p>
+<p>图1 </p>
+<p><img src="http://img.blog.csdn.net/20150825212843076" alt="这里写图片描述"> </p>
+<p>图2</p>
+<div>作者：baidu_29649941发表于2015/8/25 11:11:36<a href="http://blog.csdn.net/baidu_29649941/article/details/47974215" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：639评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/47974215#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -117,7 +122,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2017/03/24/hello-world/" data-title="Hello World | XiaXiaHo" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2015/08/25/原-Sahi-使用技巧2-高亮查找元素以及正则匹配元素/" data-title="[原]Sahi 使用技巧2-高亮查找元素以及正则匹配元素 | XiaXiaHo" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -127,21 +132,13 @@ var _hmt = _hmt || [];
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/03/24/Sahi使用技巧/" title="Sahi">
+ <a href="/2015/08/25/原-Sahi-使用技巧1-使用Sahi-Api/" title="[原]Sahi 使用技巧1-使用Sahi Api">
   <strong>新一篇:</strong><br/>
   <span>
-  Sahi</span>
+  [原]Sahi 使用技巧1-使用Sahi Api</span>
 </a>
 </div>
 
-
-<div class="next">
-<a href="/2017/03/09/原-Sahi-使用技巧4-iframe、下载文件、模态框、访问不了网页的处理/"  title="[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理">
- <strong>旧一篇:</strong><br/> 
- <span>[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理
-</span>
-</a>
-</div>
 
 </nav>
 

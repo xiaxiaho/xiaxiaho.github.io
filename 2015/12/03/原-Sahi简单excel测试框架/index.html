@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | XiaXiaHo</title>
+    <title>[原]Sahi简单excel测试框架 | XiaXiaHo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="xiaxiaho">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="虽然sahi pro版本有一个excelframework，但是在sahi os被省掉了，所以自己就写了一个超简单的excel测试框架，各位可以在此基础上做更多的个人定制。 
+首先要让sahi os可以使用excel api ，可以看[这里](http://download.csdn.net/det">
     
     
     
@@ -85,10 +86,10 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/03/24/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2015/12/03/原-Sahi简单excel测试框架/" title="[原]Sahi简单excel测试框架" itemprop="url">[原]Sahi简单excel测试框架</a>
   </h1>
   <p class="article-time">
-    <time datetime="2017-03-24T14:47:35.231Z" itemprop="datePublished">2017年 3月 24日</time>
+    <time datetime="2015-12-03T13:59:28.000Z" itemprop="datePublished">2015年 12月 3日</time>
   </p>
 </header>
 	<div class="article-content">
@@ -96,19 +97,54 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		
 		</div>
 		
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-  
+		<p>虽然sahi pro版本有一个excelframework，但是在sahi os被省掉了，所以自己就写了一个超简单的excel测试框架，各位可以在此基础上做更多的个人定制。 </p>
+<pre><code>首先要让sahi os可以使用excel api ，可以看[这里](http://download.csdn.net/detail/baidu_29649941/9256781) 
+
+这个框架的逻辑就是首先用sahi脚本写好函数，然后将函数名及参数放到excel里，通过读取excel顺序执行写好的函数。这样测试开发写好函数及函数使用说明，就可以交给功能测试。功能测试根据自己的测试用例在excel里组成测试流程进行自动化测试。 
+
+excel模板定义如下：
+</code></pre><table><br><thead><br><tr><br>  <th align="left">函数名</th><br>  <th align="center">参数1</th><br>  <th align="center">参数2</th><br>  <th align="center">参数3</th><br></tr><br></thead><br><tbody><tr><br>  <td align="left">add</td><br>  <td align="center">345</td><br>  <td align="center">hehe</td><br>  <td align="center">kaka</td><br></tr><br><tr><br>  <td align="left">query</td><br>  <td align="center">one</td><br>  <td align="center">two</td><br>  <td align="center">three</td><br></tr><br><tr><br>  <td align="left">delete</td><br>  <td align="center">four</td><br>  <td align="center">me</td><br>  <td align="center">five</td><br></tr><br></tbody></table>
+
+<p>框架代码如下：</p>
+<pre><code>&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;excelFramework&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($excel, $sheet)&lt;/span&gt; {&lt;/span&gt;
+    &lt;span class=&quot;hljs-comment&quot;&gt;//返回一个数据表的二维数组，不带标题行，也就是第0行&lt;/span&gt;
+    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $excel = _readExcelFile($excel, $sheet);
+    &lt;span class=&quot;hljs-comment&quot;&gt;//循环读取每一行，将每行的数据组成执行函数，通过eval()执行&lt;/span&gt;
+    &lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $i = &lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;; $i &amp;lt; $excel.length; $i++) {
+    &lt;span class=&quot;hljs-comment&quot;&gt;//通过buildFunction方法获取组成的函数&lt;/span&gt;
+        &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $F = buildFunction($excel, $i);
+        _log($F);
+        &lt;span class=&quot;hljs-comment&quot;&gt;//执行组成的函数&lt;/span&gt;
+        &lt;span class=&quot;hljs-built_in&quot;&gt;eval&lt;/span&gt;($F);
+    }
+}   `&lt;/pre&gt;
+
+&lt;pre class=&quot;prettyprint&quot;&gt;`&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;buildFunction&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($excel, $rowindex)&lt;/span&gt; {&lt;/span&gt;
+    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $f;
+    &lt;span class=&quot;hljs-comment&quot;&gt;//新建一个数组&lt;/span&gt;
+    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $ar = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;hljs-built_in&quot;&gt;Array&lt;/span&gt;();
+    &lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $i = &lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;; $i &amp;lt; $excel[$rowindex].length; $i++) {
+        &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; ($excel[$rowindex][$i] != &lt;span class=&quot;hljs-literal&quot;&gt;null&lt;/span&gt;&amp;amp;&amp;amp;$excel[$rowindex][$i]!=&lt;span class=&quot;hljs-string&quot;&gt;&quot;&quot;&lt;/span&gt;) {
+            &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $arg = &lt;span class=&quot;hljs-string&quot;&gt;&quot;&apos;&quot;&lt;/span&gt; + $excel[$rowindex][$i] + &lt;span class=&quot;hljs-string&quot;&gt;&quot;&apos;&quot;&lt;/span&gt;;
+            &lt;span class=&quot;hljs-comment&quot;&gt;//将函数的参数放到数组里&lt;/span&gt;
+            $ar.push($arg);
+        }
+    }
+    &lt;span class=&quot;hljs-comment&quot;&gt;//用逗号分隔把读到的参数组成字符串&lt;/span&gt;
+    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $args = $ar.join(&lt;span class=&quot;hljs-string&quot;&gt;&quot;,&quot;&lt;/span&gt;);
+    &lt;span class=&quot;hljs-comment&quot;&gt;//最后把第0列的函数名与参数组合成完整的函数&lt;/span&gt;
+    $f = $excel[$rowindex][&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;] + &lt;span class=&quot;hljs-string&quot;&gt;&quot;(&quot;&lt;/span&gt; + $args + &lt;span class=&quot;hljs-string&quot;&gt;&quot;)&quot;&lt;/span&gt;;
+    &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; $f;
+}`&lt;/pre&gt;
+
+在sahi脚本里添加上面两段代码，执行excelFramwork方法，如：
+
+&lt;pre class=&quot;prettyprint&quot;&gt;`excelFramework(&lt;span class=&quot;hljs-string&quot;&gt;&quot;readExcelFile.xls&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;Sheet1&quot;&lt;/span&gt;);
+</code></pre><p>这样便会一行一行顺序执行自定义的函数实现简单的自动化。</p>
+<div>作者：baidu_29649941发表于2015/12/3 21:59:28<a href="http://blog.csdn.net/baidu_29649941/article/details/50166941" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：816评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/50166941#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -117,7 +153,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2017/03/24/hello-world/" data-title="Hello World | XiaXiaHo" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2015/12/03/原-Sahi简单excel测试框架/" data-title="[原]Sahi简单excel测试框架 | XiaXiaHo" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -127,18 +163,18 @@ var _hmt = _hmt || [];
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/03/24/Sahi使用技巧/" title="Sahi">
+ <a href="/2016/06/25/原-虚拟机，提高测试的效率/" title="[原]虚拟机，提高测试的效率">
   <strong>新一篇:</strong><br/>
   <span>
-  Sahi</span>
+  [原]虚拟机，提高测试的效率</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2017/03/09/原-Sahi-使用技巧4-iframe、下载文件、模态框、访问不了网页的处理/"  title="[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理">
+<a href="/2015/09/26/译-Sahi-Pro-Sahi-APIs-概述/"  title="[译]Sahi Pro - Sahi APIs 概述">
  <strong>旧一篇:</strong><br/> 
- <span>[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理
+ <span>[译]Sahi Pro - Sahi APIs 概述
 </span>
 </a>
 </div>
