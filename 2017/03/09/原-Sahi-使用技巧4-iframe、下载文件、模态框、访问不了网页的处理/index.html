@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理 | XiaXiaHo</title>
+    <title>[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理 | 腹黑兔的逆袭</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="xiaxiaho">
@@ -15,7 +15,7 @@ frame、iframe的处理在selenium里面，跨frame或者iframe是需要用switc
     
     
     
-    <link rel="alternative" href="/Tinnypp/atom.xml" title="XiaXiaHo" type="application/atom+xml">
+    <link rel="alternative" href="/Tinnypp/atom.xml" title="腹黑兔的逆袭" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/bitbug_favicon.ico">
@@ -54,11 +54,11 @@ var _hmt = _hmt || [];
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="XiaXiaHo" title="XiaXiaHo"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="腹黑兔的逆袭" title="腹黑兔的逆袭"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="XiaXiaHo">XiaXiaHo</a></h1>
+				<h1 class="site-name"><a href="/" title="腹黑兔的逆袭">腹黑兔的逆袭</a></h1>
 				<h2 class="blog-motto">talk is cheap show me the code</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#frame、iframe的处理"><span class="toc-number">1.</span> <span class="toc-text">frame、iframe的处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#session隔离的妙用"><span class="toc-number">2.</span> <span class="toc-text">session隔离的妙用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何进行浏览器类型配置"><span class="toc-number">3.</span> <span class="toc-text">如何进行浏览器类型配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#页面下载的文件被拦截"><span class="toc-number">4.</span> <span class="toc-text">页面下载的文件被拦截</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript模态框的处理"><span class="toc-number">5.</span> <span class="toc-text">JavaScript模态框的处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#异常关闭Sahi后导致浏览器访问不了网页"><span class="toc-number">6.</span> <span class="toc-text">异常关闭Sahi后导致浏览器访问不了网页</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#frame、iframe的处理"><span class="toc-number">1.</span> <span class="toc-text">frame、iframe的处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#session隔离的妙用"><span class="toc-number">2.</span> <span class="toc-text">session隔离的妙用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何进行浏览器类型配置"><span class="toc-number">3.</span> <span class="toc-text">如何进行浏览器类型配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#页面下载的文件被拦截"><span class="toc-number">4.</span> <span class="toc-text">页面下载的文件被拦截</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript模态框的处理"><span class="toc-number">5.</span> <span class="toc-text">JavaScript模态框的处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#全局运行速度设置"><span class="toc-number">6.</span> <span class="toc-text">全局运行速度设置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#录制脚本模式java和sahi"><span class="toc-number">7.</span> <span class="toc-text">录制脚本模式java和sahi</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#异常关闭Sahi后导致浏览器访问不了网页"><span class="toc-number">8.</span> <span class="toc-text">异常关闭Sahi后导致浏览器访问不了网页</span></a></li></ol>
 		</div>
 		
 		<p>这里总结了几个Sahi使用中可能经常遇到的问题</p>
@@ -105,66 +105,67 @@ var _hmt = _hmt || [];
 <hr>
 <h1 id="session隔离的妙用"><a href="#session隔离的妙用" class="headerlink" title="session隔离的妙用"></a>session隔离的妙用</h1><p>我们知道，一个浏览器的多个页面是共享session，一旦登录一个账号，之前登录的账号就会被替代。而通过Sahi的dashboard打开的浏览器，session是隔离的。也就是说可以通过Sahi用不同的账号登录同一个被测网站，这对我们测试不同角色账户的权限操作、交易统计等会大有益处，再也不用频繁的登录注销了。</p>
 <hr>
-<h1 id="如何进行浏览器类型配置"><a href="#如何进行浏览器类型配置" class="headerlink" title="如何进行浏览器类型配置"></a>如何进行浏览器类型配置</h1><p>Sahi可以通过配置来支持对不同的浏览器代理。 </p>
-<p><img src="http://img.blog.csdn.net/20170309225800457?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="增加或修改浏览器类型设置"> </p>
+<h1 id="如何进行浏览器类型配置"><a href="#如何进行浏览器类型配置" class="headerlink" title="如何进行浏览器类型配置"></a>如何进行浏览器类型配置</h1><p>Sahi可以通过配置来支持对不同的浏览器代理。</p>
+<p><img src="http://img.blog.csdn.net/20170309225800457?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="增加或修改浏览器类型设置"></p>
 <p>在浏览器类型里给出了一些浏览器的默认配置，可根据实际浏览器安装路径配置路径，配置的路径（path）一定要正确，否则在dashboard里不会显示对应浏览器的图标。配置文件里的 options的值最好不要修改，否则可能会出一些问题。</p>
 <hr>
-<h1 id="页面下载的文件被拦截"><a href="#页面下载的文件被拦截" class="headerlink" title="页面下载的文件被拦截"></a>页面下载的文件被拦截</h1><p>在使用Sahi的时候，会发现当页面有下载文件的链接，想要下载什么文件的时候，页面闪了一下就没有了，仿佛什么都没有发生，根本无法选择下载的路径。其实这是被Sahi拦截了，Sahi为了回放的方便自动下载文件到了sahi/userdata/temp/download路径下了。这个时候如果你想操作下载的文件，可以通过三个API去处理。 </p>
-<p><strong>_lastDownloadFileName()</strong> 可以返回最后一个下载的文件名。 </p>
-<p><strong>_saveDownloadAs($path)</strong> 可以允许你将下载的文件另存为指定的路径 </p>
-<p><strong>_clearLastDownloadedFileName()</strong> 清除最后下载的文件名 </p>
-<p>如果页面的本意不是下载而是获取文档并显示在页面，却又被Sahi给拦截了。那么可以在 <strong>sahi/userdata/config/download_urls.txt</strong> 的配置文件里增加下载的链接来屏蔽Sahi的拦截。比如下载链接是<a href="http://www.sahitest.com/demo/testsaveas.pdf" target="_blank" rel="external">http://www.sahitest.com/demo/testsaveas.pdf</a> ，则可以在配置文件里添加该路径。路径的编写也支持正则表达式。 </p>
-<p><img src="http://img.blog.csdn.net/20170311003148890?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="下载文件路径规避"> </p>
-<p>如果不想拦截所有某一种文件格式的文件，可以在 <strong>download_contenttypes.txt</strong> 配置文件里删除对应的文件格式。比如不想拦截PDF格式的文件，可以删除 <strong>application/pdf</strong> 这个来达到效果。 </p>
-<p><img src="http://img.blog.csdn.net/20170311003211937?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="下载文件类型规避"> </p>
+<h1 id="页面下载的文件被拦截"><a href="#页面下载的文件被拦截" class="headerlink" title="页面下载的文件被拦截"></a>页面下载的文件被拦截</h1><p>在使用Sahi的时候，会发现当页面有下载文件的链接，想要下载什么文件的时候，页面闪了一下就没有了，仿佛什么都没有发生，根本无法选择下载的路径。其实这是被Sahi拦截了，Sahi为了回放的方便自动下载文件到了sahi/userdata/temp/download路径下了。这个时候如果你想操作下载的文件，可以通过三个API去处理。</p>
+<p><strong>_lastDownloadFileName()</strong> 可以返回最后一个下载的文件名。</p>
+<p><strong>_saveDownloadAs($path)</strong> 可以允许你将下载的文件另存为指定的路径</p>
+<p><strong>_clearLastDownloadedFileName()</strong> 清除最后下载的文件名</p>
+<p>如果页面的本意不是下载而是获取文档并显示在页面，却又被Sahi给拦截了。那么可以在 <strong>sahi/userdata/config/download_urls.txt</strong> 的配置文件里增加下载的链接来屏蔽Sahi的拦截。比如下载链接是<a href="http://www.sahitest.com/demo/testsaveas.pdf" target="_blank" rel="external">http://www.sahitest.com/demo/testsaveas.pdf</a> ，则可以在配置文件里添加该路径。路径的编写也支持正则表达式。</p>
+<p><img src="http://img.blog.csdn.net/20170311003148890?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="下载文件路径规避"></p>
+<p>如果不想拦截所有某一种文件格式的文件，可以在 <strong>download_contenttypes.txt</strong> 配置文件里删除对应的文件格式。比如不想拦截PDF格式的文件，可以删除 <strong>application/pdf</strong> 这个来达到效果。</p>
+<p><img src="http://img.blog.csdn.net/20170311003211937?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="下载文件类型规避"></p>
 <p>详细说明，可查看官网：</p>
-<h1 id="JavaScript模态框的处理"><a href="#JavaScript模态框的处理" class="headerlink" title="JavaScript模态框的处理"></a>JavaScript模态框的处理</h1><p>录制脚本的时候可能会遇到页面弹出模态框。比如说是confirm弹框，发现录制后的脚本会出现_expectConfirm()这样的函数出现。 </p>
-<p><img src="http://img.blog.csdn.net/20170312151433220?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="模态框_expectConfirm()"> </p>
-<p>而回放的时候看不到模态框弹出就执行下一步了。这是因为Sahi认为这些弹框会影响自动化的执行，所以屏蔽了。但是Sahi又提供了相关的API来控制这些弹框的执行走向。比如说confirm框，Sahi默认选择OK（确定），想要弹框时选择Cancel（取消）的话，可以用_expectConfirm()方法来控制。 </p>
-<p><img src="http://img.blog.csdn.net/20170312151352407?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="confirm框"> </p>
+<h1 id="JavaScript模态框的处理"><a href="#JavaScript模态框的处理" class="headerlink" title="JavaScript模态框的处理"></a>JavaScript模态框的处理</h1><p>录制脚本的时候可能会遇到页面弹出模态框。比如说是confirm弹框，发现录制后的脚本会出现_expectConfirm()这样的函数出现。</p>
+<p><img src="http://img.blog.csdn.net/20170312151433220?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="模态框_expectConfirm()"></p>
+<p>而回放的时候看不到模态框弹出就执行下一步了。这是因为Sahi认为这些弹框会影响自动化的执行，所以屏蔽了。但是Sahi又提供了相关的API来控制这些弹框的执行走向。比如说confirm框，Sahi默认选择OK（确定），想要弹框时选择Cancel（取消）的话，可以用_expectConfirm()方法来控制。</p>
+<p><img src="http://img.blog.csdn.net/20170312151352407?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="confirm框"></p>
 <p>下面的语句就是弹框时选择Cancel。</p>
-<pre><code>_expectConfirm(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/question/&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-literal&quot;&gt;false&lt;/span&gt;);`&lt;/pre&gt;
-
-更多相关API请戳[这里](http://sahipro.com/docs/sahi-apis/javascript-dialogs.html)。
-
-# 全局运行速度设置
-
-Sahi里面是可以修改回放时的速度。有时候回放时为了查清脚本执行失败的原因，太快会看不清楚，可以减慢回放的速度，如果觉得回放执行时间太长，则可以加快速度。默认配置是每一步间隔100ms。可以在安装路径下的config文件下的sahi.properties里修改配置，修改后重启Sahi生效。
-
-&lt;pre class=&quot;prettyprint&quot;&gt;`&lt;span class=&quot;hljs-preprocessor&quot;&gt;#Time (in milliseconds) delay between steps&lt;/span&gt;
-script.time_between_steps=&lt;span class=&quot;hljs-number&quot;&gt;100&lt;/span&gt;`&lt;/pre&gt;
-
-* * *
-
-# 录制脚本模式java和sahi
-
-由于Sahi支持java和JavaScript，脚本录制也提供了两种方式，可以修改成java的controller。默认是使用Sahi的controller。这个也可以在安装路径下的config文件下的sahi.properties里修改配置，修改后重启Sahi生效。
-
-&lt;pre class=&quot;prettyprint&quot;&gt;`# Specifies the controller &lt;span class=&quot;hljs-keyword&quot;&gt;to&lt;/span&gt; be used
-# Takes java, ruby &lt;span class=&quot;hljs-keyword&quot;&gt;and&lt;/span&gt; sahi &lt;span class=&quot;hljs-keyword&quot;&gt;as&lt;/span&gt; valid values; &lt;span class=&quot;hljs-keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;is&lt;/span&gt; sahi
-# &lt;span class=&quot;hljs-keyword&quot;&gt;Set&lt;/span&gt; this &lt;span class=&quot;hljs-keyword&quot;&gt;to&lt;/span&gt; java &lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; recorder &lt;span class=&quot;hljs-keyword&quot;&gt;in&lt;/span&gt; java mode.
-controller.mode=sahi
-</code></pre><p><img src="http://img.blog.csdn.net/20170309223456476?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="sahiController"> </p>
+<p>  <code>_expectConfirm(false);</code></p>
+<p>  更多相关API请戳<a href="http://sahipro.com/docs/sahi-apis/javascript-dialogs.html" target="_blank" rel="external">这里</a>。</p>
+<hr>
+<h1 id="全局运行速度设置"><a href="#全局运行速度设置" class="headerlink" title="全局运行速度设置"></a>全局运行速度设置</h1><p>  Sahi里面是可以修改回放时的速度。有时候回放时为了查清脚本执行失败的原因，太快会看不清楚，可以减慢回放的速度，如果觉得回放执行时间太长，则可以加快速度。默认配置是每一步间隔100ms。可以在安装路径下的config文件下的sahi.properties里修改配置，修改后重启Sahi生效。</p>
+<p>  <code>Time (in milliseconds) delay between steps script.time_between_steps=100</code></p>
+<hr>
+<h1 id="录制脚本模式java和sahi"><a href="#录制脚本模式java和sahi" class="headerlink" title="录制脚本模式java和sahi"></a>录制脚本模式java和sahi</h1><p>  由于Sahi支持java和JavaScript，脚本录制也提供了两种方式，可以修改成java的controller。默认是使用Sahi的controller。这个也可以在安装路径下的config文件下的sahi.properties里修改配置，修改后重启Sahi生效。</p>
+<pre><code>`# Specifies the controller to be used
+# Takes java, ruby and sahi as valid values; default is sahi
+# Set this to java for recorder in java mode.
+controller.mode=sahi `
+</code></pre><p><img src="http://img.blog.csdn.net/20170309223456476?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="sahiController"></p>
 <p><img src="http://img.blog.csdn.net/20170309223523416?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="java的Controller"></p>
 <hr>
-<h1 id="异常关闭Sahi后导致浏览器访问不了网页"><a href="#异常关闭Sahi后导致浏览器访问不了网页" class="headerlink" title="异常关闭Sahi后导致浏览器访问不了网页"></a>异常关闭Sahi后导致浏览器访问不了网页</h1><p>使用Sahi有时候会遇到，Sahi关闭后，无法通过浏览器访问网络了。试了不同的浏览器也访问不了网络。原因是因为Sahi异常关闭，Sahi代理设置没有回滚导致的。我们知道，Sahi需要修改系统或者浏览器的代理设置才能注入Sahi的脚本到浏览器，以便Sahi进行录制和回放的功能。<strong>这也是Sahi为什么不用像Selenium那样下载那么多浏览器对应的webdriver的原因：通过对不同浏览器进行代理，注入JavaScript的脚本来操作浏览器行为。</strong> 这是Sahi的优势，同样也造就了Sahi会出现没有成功回滚代理设置而导致无法上网的问题。 </p>
-<p>如果通过Sahi的dashboard打开的是Firefox或者Chrome浏览器，不会产生上述的问题，因为这时候打开的这两种浏览器是使用隔离的配置文件。也就是说，这时候在Sahi外打开Firefox、Chrome、IE这些浏览器，不会通过Sahi的代理。 </p>
-<p>然而通过Sahi的dashboard打开的IE浏览器，是修改了系统的代理服务器，所有依赖系统代理的浏览器，访问网络的时候都会经过Sahi的代理。 </p>
-<p>如果这时候关闭了sahi启动时打开的命令窗口，而不是先关闭所有的IE浏览器，再关闭Sahi的dashboard，则会导致上述问题的发生。这两个操作正是回滚系统代理设置的环节。 </p>
-<p><img src="http://img.blog.csdn.net/20170309215354256?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="错误的关闭方法"> </p>
-<p>解决的办法也很简单，就是打开Sahi后，通过Sahi dashboard打开IE浏览器，然后关闭IE浏览器，再关闭Sahi dashboard。 </p>
-<p><img src="http://img.blog.csdn.net/20170309215528178?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="正常操作和回滚操作"> </p>
+<h1 id="异常关闭Sahi后导致浏览器访问不了网页"><a href="#异常关闭Sahi后导致浏览器访问不了网页" class="headerlink" title="异常关闭Sahi后导致浏览器访问不了网页"></a>异常关闭Sahi后导致浏览器访问不了网页</h1><p>使用Sahi有时候会遇到，Sahi关闭后，无法通过浏览器访问网络了。试了不同的浏览器也访问不了网络。原因是因为Sahi异常关闭，Sahi代理设置没有回滚导致的。我们知道，Sahi需要修改系统或者浏览器的代理设置才能注入Sahi的脚本到浏览器，以便Sahi进行录制和回放的功能。<strong>这也是Sahi为什么不用像Selenium那样下载那么多浏览器对应的webdriver的原因：通过对不同浏览器进行代理，注入JavaScript的脚本来操作浏览器行为。</strong> 这是Sahi的优势，同样也造就了Sahi会出现没有成功回滚代理设置而导致无法上网的问题。</p>
+<p>如果通过Sahi的dashboard打开的是Firefox或者Chrome浏览器，不会产生上述的问题，因为这时候打开的这两种浏览器是使用隔离的配置文件。也就是说，这时候在Sahi外打开Firefox、Chrome、IE这些浏览器，不会通过Sahi的代理。</p>
+<p>然而通过Sahi的dashboard打开的IE浏览器，是修改了系统的代理服务器，所有依赖系统代理的浏览器，访问网络的时候都会经过Sahi的代理。</p>
+<p>如果这时候关闭了sahi启动时打开的命令窗口，而不是先关闭所有的IE浏览器，再关闭Sahi的dashboard，则会导致上述问题的发生。这两个操作正是回滚系统代理设置的环节。</p>
+<p><img src="http://img.blog.csdn.net/20170309215354256?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="错误的关闭方法"></p>
+<p>解决的办法也很简单，就是打开Sahi后，通过Sahi dashboard打开IE浏览器，然后关闭IE浏览器，再关闭Sahi dashboard。</p>
+<p><img src="http://img.blog.csdn.net/20170309215528178?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="正常操作和回滚操作"></p>
 <p>关于访问不了网页官方网站还有详细说明，可自行查看。<a href="http://sahipro.com/docs/troubleshooting/proxy-issues.html#Cannot%20connect%20to%20internet%20when%20Sahi%20is%20not%20running" target="_blank" rel="external">地址</a></p>
-<div>作者：baidu_29649941发表于2017/3/9 23:22:36<a href="http://blog.csdn.net/baidu_29649941/article/details/60783690" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：423评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/60783690#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>  
+<div>作者：baidu_29649941发表于2017/3/9 23:22:36<a href="http://blog.csdn.net/baidu_29649941/article/details/60783690" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：423评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/60783690#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
+  
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Sahi/">Sahi</a><a href="/tags/JavaScript/">JavaScript</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Sahi总结/">Sahi总结</a>
+</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2017/03/09/原-Sahi-使用技巧4-iframe、下载文件、模态框、访问不了网页的处理/" data-title="[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理 | XiaXiaHo" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2017/03/09/原-Sahi-使用技巧4-iframe、下载文件、模态框、访问不了网页的处理/" data-title="[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理 | 腹黑兔的逆袭" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -173,14 +174,6 @@ controller.mode=sahi
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/03/24/hello-world/" title="Hello World">
-  <strong>新一篇:</strong><br/>
-  <span>
-  Hello World</span>
-</a>
-</div>
-
 
 <div class="next">
 <a href="/2016/06/26/原-基于sahi的UI自动化测试框架/"  title="[原]基于sahi的UI自动化测试框架">

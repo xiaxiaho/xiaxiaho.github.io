@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>[原]基于sahi的UI自动化测试框架 | XiaXiaHo</title>
+    <title>[原]基于sahi的UI自动化测试框架 | 腹黑兔的逆袭</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="xiaxiaho">
@@ -15,7 +15,7 @@
     
     
     
-    <link rel="alternative" href="/Tinnypp/atom.xml" title="XiaXiaHo" type="application/atom+xml">
+    <link rel="alternative" href="/Tinnypp/atom.xml" title="腹黑兔的逆袭" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/bitbug_favicon.ico">
@@ -54,11 +54,11 @@ var _hmt = _hmt || [];
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="XiaXiaHo" title="XiaXiaHo"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="腹黑兔的逆袭" title="腹黑兔的逆袭"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="XiaXiaHo">XiaXiaHo</a></h1>
+				<h1 class="site-name"><a href="/" title="腹黑兔的逆袭">腹黑兔的逆袭</a></h1>
 				<h2 class="blog-motto">talk is cheap show me the code</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
@@ -101,34 +101,34 @@ var _hmt = _hmt || [];
 		</div>
 		
 		<h1 id="基于sahi-pro-excelframework自动化测试框架设计"><a href="#基于sahi-pro-excelframework自动化测试框架设计" class="headerlink" title="基于sahi pro excelframework自动化测试框架设计"></a>基于sahi pro excelframework自动化测试框架设计</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><h3 id="1-1-开发背景"><a href="#1-1-开发背景" class="headerlink" title="1.1.开发背景"></a>1.1.开发背景</h3><p>电子印章系统需要进行自动化测试功能，且需要一种易于开发、维护、使用的自动化测试工具。Sahi pro版本相比开源版本已经自带excelframework，既直接通过excel文件执行自动化测试用例。</p>
-<h3 id="1-2-建设目标"><a href="#1-2-建设目标" class="headerlink" title="1.2.建设目标"></a>1.2.建设目标</h3><p>目标1：普通测试员通过编写excel测试模板，生成自动化测试用例，直接执行自动化测试用例，实现自动化测试。 </p>
-<p>目标2：测试开发员可以灵活的修改、扩展、完善自动化测试框架。 </p>
+<h3 id="1-2-建设目标"><a href="#1-2-建设目标" class="headerlink" title="1.2.建设目标"></a>1.2.建设目标</h3><p>目标1：普通测试员通过编写excel测试模板，生成自动化测试用例，直接执行自动化测试用例，实现自动化测试。</p>
+<p>目标2：测试开发员可以灵活的修改、扩展、完善自动化测试框架。</p>
 <p>目标3：测试开发员可以所见即所得、高效、快速的编写完善自动化测试框架。</p>
 <h3 id="1-3-假定和约束"><a href="#1-3-假定和约束" class="headerlink" title="1.3.假定和约束"></a>1.3.假定和约束</h3><p>本版本设计开发必须遵循JavaScript和Sahi脚本的开发规范。</p>
-<h2 id="2-框架流程设计"><a href="#2-框架流程设计" class="headerlink" title="2.框架流程设计"></a>2.框架流程设计</h2><h3 id="2-1-测试框架"><a href="#2-1-测试框架" class="headerlink" title="2.1.测试框架"></a>2.1.测试框架</h3><p>测试框架由四层架构组成：sahiproexcelframework，业务逻辑层，页面对象库，基础控件库。 </p>
-<p>Sahiproexcelframework：将测试步骤（关键字）和测试数据直接保存在excel里，实现数据与脚本分离。由于excelframework需要调用方法而不是对象，所以需要一个中间层做把业务逻辑层的对象转换成方法。 </p>
-<p>业务逻辑层：可以在这里编写可重用的方法，这些方法中执行模拟手工测试的功能。该层的方法可以被测试用例调用。 </p>
-<p>页面对象库：用来获取、存储页面对象。每个页面对象也许包含多个控件对象，该层对象可以被业务逻辑层调用。 </p>
-<p>基础控件库：封装基础的页面控件对象。对于操作复杂的页面控件再进行封装以方便使用，该层对象可以被页面对象库调用。 </p>
-<p>图1. 测试框架图 </p>
+<h2 id="2-框架流程设计"><a href="#2-框架流程设计" class="headerlink" title="2.框架流程设计"></a>2.框架流程设计</h2><h3 id="2-1-测试框架"><a href="#2-1-测试框架" class="headerlink" title="2.1.测试框架"></a>2.1.测试框架</h3><p>测试框架由四层架构组成：sahiproexcelframework，业务逻辑层，页面对象库，基础控件库。</p>
+<p>Sahiproexcelframework：将测试步骤（关键字）和测试数据直接保存在excel里，实现数据与脚本分离。由于excelframework需要调用方法而不是对象，所以需要一个中间层做把业务逻辑层的对象转换成方法。</p>
+<p>业务逻辑层：可以在这里编写可重用的方法，这些方法中执行模拟手工测试的功能。该层的方法可以被测试用例调用。</p>
+<p>页面对象库：用来获取、存储页面对象。每个页面对象也许包含多个控件对象，该层对象可以被业务逻辑层调用。</p>
+<p>基础控件库：封装基础的页面控件对象。对于操作复杂的页面控件再进行封装以方便使用，该层对象可以被页面对象库调用。</p>
+<p>图1. 测试框架图</p>
 <p><img src="http://img.blog.csdn.net/20160626120107608" alt="架构图"></p>
-<h2 id="3-框架使用说明"><a href="#3-框架使用说明" class="headerlink" title="3.框架使用说明"></a>3.框架使用说明</h2><h3 id="3-1-Excel模板说明"><a href="#3-1-Excel模板说明" class="headerlink" title="3.1.Excel模板说明"></a>3.1.Excel模板说明</h3><p>Excel模板作为描述自动化测试用例、测试步骤、测试数据的载体，严格按照模板编写将会避免很多可能出现的错误。脚本在执行的时候默认读取Excel模板里的sheet1内的数据，按照从上到下的顺序逐行执行关键字对应的脚本。所以可以在excel里新建其他sheet，但是不要修改sheet1的名字或删除sheet1，否则会导致无法执行脚本。 </p>
-<p><img src="http://img.blog.csdn.net/20160626121539128" alt="这里写图片描述"> </p>
-<p>Excel模板里的每一行代表一个测试步骤，多行可以组成一个测试用例。 </p>
-<p><img src="http://img.blog.csdn.net/20160626121613488" alt="这里写图片描述"> </p>
-<p>现对sheet1内的数据列的含义和使用做如下说明： </p>
-<p>Comments（描述）：该列可以录入对该测试步骤的描述用来标记这一步骤，该列可以为空。 </p>
-<p>Tags（标签）：该列可以用标签对测试用例进行标记，在执行脚本时可有选择性的执行用例。所以仅在测试用例第一个测试步骤上些标签。如脚本执行时只执行smoke标签的用例，没有用标签标记的用例便不会执行。 </p>
-<p>TestCase（测试用例）：该列可以录入测试用例名用来标记测试用例，由于多个步骤组成一个测试用例，无需再每一行都写测试用例名，仅在第一个测试步骤上写测试用例名，否则框架会认为每一行都是一个测试用例。 </p>
-<p>KeyWord（关键字）：该列为必填项，框架根据该列的关键字进行脚本执行。所以关键字必须填写正确，具体可以参考excel模板里“api说明”的sheet页。 </p>
-<p>argumentN：关键字后面对应的是输入参数，也就是测试数据，具体关键字对应的参数含义可以参考excel模板里“api说明”的sheet页。 </p>
-<p><img src="http://img.blog.csdn.net/20160626121854377" alt="这里写图片描述"> </p>
-<p>基于excel模板的脚本执行方法有两个，一个是在页面用sahi控制器执行excel模板的xlsx文件，具体操作可以参考sahi官网上的使用文档（<a href="http://sahipro.com/docs/using-sahi/sahi-controller.html#Playback" target="_blank" rel="external">http://sahipro.com/docs/using-sahi/sahi-controller.html#Playback</a> Tab）。 </p>
+<h2 id="3-框架使用说明"><a href="#3-框架使用说明" class="headerlink" title="3.框架使用说明"></a>3.框架使用说明</h2><h3 id="3-1-Excel模板说明"><a href="#3-1-Excel模板说明" class="headerlink" title="3.1.Excel模板说明"></a>3.1.Excel模板说明</h3><p>Excel模板作为描述自动化测试用例、测试步骤、测试数据的载体，严格按照模板编写将会避免很多可能出现的错误。脚本在执行的时候默认读取Excel模板里的sheet1内的数据，按照从上到下的顺序逐行执行关键字对应的脚本。所以可以在excel里新建其他sheet，但是不要修改sheet1的名字或删除sheet1，否则会导致无法执行脚本。</p>
+<p><img src="http://img.blog.csdn.net/20160626121539128" alt="这里写图片描述"></p>
+<p>Excel模板里的每一行代表一个测试步骤，多行可以组成一个测试用例。</p>
+<p><img src="http://img.blog.csdn.net/20160626121613488" alt="这里写图片描述"></p>
+<p>现对sheet1内的数据列的含义和使用做如下说明：</p>
+<p>Comments（描述）：该列可以录入对该测试步骤的描述用来标记这一步骤，该列可以为空。</p>
+<p>Tags（标签）：该列可以用标签对测试用例进行标记，在执行脚本时可有选择性的执行用例。所以仅在测试用例第一个测试步骤上些标签。如脚本执行时只执行smoke标签的用例，没有用标签标记的用例便不会执行。</p>
+<p>TestCase（测试用例）：该列可以录入测试用例名用来标记测试用例，由于多个步骤组成一个测试用例，无需再每一行都写测试用例名，仅在第一个测试步骤上写测试用例名，否则框架会认为每一行都是一个测试用例。</p>
+<p>KeyWord（关键字）：该列为必填项，框架根据该列的关键字进行脚本执行。所以关键字必须填写正确，具体可以参考excel模板里“api说明”的sheet页。</p>
+<p>argumentN：关键字后面对应的是输入参数，也就是测试数据，具体关键字对应的参数含义可以参考excel模板里“api说明”的sheet页。</p>
+<p><img src="http://img.blog.csdn.net/20160626121854377" alt="这里写图片描述"></p>
+<p>基于excel模板的脚本执行方法有两个，一个是在页面用sahi控制器执行excel模板的xlsx文件，具体操作可以参考sahi官网上的使用文档（<a href="http://sahipro.com/docs/using-sahi/sahi-controller.html#Playback" target="_blank" rel="external">http://sahipro.com/docs/using-sahi/sahi-controller.html#Playback</a> Tab）。</p>
 <p>另一种方法是通过testrunner来执行，具体操作可以参考sahi官网上的使用文档（<a href="http://sahipro.com/docs/using-sahi/playback-desktop.html#Playback" target="_blank" rel="external">http://sahipro.com/docs/using-sahi/playback-desktop.html#Playback</a> via testrunner）。</p>
-<h3 id="3-2-脚本开发"><a href="#3-2-脚本开发" class="headerlink" title="3.2.脚本开发"></a>3.2.脚本开发</h3><p>由于脚本的高度开放性，该框架也是可以进行修改和扩展的。基于已有的基础控件库、页面对象库对业务逻辑层进行扩展，新增、修改业务逻辑层相关的业务逻辑，达到快速开发的目的。当基础控件库或者页面对象库中没有需要的控件或者对象时，可以自行添加需要的基础控件或者页面对象。 </p>
-<p>目前框架包括的文件有： </p>
-<p>1.xxx.xlsx–excel模板，用来编写测试步骤、用例，输入测试数据。 </p>
-<p>2.apis.sah–sahi脚本api注释文件，放在编程目录下时可给出代码自动补全（非必需）。 </p>
+<h3 id="3-2-脚本开发"><a href="#3-2-脚本开发" class="headerlink" title="3.2.脚本开发"></a>3.2.脚本开发</h3><p>由于脚本的高度开放性，该框架也是可以进行修改和扩展的。基于已有的基础控件库、页面对象库对业务逻辑层进行扩展，新增、修改业务逻辑层相关的业务逻辑，达到快速开发的目的。当基础控件库或者页面对象库中没有需要的控件或者对象时，可以自行添加需要的基础控件或者页面对象。</p>
+<p>目前框架包括的文件有：</p>
+<p>1.xxx.xlsx–excel模板，用来编写测试步骤、用例，输入测试数据。</p>
+<p>2.apis.sah–sahi脚本api注释文件，放在编程目录下时可给出代码自动补全（非必需）。</p>
 <p>3.baseWidget.sah–基础控件库，可自行添加基础控件，且尽可能遵循所见即所得的原则封装基础控件。比如一个按钮控件，可以这样写：</p>
 <pre><code>&lt;span class=&quot;hljs-comment&quot;&gt;//button控件&lt;/span&gt;
 &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $Button = &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($elem)&lt;/span&gt; {&lt;/span&gt;
@@ -171,7 +171,7 @@ var _hmt = _hmt || [];
 &lt;span class=&quot;hljs-comment&quot;&gt;//查询印章&lt;/span&gt;
     &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.query = &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-params&quot;&gt;($CNameStr, $SNameStr, $SStateStr, $SAppStr, $mediaNoStr, $CTNoStr, $SdateSStr, $SdateEStr, $Rows, $RecordsCount)&lt;/span&gt; {&lt;/span&gt;
         &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $page = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; queryPage()
-            $page.$CName.setValue($CNameStr) 
+            $page.$CName.setValue($CNameStr)
             $page.$SName.setValue($SNameStr)
             &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; ($page.$CTNo.getValue() != &lt;span class=&quot;hljs-literal&quot;&gt;null&lt;/span&gt; &amp;amp;&amp;amp; $page.$CTNo.getValue() != &lt;span class=&quot;hljs-string&quot;&gt;&quot;&quot;&lt;/span&gt;) {
                 $CTNo.setValue($CTNoStr)
@@ -198,16 +198,27 @@ var _hmt = _hmt || [];
 &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;querySeal&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($CNameStr, $SNameStr, $SStateStr, $SAppStr, $mediaNoStr, $CTNoStr, $SdateSStr, $SdateEStr, $Rows, $RecordsCount)&lt;/span&gt; {&lt;/span&gt;
     &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; SealManager.query($CNameStr, $SNameStr, $SStateStr, $SAppStr, $mediaNoStr, $CTNoStr, $SdateSStr, $SdateEStr, $Rows, $RecordsCount)
 }
-</code></pre><div>作者：baidu_29649941发表于2016/6/26 12:24:16<a href="http://blog.csdn.net/baidu_29649941/article/details/51747712" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：1137评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/51747712#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>  
+</code></pre><div>作者：baidu_29649941发表于2016/6/26 12:24:16<a href="http://blog.csdn.net/baidu_29649941/article/details/51747712" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：1137评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/51747712#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
+  
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Sahi/">Sahi</a><a href="/tags/JavaScript/">JavaScript</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Sahi总结/">Sahi总结</a>
+</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/06/26/原-基于sahi的UI自动化测试框架/" data-title="[原]基于sahi的UI自动化测试框架 | XiaXiaHo" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/06/26/原-基于sahi的UI自动化测试框架/" data-title="[原]基于sahi的UI自动化测试框架 | 腹黑兔的逆袭" data-tsina="null" class="share clearfix">
   </div>
 
 </div>

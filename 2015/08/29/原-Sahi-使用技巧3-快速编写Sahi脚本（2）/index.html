@@ -4,18 +4,19 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>[原]Sahi 使用技巧3-快速编写Sahi脚本（2） | XiaXiaHo</title>
+    <title>[原]Sahi 使用技巧3-快速编写Sahi脚本（2） | 腹黑兔的逆袭</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="xiaxiaho">
     
-    <meta name="description" content="利用notepad++可以提高一定的编写脚本的效率，而且++是一个很轻量的编辑器，适合编写不是特别复杂的脚本。但是notepad++的缺点也是很明显的，没法提示你脚本的语法错误，比如多一个括号或者少一个下划线这样经常发生的错误。 
-这里引出方法二：aptana studio 3 + apis.sah">
+    <meta name="description" content="利用notepad++可以提高一定的编写脚本的效率，而且++是一个很轻量的编辑器，适合编写不是特别复杂的脚本。但是notepad++的缺点也是很明显的，没法提示你脚本的语法错误，比如多一个括号或者少一个下划线这样经常发生的错误。
+这里引出方法二：aptana studio 3 + apis.sah
+">
     
     
     
     
-    <link rel="alternative" href="/Tinnypp/atom.xml" title="XiaXiaHo" type="application/atom+xml">
+    <link rel="alternative" href="/Tinnypp/atom.xml" title="腹黑兔的逆袭" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/bitbug_favicon.ico">
@@ -54,11 +55,11 @@ var _hmt = _hmt || [];
       <div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="XiaXiaHo" title="XiaXiaHo"/></a>
+				<a href="/"><img src="/img/logo.svg" alt="腹黑兔的逆袭" title="腹黑兔的逆袭"/></a>
 			</div>
 			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="XiaXiaHo">XiaXiaHo</a></h1>
+				<h1 class="site-name"><a href="/" title="腹黑兔的逆袭">腹黑兔的逆袭</a></h1>
 				<h2 class="blog-motto">talk is cheap show me the code</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
@@ -100,25 +101,36 @@ var _hmt = _hmt || [];
 		
 		</div>
 		
-		<p>利用notepad++可以提高一定的编写脚本的效率，而且++是一个很轻量的编辑器，适合编写不是特别复杂的脚本。但是notepad++的缺点也是很明显的，没法提示你脚本的语法错误，比如多一个括号或者少一个下划线这样经常发生的错误。 </p>
-<p>这里引出<strong>方法二</strong>：aptana studio 3 + apis.sah </p>
-<p>官网教程里有讲到如何在eclipse上配置sahi脚本编写环境，详情请参考<a href="http://sahipro.com/docs/faq/eclipse-integration.html" target="_blank" rel="external">这里</a>。但是我觉得官网里的配置比较繁琐，为了简化配置，我直接使用了aptana studio。 </p>
-<p>Aptana studio 3 是一个非常强大,开源,JavaScript-focused的AJAX开发IDE。之前说过sahi脚本是基于javascript的，所以适用于开发javascript的aptana是再好不过了。获取aptana studio 的方法主要有两种，由于aptana studio本身是基于eclipse的一个插件，所以可以按照安装eclipse插件的方式来获取。这里我认为最方便快捷的方法是直接到aptana的官网下载最新版的aptana studio，解压之后就直接可以使用了。由于aptana自带jre，即使操作系统没有安装jre也是可以直接运行的。aptana使用的是32位的jre，而且经过开发商的优化，相比64位的eclipse一启动就占了500+M的内存，aptana在内存占用、启动速度、针对javascript开发上都有优势。 </p>
-<p>说了那么多，首先需要让Aptana能识别.sah扩展名的脚本。导航到窗口-首选项-内容类型-text-javascript-添加-输入*.sah后确定（如下图操作）。PS：原谅我用gif，在博客里贴图我还没找到更有效率的方法。 </p>
-<p><img src="http://img.blog.csdn.net/20150829152200659" alt="这里写图片描述"> </p>
-<p>这样，就可以在aptana上打开以javascript的方式打开.sah扩展名的文件了。 </p>
-<p>然后新建一个web项目，在web项目里新建一个文件夹，把SAHI安装目录/userdata/scripts路径下的apis.sah文件拷贝到该文件夹里。这样所有工作都做完了，可以实现sahi api代码的自动补全和方法跳转（可以看下图演示）。 </p>
+		<p>利用notepad++可以提高一定的编写脚本的效率，而且++是一个很轻量的编辑器，适合编写不是特别复杂的脚本。但是notepad++的缺点也是很明显的，没法提示你脚本的语法错误，比如多一个括号或者少一个下划线这样经常发生的错误。</p>
+<p>这里引出<strong>方法二</strong>：aptana studio 3 + apis.sah</p>
+<p>官网教程里有讲到如何在eclipse上配置sahi脚本编写环境，详情请参考<a href="http://sahipro.com/docs/faq/eclipse-integration.html" target="_blank" rel="external">这里</a>。但是我觉得官网里的配置比较繁琐，为了简化配置，我直接使用了aptana studio。</p>
+<p>Aptana studio 3 是一个非常强大,开源,JavaScript-focused的AJAX开发IDE。之前说过sahi脚本是基于javascript的，所以适用于开发javascript的aptana是再好不过了。获取aptana studio 的方法主要有两种，由于aptana studio本身是基于eclipse的一个插件，所以可以按照安装eclipse插件的方式来获取。这里我认为最方便快捷的方法是直接到aptana的官网下载最新版的aptana studio，解压之后就直接可以使用了。由于aptana自带jre，即使操作系统没有安装jre也是可以直接运行的。aptana使用的是32位的jre，而且经过开发商的优化，相比64位的eclipse一启动就占了500+M的内存，aptana在内存占用、启动速度、针对javascript开发上都有优势。</p>
+<p>说了那么多，首先需要让Aptana能识别.sah扩展名的脚本。导航到窗口-首选项-内容类型-text-javascript-添加-输入*.sah后确定（如下图操作）。PS：原谅我用gif，在博客里贴图我还没找到更有效率的方法。</p>
+<p><img src="http://img.blog.csdn.net/20150829152200659" alt="这里写图片描述"></p>
+<p>这样，就可以在aptana上打开以javascript的方式打开.sah扩展名的文件了。</p>
+<p>然后新建一个web项目，在web项目里新建一个文件夹，把SAHI安装目录/userdata/scripts路径下的apis.sah文件拷贝到该文件夹里。这样所有工作都做完了，可以实现sahi api代码的自动补全和方法跳转（可以看下图演示）。</p>
 <p><img src="http://img.blog.csdn.net/20150829223650327" alt="这里写图片描述"></p>
-<div>作者：baidu_29649941发表于2015/8/29 18:50:17<a href="http://blog.csdn.net/baidu_29649941/article/details/48089859" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：809评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/48089859#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>  
+<div>作者：baidu_29649941发表于2015/8/29 18:50:17<a href="http://blog.csdn.net/baidu_29649941/article/details/48089859" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：809评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/48089859#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
+  
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Sahi/">Sahi</a><a href="/tags/JavaScript/">JavaScript</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Sahi总结/">Sahi总结</a>
+</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2015/08/29/原-Sahi-使用技巧3-快速编写Sahi脚本（2）/" data-title="[原]Sahi 使用技巧3-快速编写Sahi脚本（2） | XiaXiaHo" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2015/08/29/原-Sahi-使用技巧3-快速编写Sahi脚本（2）/" data-title="[原]Sahi 使用技巧3-快速编写Sahi脚本（2） | 腹黑兔的逆袭" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
