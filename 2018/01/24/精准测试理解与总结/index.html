@@ -1,0 +1,333 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>精准测试理解与总结 | 腹黑兔的逆袭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="xiaxiaho">
+    
+    <meta name="description" content="敏捷开发下测试的处境从传统模式到敏捷开发，产品或项目的迭代增多，很有可能达到每两周就会有一个版本。虽然没有达到每天部署3~4个版本的devops开发模式，但这个时候测试的压力依然陡然增大，既没有那么多的时间写完善的用例，更做不到每个版本都进行完整的回归测试。以前的同事便是在敏捷开发环境下测试某电信运">
+    
+    
+    
+    
+    <link rel="alternative" href="/Tinnypp/atom.xml" title="腹黑兔的逆袭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/bitbug_favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/面露异常.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/面露异常.jpg">
+    
+
+  
+  
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d182ed77fc48758bf45a33835ee35745";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+      <script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','.............Add your swiftype userID...............');
+</script>
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="腹黑兔的逆袭" title="腹黑兔的逆袭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="腹黑兔的逆袭">腹黑兔的逆袭</a></h1>
+				<h2 class="blog-motto">talk is cheap show me the code</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+                    <ul>
+					 
+						<li><a href="/Tinnypp">首页</a></li>
+					
+						<li><a href="/Tinnypp/archives">归档</a></li>
+					
+					<li>
+					
+					</li>
+                <!--<li><div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div></li>-->
+
+				</ul>
+			</nav>	
+</div>
+    </header>
+    <div id="container" class="clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/01/24/精准测试理解与总结/" title="精准测试理解与总结" itemprop="url">精准测试理解与总结</a>
+  </h1>
+  <p class="article-time">
+    <time datetime="2018-01-24T13:05:49.000Z" itemprop="datePublished">2018年 1月 24日</time>
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title"></strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#敏捷开发下测试的处境"><span class="toc-number">1.</span> <span class="toc-text">敏捷开发下测试的处境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#测试遇到的问题"><span class="toc-number">2.</span> <span class="toc-text">测试遇到的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#理论"><span class="toc-number">3.</span> <span class="toc-text">理论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#测试左移"><span class="toc-number">3.1.</span> <span class="toc-text">测试左移</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试右移"><span class="toc-number">3.2.</span> <span class="toc-text">测试右移</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#xmind关闭cloud服务"><span class="toc-number">3.2.1.</span> <span class="toc-text">xmind关闭cloud服务</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现方法"><span class="toc-number">4.</span> <span class="toc-text">实现方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#需求到任务到用例的转化"><span class="toc-number">4.1.</span> <span class="toc-text">需求到任务到用例的转化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用例的编写"><span class="toc-number">4.2.</span> <span class="toc-text">用例的编写</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#点-》线-》面，用例精简tmq"><span class="toc-number">4.2.1.</span> <span class="toc-text">点-》线-》面，用例精简tmq</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用例从概括到逐步细化"><span class="toc-number">4.2.2.</span> <span class="toc-text">用例从概括到逐步细化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#把控版本构建"><span class="toc-number">4.3.</span> <span class="toc-text">把控版本构建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#会用代码提交工具，查看提交代码内容，确定测试大致范围"><span class="toc-number">4.3.1.</span> <span class="toc-text">会用代码提交工具，查看提交代码内容，确定测试大致范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#持续集成工具的使用"><span class="toc-number">4.3.2.</span> <span class="toc-text">持续集成工具的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码质量管理"><span class="toc-number">4.4.</span> <span class="toc-text">代码质量管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码规范"><span class="toc-number">4.4.1.</span> <span class="toc-text">代码规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码审核"><span class="toc-number">4.4.2.</span> <span class="toc-text">代码审核</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sonarqube与sonarlint"><span class="toc-number">4.4.3.</span> <span class="toc-text">sonarqube与sonarlint</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unit-test-与-BDD"><span class="toc-number">4.5.</span> <span class="toc-text">unit test 与 BDD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动化测试"><span class="toc-number">4.6.</span> <span class="toc-text">自动化测试</span></a></li></ol></li></ol>
+		</div>
+		
+		<h1 id="敏捷开发下测试的处境"><a href="#敏捷开发下测试的处境" class="headerlink" title="敏捷开发下测试的处境"></a>敏捷开发下测试的处境</h1><p>从传统模式到敏捷开发，产品或项目的迭代增多，很有可能达到每两周就会有一个版本。虽然没有达到每天部署3~4个版本的devops开发模式，但这个时候测试的压力依然陡然增大，既没有那么多的时间写完善的用例，更做不到每个版本都进行完整的回归测试。以前的同事便是在敏捷开发环境下测试某电信运营商相关的金融类app。她经常会遇到即使上线，缺陷也不断的涌现。有些在测试时已经修复的问题，在生产环境又再次出现；或者之前修复的问题，下次测试又再次出现。测试到最后经常顾此失彼，疲于奔命。这时候，测试如果仅仅只是在部署后才参与到产品或项目中，就会越来越累。测试需要肩负起软件质量控制的重任。</p>
+<h1 id="测试遇到的问题"><a href="#测试遇到的问题" class="headerlink" title="测试遇到的问题"></a>测试遇到的问题</h1><ul>
+<li>测试不参与产品或项目的需求评审，无法对产品或项目做测试计划</li>
+<li>即使参与到需求评审，但是没有把控需求的可测试性</li>
+<li>版本构建快，无法把控版本构建</li>
+<li>测试不了解产品或项目内部流程，无法针对性的编写更有效、更精简的用例</li>
+<li>测试人力不足，版本迭代快速，无法进行全面的回归测试<h1 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h1><h2 id="测试左移"><a href="#测试左移" class="headerlink" title="测试左移"></a>测试左移</h2><h2 id="测试右移"><a href="#测试右移" class="headerlink" title="测试右移"></a>测试右移</h2><h3 id="xmind关闭cloud服务"><a href="#xmind关闭cloud服务" class="headerlink" title="xmind关闭cloud服务"></a>xmind关闭cloud服务</h3><h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="需求到任务到用例的转化"><a href="#需求到任务到用例的转化" class="headerlink" title="需求到任务到用例的转化"></a>需求到任务到用例的转化</h2><h2 id="用例的编写"><a href="#用例的编写" class="headerlink" title="用例的编写"></a>用例的编写</h2><h3 id="点-》线-》面，用例精简tmq"><a href="#点-》线-》面，用例精简tmq" class="headerlink" title="点-》线-》面，用例精简tmq"></a>点-》线-》面，用例精简tmq</h3><h3 id="用例从概括到逐步细化"><a href="#用例从概括到逐步细化" class="headerlink" title="用例从概括到逐步细化"></a>用例从概括到逐步细化</h3><h2 id="把控版本构建"><a href="#把控版本构建" class="headerlink" title="把控版本构建"></a>把控版本构建</h2><h3 id="会用代码提交工具，查看提交代码内容，确定测试大致范围"><a href="#会用代码提交工具，查看提交代码内容，确定测试大致范围" class="headerlink" title="会用代码提交工具，查看提交代码内容，确定测试大致范围"></a>会用代码提交工具，查看提交代码内容，确定测试大致范围</h3><h3 id="持续集成工具的使用"><a href="#持续集成工具的使用" class="headerlink" title="持续集成工具的使用"></a>持续集成工具的使用</h3><h2 id="代码质量管理"><a href="#代码质量管理" class="headerlink" title="代码质量管理"></a>代码质量管理</h2><h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><h3 id="代码审核"><a href="#代码审核" class="headerlink" title="代码审核"></a>代码审核</h3><h3 id="sonarqube与sonarlint"><a href="#sonarqube与sonarlint" class="headerlink" title="sonarqube与sonarlint"></a>sonarqube与sonarlint</h3><h2 id="unit-test-与-BDD"><a href="#unit-test-与-BDD" class="headerlink" title="unit test 与 BDD"></a>unit test 与 BDD</h2><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/精准测试/">精准测试</a><a href="/tags/自动化测试/">自动化测试</a><a href="/tags/接口测试，测试左移，测试右移，测试用例，代码审核，代码规范，sonarqube/">接口测试，测试左移，测试右移，测试用例，代码审核，代码规范，sonarqube</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/测试/">测试</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2018/01/24/精准测试理解与总结/" data-title="精准测试理解与总结 | 腹黑兔的逆袭" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2018/01/23/PostMan使用总结/"  title="PostMan使用总结">
+ <strong>旧一篇:</strong><br/> 
+ <span>PostMan使用总结
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+    </div>
+    <footer><div id="footer" >
+	<div class="copyright">
+		<span>Powered by <a href="https://github.com/hexojs/hexo">Hexo</a> and theme by 
+		<a href="https://github.com/levonlin/Tinnypp">Tinnypp</a>.</span>
+		
+			<span>© xiaxiaho</span>
+		
+	<div>
+</div></footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  //back to top
+  function backToTop(){
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
+    buttonHTML.appendTo($("body"));
+    var buttonToTop = $("#back-top");
+    // hide #back-top first
+    buttonToTop.hide();
+
+    // fade in #back-top
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                buttonToTop.fadeIn();
+            } else {
+                buttonToTop.fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        buttonToTop.click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+  }
+  backToTop();
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      ta = $('#toc.toc-aside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+        
+    }
+  });
+
+  var show = true;
+  c.click(function(){
+    if(show == true){
+        a.addClass('fadeOut').css('display', 'none');
+        ta.css('display', 'block').addClass('fadeIn');
+        m.addClass('moveMain');  
+    }else{
+        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
+        ta.css('display', 'none'); 
+        m.removeClass('moveMain');
+        $('#toc.toc-aside').css('display', 'none');
+    }
+    show = !show;
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,240-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+<script type="text/javascript">
+  function footerPosition() {
+    var contentHeight = document.documentElement.scrollHeight,
+        winHeight = window.innerHeight;
+    if(contentHeight <= winHeight) {
+      $('footer').addClass('fixed-bottom');
+    } else {
+      $('footer').removeClass('fixed-bottom');
+    }
+  }
+  footerPosition();
+  $(window).resize(footerPosition);
+</script>
+
+
+  </body>
+</html>

@@ -10,7 +10,9 @@
     <meta name="author" content="xiaxiaho">
     
     <meta name="description" content="PostMan 方便了开发和测试进行接口测试，这里总结几个常见的使用方法。
-环境变量分组举个栗子测试的接口有get也有post，都是restful的接口。如下一个post接口的body参数：接口地址：http://192.168.1.1/sendPDF12345678910111213&amp;#123;&quot;">
+环境变量分组
+
+可以看到PostMan是支持变量分组的。这样可以开发、测试、生产环境的变量个分一个组，各组中都会用到相同的参数就可以放到全局变量里。举个栗子测试的接口有get也有post，都是restful的接口。如下一个p">
     
     
     
@@ -101,7 +103,9 @@ var _hmt = _hmt || [];
 		</div>
 		
 		<p>PostMan 方便了开发和测试进行接口测试，这里总结几个常见的使用方法。</p>
-<h1 id="环境变量分组"><a href="#环境变量分组" class="headerlink" title="环境变量分组"></a>环境变量分组</h1><p>举个栗子<br>测试的接口有get也有post，都是restful的接口。如下一个post接口的body参数：<br><em>接口地址：<a href="http://192.168.1.1/sendPDF" target="_blank" rel="external">http://192.168.1.1/sendPDF</a></em><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"systemId"</span>:<span class="string">"bb01"</span>,</div><div class="line"><span class="attr">"curTime"</span>:<span class="string">"1231231233"</span>,</div><div class="line"><span class="attr">"sign"</span>:<span class="string">"12312312313"</span>,</div><div class="line"><span class="attr">"fileInfoList"</span>:[</div><div class="line">&#123;</div><div class="line"><span class="attr">"fileId"</span>:<span class="string">"PostManTest001"</span>,</div><div class="line"><span class="attr">"creatorId"</span>:<span class="string">"li001"</span>,</div><div class="line"><span class="attr">"fileType"</span>:<span class="string">"002"</span>,</div><div class="line"><span class="attr">"fileName"</span>:<span class="string">"PostManTest001.pdf"</span>,</div><div class="line"><span class="attr">"fileData"</span>:<span class="string">"JVBERi0xLjMKJf////8KMSAwIG9iago8PCAvVGl0bGUgKENoYW5nZSB0aGUgTXlTUUwgVGVtcG9yYXJ5IEZpbGVzIERpcmVjdG9yeSkKL0NyZWF0b3IgKFByYXduIDEuMC4wKQovUHJvZHVjZXIgKFByYXduIDEuMC4wKQovQ3JlYXRpb25EYXRlIChEOjIwMTUxMDMwMTU1MzI0KzAxJzAwJykKL01vZERhdGUgKEQ6MjAxNTEwMzAxNTUzMjQrMDEnMDAnKQo..."</span>,</div><div class="line">&#125;]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="环境变量分组"><a href="#环境变量分组" class="headerlink" title="环境变量分组"></a>环境变量分组</h1><img src="/2018/01/23/PostMan使用总结/environment.png" alt="分组" title="分组">
+<img src="/2018/01/23/PostMan使用总结/环境变量2.png" alt="每组包含多个变量和值" title="每组包含多个变量和值">
+<p>可以看到PostMan是支持变量分组的。这样可以开发、测试、生产环境的变量个分一个组，各组中都会用到相同的参数就可以放到全局变量里。<br>举个栗子<br>测试的接口有get也有post，都是restful的接口。如下一个post接口的body参数：<br><em>接口地址：<a href="http://192.168.1.1/sendPDF" target="_blank" rel="external">http://192.168.1.1/sendPDF</a></em><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"systemId"</span>:<span class="string">"bb01"</span>,</div><div class="line"><span class="attr">"curTime"</span>:<span class="string">"1231231233"</span>,</div><div class="line"><span class="attr">"sign"</span>:<span class="string">"12312312313"</span>,</div><div class="line"><span class="attr">"fileInfoList"</span>:[</div><div class="line">&#123;</div><div class="line"><span class="attr">"fileId"</span>:<span class="string">"PostManTest001"</span>,</div><div class="line"><span class="attr">"creatorId"</span>:<span class="string">"li001"</span>,</div><div class="line"><span class="attr">"fileType"</span>:<span class="string">"002"</span>,</div><div class="line"><span class="attr">"fileName"</span>:<span class="string">"PostManTest001.pdf"</span>,</div><div class="line"><span class="attr">"fileData"</span>:<span class="string">"JVBERi0xLjMKJf////8KMSAwIG9iago8PCAvVGl0bGUgKENoYW5nZSB0aGUgTXlTUUwgVGVtcG9yYXJ5IEZpbGVzIERpcmVjdG9yeSkKL0NyZWF0b3IgKFByYXduIDEuMC4wKQovUHJvZHVjZXIgKFByYXduIDEuMC4wKQovQ3JlYXRpb25EYXRlIChEOjIwMTUxMDMwMTU1MzI0KzAxJzAwJykKL01vZERhdGUgKEQ6MjAxNTEwMzAxNTUzMjQrMDEnMDAnKQo..."</span>,</div><div class="line">&#125;]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <ul>
 <li>很明显这是一个发送PDF文件的接口。其中systemId不仅在这个接口，也出现在其他多个接口。在一次连续请求时，这个参数是要相同的，表明访问的系统id。将这个systemId的值用变量代替，可以在systemId变动时，不用每个接口的修改这个值。PostMan在参数使用变量的方法是双括号包裹变量名，比如。</li>
 <li><p>接口地址不同开发环境使用不同的IP，则可以用把接口地址加入变量：</p>
@@ -153,6 +157,14 @@ var _hmt = _hmt || [];
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2018/01/24/精准测试理解与总结/" title="精准测试理解与总结">
+  <strong>新一篇:</strong><br/>
+  <span>
+  精准测试理解与总结</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2017/03/09/原-Sahi-使用技巧4-iframe、下载文件、模态框、访问不了网页的处理/"  title="[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理">
