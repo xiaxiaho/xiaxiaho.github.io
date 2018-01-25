@@ -105,9 +105,18 @@ var _hmt = _hmt || [];
 <li>即使参与到需求评审，但是没有把控需求的可测试性</li>
 <li>版本构建快，无法把控版本构建</li>
 <li>测试不了解产品或项目内部流程，无法针对性的编写更有效、更精简的用例</li>
-<li>测试人力不足，版本迭代快速，无法进行全面的回归测试<h1 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h1><h2 id="测试左移"><a href="#测试左移" class="headerlink" title="测试左移"></a>测试左移</h2><h2 id="测试右移"><a href="#测试右移" class="headerlink" title="测试右移"></a>测试右移</h2><h3 id="xmind关闭cloud服务"><a href="#xmind关闭cloud服务" class="headerlink" title="xmind关闭cloud服务"></a>xmind关闭cloud服务</h3><h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="需求到任务到用例的转化"><a href="#需求到任务到用例的转化" class="headerlink" title="需求到任务到用例的转化"></a>需求到任务到用例的转化</h2><h2 id="用例的编写"><a href="#用例的编写" class="headerlink" title="用例的编写"></a>用例的编写</h2><h3 id="点-》线-》面，用例精简tmq"><a href="#点-》线-》面，用例精简tmq" class="headerlink" title="点-》线-》面，用例精简tmq"></a>点-》线-》面，用例精简tmq</h3><h3 id="用例从概括到逐步细化"><a href="#用例从概括到逐步细化" class="headerlink" title="用例从概括到逐步细化"></a>用例从概括到逐步细化</h3><h2 id="把控版本构建"><a href="#把控版本构建" class="headerlink" title="把控版本构建"></a>把控版本构建</h2><h3 id="会用代码提交工具，查看提交代码内容，确定测试大致范围"><a href="#会用代码提交工具，查看提交代码内容，确定测试大致范围" class="headerlink" title="会用代码提交工具，查看提交代码内容，确定测试大致范围"></a>会用代码提交工具，查看提交代码内容，确定测试大致范围</h3><h3 id="持续集成工具的使用"><a href="#持续集成工具的使用" class="headerlink" title="持续集成工具的使用"></a>持续集成工具的使用</h3><h2 id="代码质量管理"><a href="#代码质量管理" class="headerlink" title="代码质量管理"></a>代码质量管理</h2><h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><h3 id="代码审核"><a href="#代码审核" class="headerlink" title="代码审核"></a>代码审核</h3><h3 id="sonarqube与sonarlint"><a href="#sonarqube与sonarlint" class="headerlink" title="sonarqube与sonarlint"></a>sonarqube与sonarlint</h3><h2 id="unit-test-与-BDD"><a href="#unit-test-与-BDD" class="headerlink" title="unit test 与 BDD"></a>unit test 与 BDD</h2><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2></li>
+<li>测试人力不足，版本迭代快速，无法进行全面的回归测试<h1 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h1><a href="http://www.epubit.com.cn/article/1401" target="_blank" rel="external"></a><blockquote>
+<p>Laurent提出一个测试左移和右移的概念:</p>
+</blockquote>
+</li>
 </ul>
-  
+<blockquote>
+<p>测试左移，就是指在开发阶段之前定义测试。</p>
+<p>测试右移，就是直接在生产环境中监控，并且实时获取用户反馈。</p>
+</blockquote>
+<h2 id="测试左移"><a href="#测试左移" class="headerlink" title="测试左移"></a>测试左移</h2><h2 id="测试右移"><a href="#测试右移" class="headerlink" title="测试右移"></a>测试右移</h2><h3 id="xmind关闭cloud服务"><a href="#xmind关闭cloud服务" class="headerlink" title="xmind关闭cloud服务"></a>xmind关闭cloud服务</h3><h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="需求到任务到用例的转化"><a href="#需求到任务到用例的转化" class="headerlink" title="需求到任务到用例的转化"></a>需求到任务到用例的转化</h2><h2 id="用例的编写"><a href="#用例的编写" class="headerlink" title="用例的编写"></a>用例的编写</h2><p>敏捷开发，拥抱变化。需求的变化相较于传统模式越来越多，所以用例也需要跟着及时更新。为了提高编写用例的效率，使用一个好的用例管理平台比用Excel等工具要好。不管是给上级看到工作成果也好，还是方便其他测试接手也好，甚至评价分析测试用例覆盖率都是很有帮助的。<br>写用例采用一种由功能点到业务逻辑的方式。</p>
+<h3 id="点-》线-》面，用例精简tmq"><a href="#点-》线-》面，用例精简tmq" class="headerlink" title="点-》线-》面，用例精简tmq"></a>点-》线-》面，用例精简tmq</h3><h3 id="用例从概括到逐步细化"><a href="#用例从概括到逐步细化" class="headerlink" title="用例从概括到逐步细化"></a>用例从概括到逐步细化</h3><h2 id="把控版本构建"><a href="#把控版本构建" class="headerlink" title="把控版本构建"></a>把控版本构建</h2><h3 id="会用代码提交工具，查看提交代码内容，确定测试大致范围"><a href="#会用代码提交工具，查看提交代码内容，确定测试大致范围" class="headerlink" title="会用代码提交工具，查看提交代码内容，确定测试大致范围"></a>会用代码提交工具，查看提交代码内容，确定测试大致范围</h3><h3 id="持续集成工具的使用"><a href="#持续集成工具的使用" class="headerlink" title="持续集成工具的使用"></a>持续集成工具的使用</h3><h2 id="代码质量管理"><a href="#代码质量管理" class="headerlink" title="代码质量管理"></a>代码质量管理</h2><h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><p>代码可读性–结对的人更容易理解，自己更容易理解，更不容易出错，出错后更容易找到问题，出错后更愿意去找问题，更愿意去优化重构</p>
+<h3 id="代码审核"><a href="#代码审核" class="headerlink" title="代码审核"></a>代码审核</h3><h3 id="sonarqube与sonarlint"><a href="#sonarqube与sonarlint" class="headerlink" title="sonarqube与sonarlint"></a>sonarqube与sonarlint</h3><h2 id="unit-test-与-BDD"><a href="#unit-test-与-BDD" class="headerlink" title="unit test 与 BDD"></a>unit test 与 BDD</h2><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2>  
 	</div>
 		<footer class="article-footer clearfix">
 
