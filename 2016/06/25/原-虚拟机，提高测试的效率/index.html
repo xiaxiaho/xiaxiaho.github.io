@@ -1,106 +1,343 @@
+<!DOCTYPE html>
 
- <!DOCTYPE HTML>
-<html lang="zh-CN">
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8">
-  
-    <title>[原]虚拟机，提高测试的效率 | 腹黑兔的逆袭</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
-    
-    <meta name="author" content="xiaxiaho">
-    
-    <meta name="description" content="作为从事IT行业的人员，相信对于“虚拟机”这个词是再熟悉不过了。学会使用虚拟机对测试和生活都是许多好处的。这里的学会，不仅仅学会安装一个虚拟机的过程，而是更深入的把虚拟机应用到工作生活中去提高效率。
-技巧一：备份虚拟机镜像首先一点就是不要把时间花在重复安装虚拟系统上，而是应该备份常用的虚拟机系统，在">
-    
-    
-    
-    
-    <link rel="alternative" href="/Tinnypp/atom.xml" title="腹黑兔的逆袭" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/bitbug_favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/面露异常.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/面露异常.jpg">
-    
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
   
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="/css/style.css">
-    <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?d182ed77fc48758bf45a33835ee35745";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="作为从事IT行业的人员，相信对于“虚拟机”这个词是再熟悉不过了。学会使用虚拟机对测试和生活都是许多好处的。这里的学会，不仅仅学会安装一个虚拟机的过程，而是更深入的把虚拟机应用到工作生活中去提高效率。
+技巧一：备份虚拟机镜像首先一点就是不要把时间花在重复安装虚拟系统上，而是应该备份常用的虚拟机系统，在需要的时候立刻拿出来使用。比如说装好一个纯净版的win732位的系统，打固实压缩包备份，到用的时候立">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[原]虚拟机，提高测试的效率">
+<meta property="og:url" content="http://xiaxiaho.github.io/2016/06/25/原-虚拟机，提高测试的效率/index.html">
+<meta property="og:site_name" content="腹黑兔的逆袭">
+<meta property="og:description" content="作为从事IT行业的人员，相信对于“虚拟机”这个词是再熟悉不过了。学会使用虚拟机对测试和生活都是许多好处的。这里的学会，不仅仅学会安装一个虚拟机的过程，而是更深入的把虚拟机应用到工作生活中去提高效率。
+技巧一：备份虚拟机镜像首先一点就是不要把时间花在重复安装虚拟系统上，而是应该备份常用的虚拟机系统，在需要的时候立刻拿出来使用。比如说装好一个纯净版的win732位的系统，打固实压缩包备份，到用的时候立">
+<meta property="og:image" content="http://img.blog.csdn.net/20160626104939667">
+<meta property="og:image" content="http://img.blog.csdn.net/20160626105342731">
+<meta property="og:image" content="http://img.blog.csdn.net/20160626105431716">
+<meta property="og:image" content="http://img.blog.csdn.net/20160922223851367">
+<meta property="og:updated_time" content="2018-01-15T15:30:53.824Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[原]虚拟机，提高测试的效率">
+<meta name="twitter:description" content="作为从事IT行业的人员，相信对于“虚拟机”这个词是再熟悉不过了。学会使用虚拟机对测试和生活都是许多好处的。这里的学会，不仅仅学会安装一个虚拟机的过程，而是更深入的把虚拟机应用到工作生活中去提高效率。
+技巧一：备份虚拟机镜像首先一点就是不要把时间花在重复安装虚拟系统上，而是应该备份常用的虚拟机系统，在需要的时候立刻拿出来使用。比如说装好一个纯净版的win732位的系统，打固实压缩包备份，到用的时候立">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160626104939667">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
 </script>
 
-      <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
 
-  _st('install','.............Add your swiftype userID...............');
-</script>
+
+  <link rel="canonical" href="http://xiaxiaho.github.io/2016/06/25/原-虚拟机，提高测试的效率/"/>
+
+
+
+
+
+  <title>[原]虚拟机，提高测试的效率 | 腹黑兔的逆袭</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
-  <body>
-    <header>
-      <div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="腹黑兔的逆袭" title="腹黑兔的逆袭"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="腹黑兔的逆袭">腹黑兔的逆袭</a></h1>
-				<h2 class="blog-motto">talk is cheap show me the code</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-                    <ul>
-					 
-						<li><a href="/Tinnypp">首页</a></li>
-					
-						<li><a href="/Tinnypp/archives">归档</a></li>
-					
-					<li>
-					
-					</li>
-                <!--<li><div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div></li>-->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-				</ul>
-			</nav>	
-</div>
-    </header>
-    <div id="container" class="clearfix">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+  
+  
     
-      <a href="/2016/06/25/原-虚拟机，提高测试的效率/" title="[原]虚拟机，提高测试的效率" itemprop="url">[原]虚拟机，提高测试的效率</a>
-  </h1>
-  <p class="article-time">
-    <time datetime="2016-06-24T17:00:27.000Z" itemprop="datePublished">2016年 6月 25日</time>
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#技巧一：备份虚拟机镜像"><span class="toc-number">1.</span> <span class="toc-text">技巧一：备份虚拟机镜像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技巧二：同时运行多个虚拟机。"><span class="toc-number">2.</span> <span class="toc-text">技巧二：同时运行多个虚拟机。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技巧三：快照神器"><span class="toc-number">3.</span> <span class="toc-text">技巧三：快照神器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。"><span class="toc-number">3.1.</span> <span class="toc-text">一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。"><span class="toc-number">3.2.</span> <span class="toc-text">二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。"><span class="toc-number">3.3.</span> <span class="toc-text">三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。"><span class="toc-number">3.4.</span> <span class="toc-text">四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。</span></a></li></ol></li></ol>
-		</div>
-		
-		<p>作为从事IT行业的人员，相信对于“虚拟机”这个词是再熟悉不过了。学会使用虚拟机对测试和生活都是许多好处的。这里的学会，不仅仅学会安装一个虚拟机的过程，而是更深入的把虚拟机应用到工作生活中去提高效率。</p>
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">腹黑兔的逆袭</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">talk is cheap show me the code</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiaxiaho.github.io/2016/06/25/原-虚拟机，提高测试的效率/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiaxiaho">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="腹黑兔的逆袭">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">[原]虚拟机，提高测试的效率</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-25T01:00:27+08:00">
+                2016年 6月 25日
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,438
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>作为从事IT行业的人员，相信对于“虚拟机”这个词是再熟悉不过了。学会使用虚拟机对测试和生活都是许多好处的。这里的学会，不仅仅学会安装一个虚拟机的过程，而是更深入的把虚拟机应用到工作生活中去提高效率。</p>
 <h1 id="技巧一：备份虚拟机镜像"><a href="#技巧一：备份虚拟机镜像" class="headerlink" title="技巧一：备份虚拟机镜像"></a>技巧一：备份虚拟机镜像</h1><p>首先一点就是不要把时间花在重复安装虚拟系统上，而是应该备份常用的虚拟机系统，在需要的时候立刻拿出来使用。比如说装好一个纯净版的win732位的系统，打固实压缩包备份，到用的时候立刻解压缩就可以用。 为了方便windows平台下的兼容性测试，可以备份xp以及win7，win8，win10的32位系统和64位系统。不太建议使用微软官方的虚拟机，首先是官方的虚拟机镜像是英文版的，其次需要激活，还有就是比自己打的压缩包体积大很多 </p>
 <p><img src="http://img.blog.csdn.net/20160626104939667" alt="win732位虚拟机压缩包"></p>
 <h1 id="技巧二：同时运行多个虚拟机。"><a href="#技巧二：同时运行多个虚拟机。" class="headerlink" title="技巧二：同时运行多个虚拟机。"></a>技巧二：同时运行多个虚拟机。</h1><p>1.从这里就可以体现出虚拟机的优势来了。在同一台电脑上安装多系统固然是最真实的环境，但是无法同时运行多个系统的问题导致必须不断的重启进行系统的切换。发现一个测试用例在这个系统测过，那个系统没测过，重启；突然想到一个没有覆盖到的测试用例，在这个系统测完后重启；发现需要重复确认这个用例在那个系统运行的效果，重启。。。问题会很多，效率自然就不高。用虚拟机进行兼容性测试，多系统同时运行，不用重启主机系统，虽然虚拟机模拟的不是最真实的，但是可以说，在虚拟机里发现的缺陷，在主机环境下同样会出现。所以用虚拟机做测试已经可以尽可能的模拟真实环境了。这样便可以大大提高测试效率。有人会说，内存够用么。这里就要合理设置虚拟机的内存占用。xp给个512M，win7的32位给个1G，win10的64位给个2G，加上宿主机的占用，8G内存的机器是够用的。系统的瓶颈会出现在磁盘而不是内存，但是固态硬盘和组raid基本不会出现在公司的办公主机里，所以只能呵呵了。</p>
@@ -114,225 +351,439 @@ var _hmt = _hmt || [];
 <h2 id="一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。"><a href="#一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。" class="headerlink" title="一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。"></a>一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。</h2><h2 id="二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。"><a href="#二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。" class="headerlink" title="二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。"></a>二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。</h2><p><img src="http://img.blog.csdn.net/20160626105431716" alt="这里写图片描述"></p>
 <h2 id="三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。"><a href="#三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。" class="headerlink" title="三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。"></a>三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。</h2><h2 id="四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。"><a href="#四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。" class="headerlink" title="四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。"></a>四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。</h2><p><img src="http://img.blog.csdn.net/20160922223851367" alt="这里写图片描述"> </p>
 <p>总结：虚拟机很好，赶快安装使用：）好吧，这么草率的结尾，是因为我现在已经很困了-o-</p>
-<div>作者：baidu_29649941发表于2016/6/25 1:00:27<a href="http://blog.csdn.net/baidu_29649941/article/details/51550194" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：1152评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/51550194#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>  
-	</div>
-		<footer class="article-footer clearfix">
+<div>作者：baidu_29649941发表于2016/6/25 1:00:27<a href="http://blog.csdn.net/baidu_29649941/article/details/51550194" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：1152评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/51550194#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果觉得文章不错，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="xiaxiaho 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="xiaxiaho 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    xiaxiaho
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://xiaxiaho.github.io/2016/06/25/原-虚拟机，提高测试的效率/" title="[原]虚拟机，提高测试的效率">http://xiaxiaho.github.io/2016/06/25/原-虚拟机，提高测试的效率/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="external nofollow" target="_blank">知识共享署名-相同方式共享 4.0 国际许可协议</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/03/原-Sahi简单excel测试框架/" rel="next" title="[原]Sahi简单excel测试框架">
+                <i class="fa fa-chevron-left"></i> [原]Sahi简单excel测试框架
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/26/原-基于sahi的UI自动化测试框架/" rel="prev" title="[原]基于sahi的UI自动化测试框架">
+                [原]基于sahi的UI自动化测试框架 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-
-<div class="article-share" id="share">
-
-  <div data-url="http://yoursite.com/2016/06/25/原-虚拟机，提高测试的效率/" data-title="[原]虚拟机，提高测试的效率 | 腹黑兔的逆袭" data-tsina="null" class="share clearfix">
+    <div class="post-spread">
+      
+    </div>
   </div>
 
-</div>
-</footer>   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2016/06/26/原-基于sahi的UI自动化测试框架/" title="[原]基于sahi的UI自动化测试框架">
-  <strong>新一篇:</strong><br/>
-  <span>
-  [原]基于sahi的UI自动化测试框架</span>
-</a>
-</div>
+
+          </div>
+          
 
 
-<div class="next">
-<a href="/2015/12/03/原-Sahi简单excel测试框架/"  title="[原]Sahi简单excel测试框架">
- <strong>旧一篇:</strong><br/> 
- <span>[原]Sahi简单excel测试框架
-</span>
-</a>
-</div>
+          
 
-</nav>
+  
 
-	
 
-</div>  
-    </div>
-    <footer><div id="footer" >
-	<div class="copyright">
-		<span>Powered by <a href="https://github.com/hexojs/hexo">Hexo</a> and theme by 
-		<a href="https://github.com/levonlin/Tinnypp">Tinnypp</a>.</span>
-		
-			<span>© xiaxiaho</span>
-		
-	<div>
-</div></footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  //back to top
-  function backToTop(){
-    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
-    buttonHTML.appendTo($("body"));
-    var buttonToTop = $("#back-top");
-    // hide #back-top first
-    buttonToTop.hide();
 
-    // fade in #back-top
-    $(function() {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 200) {
-                buttonToTop.fadeIn();
-            } else {
-                buttonToTop.fadeOut();
-            }
-        });
-        // scroll body to 0px on click
-        buttonToTop.click(function() {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 800);
-            return false;
-        });
-    });
-  }
-  backToTop();
-
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      ta = $('#toc.toc-aside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
+        </div>
         
-    }
-  });
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
 
-  var show = true;
-  c.click(function(){
-    if(show == true){
-        a.addClass('fadeOut').css('display', 'none');
-        ta.css('display', 'block').addClass('fadeIn');
-        m.addClass('moveMain');  
-    }else{
-        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
-        ta.css('display', 'none'); 
-        m.removeClass('moveMain');
-        $('#toc.toc-aside').css('display', 'none');
-    }
-    show = !show;
-  });
-});
-</script>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">xiaxiaho</p>
+              <p class="site-description motion-element" itemprop="description">w</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧一：备份虚拟机镜像"><span class="nav-number">1.</span> <span class="nav-text">技巧一：备份虚拟机镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧二：同时运行多个虚拟机。"><span class="nav-number">2.</span> <span class="nav-text">技巧二：同时运行多个虚拟机。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧三：快照神器"><span class="nav-number">3.</span> <span class="nav-text">技巧三：快照神器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。"><span class="nav-number">3.1.</span> <span class="nav-text">一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。"><span class="nav-number">3.2.</span> <span class="nav-text">二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。"><span class="nav-number">3.3.</span> <span class="nav-text">三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。"><span class="nav-number">3.4.</span> <span class="nav-text">四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiaxiaho</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
 
 <script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,240-$(this).scrollTop()));
-    });
-  };
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
-</script>
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
   }
-}); 
-</script>
-
-<script type="text/javascript">
-  function footerPosition() {
-    var contentHeight = document.documentElement.scrollHeight,
-        winHeight = window.innerHeight;
-    if(contentHeight <= winHeight) {
-      $('footer').addClass('fixed-bottom');
-    } else {
-      $('footer').removeClass('fixed-bottom');
-    }
-  }
-  footerPosition();
-  $(window).resize(footerPosition);
 </script>
 
 
-  </body>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
 </html>
