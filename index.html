@@ -316,7 +316,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,615
+                  1,951
                 </span>
               
 
@@ -332,7 +332,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  7
                 </span>
               
             </div>
@@ -361,28 +361,25 @@
 <li>即使参与到需求评审，但是没有把控需求的可测试性</li>
 <li>版本构建快，无法把控版本构建</li>
 <li>测试不了解产品或项目内部流程，无法针对性的编写更有效、更精简的用例</li>
-<li>测试人力不足，版本迭代快速，无法进行全面的回归测试<h1 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h1>测试左移、测试右移的概念可以参见<a href="http://www.epubit.com.cn/article/1401" target="_blank" rel="external">项目实施DevOps时，我们是如何做测试的</a><blockquote>
-<p>Laurent提出一个测试左移和右移的概念:</p>
-</blockquote>
-</li>
+<li>测试人力不足，版本迭代快速，无法进行全面的回归测试</li>
 </ul>
+<h1 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h1><p>测试左移、测试右移的概念可以参见<a href="http://www.epubit.com.cn/article/1401" target="_blank" rel="external">项目实施DevOps时，我们是如何做测试的</a></p>
 <blockquote>
+<p>Laurent提出一个测试左移和右移的概念:</p>
 <p>测试左移，就是指在开发阶段之前定义测试。</p>
 <p>测试右移，就是直接在生产环境中监控，并且实时获取用户反馈。</p>
-<h2 id="测试左移"><a href="#测试左移" class="headerlink" title="测试左移"></a>测试左移</h2><h2 id="测试右移"><a href="#测试右移" class="headerlink" title="测试右移"></a>测试右移</h2><h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="需求到任务到用例的转化"><a href="#需求到任务到用例的转化" class="headerlink" title="需求到任务到用例的转化"></a>需求到任务到用例的转化</h2><h2 id="用例的编写"><a href="#用例的编写" class="headerlink" title="用例的编写"></a>用例的编写</h2><p>敏捷开发，拥抱变化。需求的变化相较于传统模式越来越多，所以用例也需要跟着及时更新。为了提高编写用例的效率，使用一个好的用例管理平台比用Excel等工具要好。不管是给上级看到工作成果也好，还是方便其他测试接手也好，甚至评价分析测试用例覆盖率都是很有帮助的。<br>写用例采用一种由功能点到业务逻辑的方式。已添加用户weili2，少不了登录，数据查询等。</p>
-<h3 id="点-》线-》面，用例精简tmq"><a href="#点-》线-》面，用例精简tmq" class="headerlink" title="点-》线-》面，用例精简tmq"></a>点-》线-》面，用例精简tmq</h3><h3 id="用例从概括到逐步细化"><a href="#用例从概括到逐步细化" class="headerlink" title="用例从概括到逐步细化"></a>用例从概括到逐步细化</h3><h2 id="把控版本构建"><a href="#把控版本构建" class="headerlink" title="把控版本构建"></a>把控版本构建</h2><h3 id="会用代码提交工具，查看提交代码内容，确定测试大致范围"><a href="#会用代码提交工具，查看提交代码内容，确定测试大致范围" class="headerlink" title="会用代码提交工具，查看提交代码内容，确定测试大致范围"></a>会用代码提交工具，查看提交代码内容，确定测试大致范围</h3><p>每次构建或者部署一个测试版本，仅针对修改的部分做测试而不是做回归测试。可以通过查看开发提交记录确定提交的代码是不是都在RealseNote上体现了，还是会“夹杂一些私活”，最后没有测试到。对于SCM是git的，可以使用sourcetree这个代码查看提交工具。sourcetree也是支持查看SVN的。掌握了代码提交工具的使用，可以查看提交代码的内容。可以通过查看提交的描述判断这次提交修改的部分是那些功能。大部分后台服务都是用Java编写的。而后台Java服务大都遵循MVC分层。所以代码文件的名字的后缀来判断这次提交修改的部分是那些功能。<br><strong>Util.java 工具类 
-</strong>service.java 相对具体的业务逻辑服务层类<br><strong>manager.java 通用业务处理层类 
-</strong>controller.java 控制器类，对访问控制进行转发<br><strong>DAO.java 数据访问层类
-</strong>Model.java model类<br>–<strong>view view类<br><em>.properties 配置文件
-</em>.xml 配置文件<br>大部分服务也会遵循分层领域模型。
-</strong>DO.java（Data Object）：与数据库表结构一一对应，通过DAO层向上传输数据源对象。<br><strong>DTO.java（Data Transfer Object）：数据传输对象，Service和Manager向外传输的对象。
-</strong>BO.java（Business Object）：业务对象。可以由Service层输出的封装业务逻辑的对象。<br><strong>QUERY：数据查询对象，各层接收上层的查询请求。注：超过2个参数的查询封装，禁止使用Map类来传输。
-</strong>VO.java（View Object）：显示层对象，通常是Web向模板渲染引擎层传输的对象。<br>**表示省略的具体的类名。比如LoginController.java。可以知道这个控制器是用来负责处理登录业务。</p>
+</blockquote>
+<hr>
+<h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="需求到任务到用例的转化"><a href="#需求到任务到用例的转化" class="headerlink" title="需求到任务到用例的转化"></a>需求到任务到用例的转化</h2><h2 id="用例的编写"><a href="#用例的编写" class="headerlink" title="用例的编写"></a>用例的编写</h2><h3 id="用例从概括到逐步细化"><a href="#用例从概括到逐步细化" class="headerlink" title="用例从概括到逐步细化"></a>用例从概括到逐步细化</h3><p>刚有需求但没有原型设计，或者需求不明确，用例往往是没法写具体的。所以这时候可以先概括的写，甚至就是把需求描述的功能点写到用例。当设计出来，需求不断明确后，用例就可以逐步细化。就像画画，先勾勒一个轮廓，然后逐渐画细节。<br>敏捷开发，拥抱变化。需求的变化相较于传统模式越来越多，所以用例也需要跟着及时更新。为了提高编写用例的效率，使用一个好的用例管理平台比用Excel等工具要好。不管是给上级看到工作成果也好，还是方便其他测试接手也好，甚至评价分析测试用例覆盖率都是很有帮助的。</p>
+<h3 id="点-》线-》面，用例精简tmq"><a href="#点-》线-》面，用例精简tmq" class="headerlink" title="点-》线-》面，用例精简tmq"></a>点-》线-》面，用例精简tmq</h3><p>写用例采用一种点-》线-》面的方式。以添加用户为例。添加用户这是一个功能点。点击添加用户按钮，输入用户信息，点击确定，提示添加成功。这个功能看似流程走完了，其实不能保证所有数据入库正确。这时加入一个功能点，查询用户。查询该用户，在查询结果看不到刚添加的用户，可能是添加用户功能出现了问题。如果查询到用户，用户记录也显示正确了，但同样不能保证所有数据入库正确了。这时再加入用户登录功能点。如果登录不了，或者登录后用户数据显示与添加时不符，还有可能是添加用户时出现的问题。所以功能点不是孤立的，应该用业务串起来，这就是线。如果在添加用户时，设置该用户是用户A的好友。则添加用户成功后，还要登录用户A，查看用户A的好友列表是否有该用户。这就是在添加用户后的另一条分支，也可以说是另一条线。每个业务逻辑会产生多条线，线越来越多，就形成了面。</p>
+<h2 id="把控版本构建"><a href="#把控版本构建" class="headerlink" title="把控版本构建"></a>把控版本构建</h2><h3 id="会用代码提交工具，查看提交代码内容，确定测试大致范围"><a href="#会用代码提交工具，查看提交代码内容，确定测试大致范围" class="headerlink" title="会用代码提交工具，查看提交代码内容，确定测试大致范围"></a>会用代码提交工具，查看提交代码内容，确定测试大致范围</h3><p>每次构建或者部署一个测试版本，仅针对修改的部分做测试而不是做回归测试。可以通过查看开发提交记录确定提交的代码是不是都在ReleaseNote上体现了，还是会“夹杂一些私活”，最后没有测试到。对于SCM是git或者SVN的，可以使用sourcetree这个代码查看提交工具。掌握了代码提交工具的使用，可以查看提交代码的内容。可以通过查看提交的描述判断这次提交修改的部分是那些功能。大部分后台服务都是用Java编写的。而后台Java服务大都遵循MVC分层。所以代码文件的名字的后缀来判断这次提交修改的部分是那些功能。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">**Util.java 工具类 </div><div class="line">**service.java 相对具体的业务逻辑服务层类 </div><div class="line">**manager.java 通用业务处理层类 </div><div class="line">**controller.java 控制器类，对访问控制进行转发</div><div class="line">**DAO.java 数据访问层类</div><div class="line">**Model.java model类 </div><div class="line">*.properties 配置文件</div><div class="line">*.xml 配置文件</div></pre></td></tr></table></figure></p>
+<p>大部分服务也会遵循分层领域模型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">**DO.java（Data Object）：与数据库表结构一一对应，通过DAO层向上传输数据源对象。</div><div class="line">**DTO.java（Data Transfer Object）：数据传输对象，Service和Manager向外传输的对象。</div><div class="line">**BO.java（Business Object）：业务对象。可以由Service层输出的封装业务逻辑的对象。</div><div class="line">**VO.java（View Object）：显示层对象，通常是Web向模板渲染引擎层传输的对象。</div></pre></td></tr></table></figure>
+<p>**表示省略的具体的类名。比如LoginController.java。可以知道这个控制器是用来负责处理登录业务。</p>
 <h3 id="持续集成工具的使用"><a href="#持续集成工具的使用" class="headerlink" title="持续集成工具的使用"></a>持续集成工具的使用</h3><p>持续集成环境的搭建可能我们不关心，但是使用应该是要了解一下的。如果持续集成环境的构建不是无中断的，就是说，构建时服务可能会有短暂时间的不可访问，这取决于测试环境架构或部署脚本的编写。比如突然访问不了测试环境，以为环境出了问题，其实也许只是开发在重新构建测试服务应用。了解了CI工具的使用，可以尽快确定是构建导致的访问不了还是真的出了问题。建议在测试环境由测试人员负责点击构建的工作，一方面可以了解构建时整个CI工具做了那些工作，构建时出了问题也可以及时看到。另一方面可以把控版本的构建，在必要的时候进行控制。比如在确定开发确实提交了相关修改时，再做构建，毕竟提交代码也是会花费一定时间的，而构建一次会花更多的时间，所以尽量减少无意义的构建。</p>
 <h2 id="代码质量管理"><a href="#代码质量管理" class="headerlink" title="代码质量管理"></a>代码质量管理</h2><h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><p>很多公司可能不太注意代码规范。但是代码规范与产品代码质量有着直接的关系。代码规范最重要的一点是代码的可读性–结对的人更容易理解，自己更容易理解，更不容易出错，出错后更容易找到问题，出错后更愿意去找问题，更愿意去优化重构</p>
 <h3 id="代码审核"><a href="#代码审核" class="headerlink" title="代码审核"></a>代码审核</h3><h3 id="sonarqube与sonarlint"><a href="#sonarqube与sonarlint" class="headerlink" title="sonarqube与sonarlint"></a>sonarqube与sonarlint</h3><p>逻辑语句的嵌套（if while）</p>
-<h2 id="unit-test-与-BDD"><a href="#unit-test-与-BDD" class="headerlink" title="unit test 与 BDD"></a>unit test 与 BDD</h2><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2></blockquote>
-
+<h2 id="unit-test-与-BDD"><a href="#unit-test-与-BDD" class="headerlink" title="unit test 与 BDD"></a>unit test 与 BDD</h2><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2>
           
         
       
