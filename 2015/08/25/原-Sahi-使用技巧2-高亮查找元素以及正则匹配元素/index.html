@@ -89,7 +89,7 @@
 使用sahi也有一段时间了，把自己使用时遇">
 <meta property="og:image" content="http://img.blog.csdn.net/20150825212813356">
 <meta property="og:image" content="http://img.blog.csdn.net/20150825212843076">
-<meta property="og:updated_time" content="2018-01-17T14:54:34.224Z">
+<meta property="og:updated_time" content="2018-02-02T16:15:46.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[原]Sahi 使用技巧2-高亮查找元素以及正则匹配元素">
 <meta name="twitter:description" content="Sahi 使用技巧2-高亮查找元素以及正则匹配元素Sahi作为一个开源的 Web UI 自动化测试框架，在中国软件测试行业不是很流行。尽管它的知名度不及开源的 Selenium和收费的quicktest pro，用户群也不大（貌似国外的测试人员用的更多），但是有着它的优势，比如基于上下文的页面元素识别机制和隐式页面加载响应等待机制等，具体细节可以看这里。
@@ -418,8 +418,7 @@
       
         <h1 id="Sahi-使用技巧2-高亮查找元素以及正则匹配元素"><a href="#Sahi-使用技巧2-高亮查找元素以及正则匹配元素" class="headerlink" title="Sahi 使用技巧2-高亮查找元素以及正则匹配元素"></a>Sahi 使用技巧2-高亮查找元素以及正则匹配元素</h1><p>Sahi作为一个开源的 Web UI 自动化测试框架，在中国软件测试行业不是很流行。尽管它的知名度不及开源的 Selenium和收费的quicktest pro，用户群也不大（貌似国外的测试人员用的更多），但是有着它的优势，比如基于上下文的页面元素识别机制和隐式页面加载响应等待机制等，具体细节可以看<a href="http://www.ibm.com/developerworks/cn/web/1403_yangxb_sahi/" target="_blank" rel="external">这里</a>。</p>
 <p>使用sahi也有一段时间了，把自己使用时遇到的问题和使用心得记录一下想必也是极好的。</p>
-<p>刚开始使用sahi时，觉得sahi好神奇，可以录制脚本然后回放。后来慢慢熟悉sahi后，简单的录制脚本已经不能满足我的要求，所以不得不开始自己写脚本。这里就会遇到一个问题：如何灵活的编写sahi的脚本，让脚本可以在页面发生微小调整后不会因为找不到标签元素而失效。</p>
-<p>正是sahi基于上下文的页面元素识别机制，可以使用_near、_in、_under、_above等api来让sahi灵活的找到目标元素，同时sahi api 规定identifier是支持正则表达式的，这也大大地增加了识别灵活性。如图1，假设想要确定存在且仅存在一条项目名称为123的记录，但是实际上因为各种原因是存在项目名称一样的另一条记录而且该记录在页面也是可见的，如果只是判断存在cell(“123”)就会出现问题。这时如果在同一个表格里，用_near就不是很好的选择，sahi会找到最先出现的cell(“123”)，仍然无法保证唯一确定。用_leftOf把结束日期带进来</p>
+<p>刚开始使用sahi时，觉得sahi好神奇，可以录制脚本然后回放。后来慢慢熟悉sahi后，简单的录制脚本已经不能满足我的要求，所以不得不开始自己写脚本。这里就会遇到一个问题：如何灵活的编写sahi的脚本，让脚本可以在页面发生微小调整后不会因为找不到标签元素而失效。<br><a id="more"></a><br>正是sahi基于上下文的页面元素识别机制，可以使用_near、_in、_under、_above等api来让sahi灵活的找到目标元素，同时sahi api 规定identifier是支持正则表达式的，这也大大地增加了识别灵活性。如图1，假设想要确定存在且仅存在一条项目名称为123的记录，但是实际上因为各种原因是存在项目名称一样的另一条记录而且该记录在页面也是可见的，如果只是判断存在cell(“123”)就会出现问题。这时如果在同一个表格里，用_near就不是很好的选择，sahi会找到最先出现的cell(“123”)，仍然无法保证唯一确定。用_leftOf把结束日期带进来</p>
 <p><code>_cell(&quot;123&quot;,_leftOf(_cell(&quot;2015-09-24&quot;)))</code></p>
 <p>这样确实可以唯一确定目标cell，但是代价是更复杂的脚本编写和逻辑判断，如果这两个cell仍然不能唯一确定要找的记录，是不是还要加第三个、第四个。。。后来我发现原来可以利用_row来判断整行</p>
 <p><code>_row(&quot;123 2015-09-24 未开始 0 0 0 0%&quot;)</code></p>

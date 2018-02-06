@@ -100,7 +100,7 @@ session隔离的妙用我们知道，一个浏览器的多个页面是共享se">
 <meta property="og:image" content="http://img.blog.csdn.net/20170309223523416?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170309215354256?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170309215528178?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2018-01-17T15:06:49.701Z">
+<meta property="og:updated_time" content="2018-02-02T16:16:02.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[原]Sahi 使用技巧4-iframe、下载文件、模态框、访问不了网页的处理">
 <meta name="twitter:description" content="这里总结了几个Sahi使用中可能经常遇到的问题
@@ -434,6 +434,7 @@ session隔离的妙用我们知道，一个浏览器的多个页面是共享se">
 <hr>
 <h1 id="session隔离的妙用"><a href="#session隔离的妙用" class="headerlink" title="session隔离的妙用"></a>session隔离的妙用</h1><p>我们知道，一个浏览器的多个页面是共享session，一旦登录一个账号，之前登录的账号就会被替代。而通过Sahi的dashboard打开的浏览器，session是隔离的。也就是说可以通过Sahi用不同的账号登录同一个被测网站，这对我们测试不同角色账户的权限操作、交易统计等会大有益处，再也不用频繁的登录注销了。</p>
 <hr>
+<a id="more"></a>
 <h1 id="如何进行浏览器类型配置"><a href="#如何进行浏览器类型配置" class="headerlink" title="如何进行浏览器类型配置"></a>如何进行浏览器类型配置</h1><p>Sahi可以通过配置来支持对不同的浏览器代理。</p>
 <p><img src="http://img.blog.csdn.net/20170309225800457?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="增加或修改浏览器类型设置"></p>
 <p>在浏览器类型里给出了一些浏览器的默认配置，可根据实际浏览器安装路径配置路径，配置的路径（path）一定要正确，否则在dashboard里不会显示对应浏览器的图标。配置文件里的 options的值最好不要修改，否则可能会出一些问题。</p>

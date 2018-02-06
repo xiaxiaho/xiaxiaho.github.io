@@ -408,38 +408,17 @@
 
       
         
-          
-            <p>Sahi os<span style="font-family:'宋体';">版本是没有专门的代码编辑器的（</span><span style="font-family:'Times New Roman';">sahi pro</span><span style="font-family:'宋体';">是有的）。所以这就需要自己找到一个<span style="color:#33ffff;background-color:#ffffff;">高效的编辑器</span>。我曾经傻傻的使用</span><span style="font-family:'Times New Roman';">notepad++</span><span style="font-family:'宋体';">直接编写脚本，后果可想而知的，效率低，脚本出错后调试花的时间比较多。尤其是遇到语法错误，比如多或者少一个括号都会导致</span><span style="font-family:'Times New Roman';">sahi</span><span style="font-family:'宋体';">的解释器通不过，最后还要在日志里查看报错原因，甚是苦恼。</span></p>
+          <p>Sahi os<span style="font-family:'宋体';">版本是没有专门的代码编辑器的（</span><span style="font-family:'Times New Roman';">sahi pro</span><span style="font-family:'宋体';">是有的）。所以这就需要自己找到一个<span style="color:#33ffff;background-color:#ffffff;">高效的编辑器</span>。我曾经傻傻的使用</span><span style="font-family:'Times New Roman';">notepad++</span><span style="font-family:'宋体';">直接编写脚本，后果可想而知的，效率低，脚本出错后调试花的时间比较多。尤其是遇到语法错误，比如多或者少一个括号都会导致</span><span style="font-family:'Times New Roman';">sahi</span><span style="font-family:'宋体';">的解释器通不过，最后还要在日志里查看报错原因，甚是苦恼。</span></p>
 <p>经过一段时间的实践，目前发现有两个思路来提高写脚本的效率，但都不是很完美，或多或少达不到我心目中用<span style="font-family:'Times New Roman';">eclipse</span><span style="font-family:'宋体';">写</span><span style="font-family:'Times New Roman';">java</span><span style="font-family:'宋体';">代码时的要求，但是也在这里小小的说明一下。</span></p>
 <p>方法一：<span style="font-family:'Times New Roman';">notepad++ + sahi </span><span style="font-family:'宋体';">官方提供的辅助文件</span></p>
-<p>这个方法在官网上有详细的说明：</p>
-<p><span style="background-color:#99ff99;">To configure Notepad++ with Sahi, please do the following,<br></span>想要配置适用于<span style="font-family:'Times New Roman';">sahi</span><span style="font-family:'宋体';">的</span><span style="font-family:'Times New Roman';">notepad++</span><span style="font-family:'宋体';">，请按照以下操作，</span><br><span style="background-color:#99ff99;">For Autocomplete:<br></span>对于自动补全：<br><span style="background-color:#99ff99;">Copy &lt;SAHI_INSTALLED_DIRECTORY&gt;\editors\notepad++\plugin\APIs\sahi.xml to &lt;Notepad++_Installed_Directory&gt;\plugins\APIs</span></p>
-<p>复制<span style="font-family:'Times New Roman';">&lt;sahi</span><span style="font-family:'宋体';">安装的根目录</span><span style="font-family:'Times New Roman';">&gt;</span>\editors\notepad++\plugin\APIs\sahi.xml <span style="font-family:'宋体';">到</span><span style="font-family:'Times New Roman';"> </span>&lt;Notepad++安装的根目录&gt;\plugins\APIs</p>
-<p>但是这样依旧没法满足我这种强迫症人群，写的脚本不能格式化是非常闹心的。看着凌乱的脚本，我的内心其实是崩溃的。怎么办呢？这里就可以使用<span style="font-family:'Times New Roman';">JavaScript</span><span style="font-family:'宋体';">的格式化功能了。</span><span style="font-family:'Times New Roman';">sahi</span><span style="font-family:'宋体';">的脚本其实就是在</span><span style="font-family:'Times New Roman';">JavaScript</span><span style="font-family:'宋体';">的基础上增加了自己的</span><span style="font-family:'Times New Roman';">api</span><span style="font-family:'宋体';">，还有自己定义变量的方法，在</span><span style="font-family:'Times New Roman';">.sah</span><span style="font-family:'宋体';">的文件里依旧是可以使用</span><span style="font-family:'Times New Roman';">JavaScript</span><span style="font-family:'宋体';">里的方法，因为</span><span style="font-family:'Times New Roman';">sahi</span><span style="font-family:'宋体';">的脚本解析器就是</span><span style="color:#222222;background:rgb(255,255,255);">rhino JavaScript </span><span style="color:#222222;background:rgb(255,255,255);">引擎，自己</span><span style="color:#222222;background:rgb(255,255,255);">api<span style="font-family:'宋体';">和</span><span style="font-family:Arial;">JavaScript</span><span style="font-family:'宋体';">的</span><span style="font-family:Arial;">api</span><span style="font-family:'宋体';">都可以有效执行。那我们是不是可以用</span><span style="font-family:Arial;">notepad++</span><span style="font-family:'宋体';">上格式化</span><span style="font-family:Arial;">JavaScript</span><span style="font-family:'宋体';">的插件来格式化</span><span style="font-family:Arial;">.sah</span><span style="font-family:'宋体';">文件呢？答案是可以的。</span></span></p>
-<p><span style="color:#222222;background:rgb(255,255,255);">在<span style="font-family:Arial;">notepad++</span><span style="font-family:'宋体';">上安装</span><span style="font-family:Arial;">js</span><span style="font-family:'宋体';">插件：</span></span></p>
-<p>导航到插件<span style="font-family:'Times New Roman';">-&gt;Plugin Manager-&gt;Show Plugin Manager</span></p>
-<p> <img src="http://img.blog.csdn.net/20150828225153088?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>打开Plugin Manager<span style="font-family:'宋体';">后，在</span><span style="font-family:'Times New Roman';">Available</span><span style="font-family:'宋体';">找到</span><span style="font-family:'Times New Roman';">JSTool</span><span style="font-family:'宋体';">，勾选，点</span><span style="font-family:'Times New Roman';">Install</span></p>
-<p> <img src="http://img.blog.csdn.net/20150828225219084?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>安装前会先下载这个插件</p>
-<p> <img src="http://img.blog.csdn.net/20150828225258520?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>安装完插件后提醒要重启notepad++<span style="font-family:'宋体';">，点击是重启</span><span style="font-family:'Times New Roman';">notepad++</span></p>
-<p> <img src="http://img.blog.csdn.net/20150828225319078?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>重启后，就可以看到在插件里有JSTool<span style="font-family:'宋体';">，里面有</span><span style="font-family:'Times New Roman';">JSFormat</span><span style="font-family:'宋体';">对应的快捷键</span><span style="font-family:'Times New Roman';">Ctrl+Alt+M</span></p>
-<p> <img src="http://img.blog.csdn.net/20150828225329077?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>在notepad++打开需要编辑的脚本文件，然后在语言里选择JavaScript</p>
-<p> <img src="http://img.blog.csdn.net/20150828225514448?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>这时候脚本就可以用快捷键格式化了</p>
-<p> <img src="http://img.blog.csdn.net/20150828225536063?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>但是在<span style="font-family:'Times New Roman';">JavaScript</span><span style="font-family:'宋体';">的语言风格下，</span><span style="font-family:'Times New Roman';">sahi</span><span style="font-family:'宋体';">自己的</span><span style="font-family:'Times New Roman';">api</span><span style="font-family:'宋体';">是不会自动补全的。所以我们修改一下</span><span style="font-family:'Times New Roman';">notepad++</span><span style="font-family:'宋体';">对应的</span><span style="font-family:'Times New Roman';">JavaScript</span><span style="font-family:'宋体';">的配置文件，把</span><span style="font-family:'Times New Roman';">sahi</span><span style="font-family:'宋体';">里的关键字添加到</span><span style="font-family:'Times New Roman';">JavaScript</span><span style="font-family:'宋体';">的配置文件里。在</span><span style="font-family:'Times New Roman';"> </span>&lt;Notepad++安装的根目录&gt;\plugins\APIs目录下找到<span style="font-family:'Times New Roman';">sahi.xml</span><span style="font-family:'宋体';">打开，复制里面所有的</span><span style="font-family:'Times New Roman';">&lt;KeyWord &gt;</span><span style="font-family:'宋体';">关键字</span></p>
-<p> <img src="http://img.blog.csdn.net/20150828225608054?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>在同样的文件夹里找到<span style="font-family:'Times New Roman';">javascript.xml</span><span style="font-family:'宋体';">打开，在对应的位置把复制的关键字黏贴上去，保存后重启</span><span style="font-family:'Times New Roman';">notepad++</span></p>
-<p> <img src="http://img.blog.csdn.net/20150828225623171?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<p>这个时候输入sahi api<span style="font-family:'宋体';">后，就可以自动补全了</span></p>
-<p> <img src="http://img.blog.csdn.net/20150828225653157?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
-<div>作者：baidu_29649941发表于2015/8/28 20:41:01<a href="http://blog.csdn.net/baidu_29649941/article/details/48057593" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：1015评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/48057593#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-
-          
+<p>这个方法在官网上有详细的说明：<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/08/28/原-Sahi-使用技巧3-快速编写Sahi脚本（1）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -609,15 +588,16 @@
 
       
         
-          
-            <h2 id="Sahi-使用技巧1-使用Sahi-Api"><a href="#Sahi-使用技巧1-使用Sahi-Api" class="headerlink" title="Sahi 使用技巧1-使用Sahi Api"></a>Sahi 使用技巧1-使用Sahi Api</h2><p>Sahi作为一个开源的 Web UI 自动化测试框架，在中国软件测试行业不是很流行。尽管它的知名度不及开源的 Selenium和收费的quicktest pro，用户群也不大（貌似国外的测试人员用的更多），但是有着它的优势，比如基于上下文的页面元素识别机制和隐式页面加载响应等待机制等，具体细节可以看<a href="http://www.ibm.com/developerworks/cn/web/1403_yangxb_sahi/" target="_blank" rel="external">这里</a>。</p>
+          <h2 id="Sahi-使用技巧1-使用Sahi-Api"><a href="#Sahi-使用技巧1-使用Sahi-Api" class="headerlink" title="Sahi 使用技巧1-使用Sahi Api"></a>Sahi 使用技巧1-使用Sahi Api</h2><p>Sahi作为一个开源的 Web UI 自动化测试框架，在中国软件测试行业不是很流行。尽管它的知名度不及开源的 Selenium和收费的quicktest pro，用户群也不大（貌似国外的测试人员用的更多），但是有着它的优势，比如基于上下文的页面元素识别机制和隐式页面加载响应等待机制等，具体细节可以看<a href="http://www.ibm.com/developerworks/cn/web/1403_yangxb_sahi/">这里</a>。</p>
 <p>使用sahi也有一段时间了，把自己使用时遇到的问题和使用心得记录一下想必也是极好的。</p>
-<p>Sahi由于国内用户群不大，使用人员比较少，所以Sahi Api和相关的使用说明书都没有中文版本，查看Sahi Api和Sahi的使用可以到官网的文档页面（<a href="http://sahipro.com/docs/introduction/index.html" target="_blank" rel="external">点击这里</a>）。也可以下载Sahi pro版本（收费），自带离线的Sahi Api。这里要说明一下，刚接触sahi到现在我都用的是Sahi OS版本（开源），真心是没钱买收费版本（一个人一年的授权要700美元！）。<strong>在文档里，每个api都有since sahi pro和since sahi os ，后面对应版本号。这里就是说该api在哪个版本开始被支持，如果发现since sahi os：NA ，这就说明sahi os是不支持该api的。</strong>我之前一直以为os版本可以使用_readExcelFile()，百般尝试，最后发现os版本是不支持的，这里提醒大家注意。</p>
-<p>大家可能会觉得英文版的api看着不爽，要是有中文版多好呀。但是相比我这个刚过CET4的人都可以看得懂，这应该也不是问题吧。而且这个api文档简单明了，是我见过最清晰明白的文档，每个api还配有使用例子，可以直接复制黏贴去调试。</p>
-<p>最新增加离线api文档下载，<a href="http://download.csdn.net/detail/baidu_29649941/9062543" target="_blank" rel="external">请戳这里</a>。</p>
-<div>作者：baidu_29649941发表于2015/8/25 16:24:38<a href="http://blog.csdn.net/baidu_29649941/article/details/47978989" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：1216评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/47978989#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-
-          
+<p>Sahi由于国内用户群不大，使用人员比较少，所以Sahi Api和相关的使用说明书都没有中文版本，查看Sahi Api和Sahi的使用可以到官网的文档页面（<a href="http://sahipro.com/docs/introduction/index.html">点击这里</a>）。也可以下载Sahi pro版本（收费），自带离线的Sahi Api。这里要说明一下，刚接触sahi到现在我都用的是Sahi OS版本（开源），真心是没钱买收费版本（一个人一年的授权要700美元！）。<strong>在文档里，每个api都有since sahi pro和since sahi os ，后面对应版本号。这里就是说该api在哪个版本开始被支持，如果发现since sahi os：NA ，这就说明sahi os是不支持该api的。</strong>我之前一直以为os版本可以使用_readExcelFile()，百般尝试，最后发现os版本是不支持的，这里提醒大家注意。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/08/25/原-Sahi-使用技巧1-使用Sahi-Api/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -787,24 +767,16 @@
 
       
         
-          
-            <h1 id="Sahi-使用技巧2-高亮查找元素以及正则匹配元素"><a href="#Sahi-使用技巧2-高亮查找元素以及正则匹配元素" class="headerlink" title="Sahi 使用技巧2-高亮查找元素以及正则匹配元素"></a>Sahi 使用技巧2-高亮查找元素以及正则匹配元素</h1><p>Sahi作为一个开源的 Web UI 自动化测试框架，在中国软件测试行业不是很流行。尽管它的知名度不及开源的 Selenium和收费的quicktest pro，用户群也不大（貌似国外的测试人员用的更多），但是有着它的优势，比如基于上下文的页面元素识别机制和隐式页面加载响应等待机制等，具体细节可以看<a href="http://www.ibm.com/developerworks/cn/web/1403_yangxb_sahi/" target="_blank" rel="external">这里</a>。</p>
+          <h1 id="Sahi-使用技巧2-高亮查找元素以及正则匹配元素"><a href="#Sahi-使用技巧2-高亮查找元素以及正则匹配元素" class="headerlink" title="Sahi 使用技巧2-高亮查找元素以及正则匹配元素"></a>Sahi 使用技巧2-高亮查找元素以及正则匹配元素</h1><p>Sahi作为一个开源的 Web UI 自动化测试框架，在中国软件测试行业不是很流行。尽管它的知名度不及开源的 Selenium和收费的quicktest pro，用户群也不大（貌似国外的测试人员用的更多），但是有着它的优势，比如基于上下文的页面元素识别机制和隐式页面加载响应等待机制等，具体细节可以看<a href="http://www.ibm.com/developerworks/cn/web/1403_yangxb_sahi/">这里</a>。</p>
 <p>使用sahi也有一段时间了，把自己使用时遇到的问题和使用心得记录一下想必也是极好的。</p>
-<p>刚开始使用sahi时，觉得sahi好神奇，可以录制脚本然后回放。后来慢慢熟悉sahi后，简单的录制脚本已经不能满足我的要求，所以不得不开始自己写脚本。这里就会遇到一个问题：如何灵活的编写sahi的脚本，让脚本可以在页面发生微小调整后不会因为找不到标签元素而失效。</p>
-<p>正是sahi基于上下文的页面元素识别机制，可以使用_near、_in、_under、_above等api来让sahi灵活的找到目标元素，同时sahi api 规定identifier是支持正则表达式的，这也大大地增加了识别灵活性。如图1，假设想要确定存在且仅存在一条项目名称为123的记录，但是实际上因为各种原因是存在项目名称一样的另一条记录而且该记录在页面也是可见的，如果只是判断存在cell(“123”)就会出现问题。这时如果在同一个表格里，用_near就不是很好的选择，sahi会找到最先出现的cell(“123”)，仍然无法保证唯一确定。用_leftOf把结束日期带进来</p>
-<p><code>_cell(&quot;123&quot;,_leftOf(_cell(&quot;2015-09-24&quot;)))</code></p>
-<p>这样确实可以唯一确定目标cell，但是代价是更复杂的脚本编写和逻辑判断，如果这两个cell仍然不能唯一确定要找的记录，是不是还要加第三个、第四个。。。后来我发现原来可以利用_row来判断整行</p>
-<p><code>_row(&quot;123 2015-09-24 未开始 0 0 0 0%&quot;)</code></p>
-<p>但是identifier 存在不需要的或者可能会发生变化的数据，同样会造成识别的失效，比如_row(“123 2015-09-24 未开始 0 0 0 0%”)里的0%（对应图中的进度）有可能发生变化，如果进度从0%变到10%，这样识别又会失效。所以这里就可以用到正则表达式</p>
-<p><code>_row(&quot;/123 2015-09-24 未开始 0 0 0 .*/&quot;)</code></p>
-<p>这样就可以识别所有以“123 2015-09-24 未开始 0 0 0 ”开头的行。要确保sahi可以正确识别写的正则表达式，可以在Sahi Controller上的Accessor上输入含有正则表达式的目标元素，然后点击Hilight按钮，如果之后目标元素上有红色框短暂显示后，说明识别是正确的。如图2显示</p>
-<p><img src="http://img.blog.csdn.net/20150825212813356" alt="这里写图片描述"></p>
-<p>图1</p>
-<p><img src="http://img.blog.csdn.net/20150825212843076" alt="这里写图片描述"></p>
-<p>图2</p>
-<div>作者：baidu_29649941发表于2015/8/25 11:11:36<a href="http://blog.csdn.net/baidu_29649941/article/details/47974215" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：639评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/47974215#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-
-          
+<p>刚开始使用sahi时，觉得sahi好神奇，可以录制脚本然后回放。后来慢慢熟悉sahi后，简单的录制脚本已经不能满足我的要求，所以不得不开始自己写脚本。这里就会遇到一个问题：如何灵活的编写sahi的脚本，让脚本可以在页面发生微小调整后不会因为找不到标签元素而失效。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/08/25/原-Sahi-使用技巧2-高亮查找元素以及正则匹配元素/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

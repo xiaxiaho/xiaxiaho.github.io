@@ -408,18 +408,18 @@
 
       
         
-          
-            <p>Note:</p>
+          <p>Note:</p>
 <blockquote>
 <p>A feature has three basic elements—the Feature: keyword, a name (on the same line) and an optional (but highly recommended) description that can span multiple lines.</p>
 <p>You can have as many steps as you like, but we recommend you keep the number at 3-5 per scenario. If they become longer than that they lose their expressive power as specification and documentation.</p>
-<p>It’s ok to have several Given steps (just use And or But for number 2 and upwards to make it more readable).</p>
-<p>It’s strongly recommended you only have a single When step per scenario. If you feel compelled to add more it’s usually a sign that you should split the scenario up in multiple scenarios.</p>
-<p>The step definition of a Then step should use an assertion to compare the actual outcome (what the system actually does) to the expected outcome (what the step says the system is supposed to do).</p>
-<p>Automating Scenario Outlines using UI automation such as Selenium WebDriver is considered a bad practice. :(</p>
 </blockquote>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/01/Cucumber学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -551,7 +551,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  350
+                  351
                 </span>
               
 
@@ -589,27 +589,16 @@
 
       
         
-          
-            <h2 id="启动时提示"><a href="#启动时提示" class="headerlink" title="启动时提示"></a>启动时提示</h2><blockquote>
+          <h2 id="启动时提示"><a href="#启动时提示" class="headerlink" title="启动时提示"></a>启动时提示</h2><blockquote>
 <p>Don’t use GUI mode for load testing, only for Test creation and Test debugging !<br>For load testing, use NON GUI Mode:</p>
-<p>  jmeter -n -t [jmx file] -l [results file] -e -o [Path to output folder]<br>&amp; adapt Java Heap to your test requirements:<br>   Modify HEAP=”-Xms512m -Xmx512m” in the JMeter batch file</p>
-</blockquote>
-<h2 id="JSR223-PreProcessor-用法-groovy"><a href="#JSR223-PreProcessor-用法-groovy" class="headerlink" title="JSR223 PreProcessor 用法 groovy"></a>JSR223 PreProcessor 用法 groovy</h2><h2 id="nogui"><a href="#nogui" class="headerlink" title="nogui"></a>nogui</h2><h2 id="json-extractor"><a href="#json-extractor" class="headerlink" title="json extractor"></a>json extractor</h2><h2 id="用户定义的变量"><a href="#用户定义的变量" class="headerlink" title="用户定义的变量"></a>用户定义的变量</h2><h2 id="setUp-Thead-Group-与-一次执行-变量跨线程组传递"><a href="#setUp-Thead-Group-与-一次执行-变量跨线程组传递" class="headerlink" title="setUp Thead Group 与 一次执行 变量跨线程组传递"></a>setUp Thead Group 与 一次执行 变量跨线程组传递</h2><h2 id="静态网页报告生成"><a href="#静态网页报告生成" class="headerlink" title="静态网页报告生成"></a>静态网页报告生成</h2><h2 id="时间函数-time-yyyyMMdd-HHmmss"><a href="#时间函数-time-yyyyMMdd-HHmmss" class="headerlink" title="时间函数  ${__time(yyyyMMdd-HHmmss,)}"></a>时间函数  ${__time(yyyyMMdd-HHmmss,)}</h2><h2 id="https请求"><a href="#https请求" class="headerlink" title="https请求"></a>https请求</h2><h1 id="随笔jmeter3-0初探"><a href="#随笔jmeter3-0初探" class="headerlink" title="随笔jmeter3.0初探"></a>随笔jmeter3.0初探</h1><ul>
-<li>jmeter的nongui运行模式用于生产环境,gui模式用于调试环境<blockquote>
-<p>Using GUI mode as described here should only be used when debugging your Test Plan. To run the real load test, use NON-GUI mode.</p>
-</blockquote>
-</li>
-<li>jmeter的nongui远程多服务端模式,自己的环境也要开启服务端</li>
-<li>jmeter在压力或者性能测试下(生产环境)减少使用一些耗费资源的监听器,比如察看结果树,图形报告等,调试时可短暂启用用作调试作用<blockquote>
-<p>Graph Results MUST NOT BE USED during load test as it consumes a lot of resources (memory and CPU). Use it only for either functional testing or during Test Plan debugging and Validation.<br>View Results Tree MUST NOT BE USED during load test as it consumes a lot of resources (memory and CPU). Use it only for either functional testing or during Test Plan debugging and Validation.</p>
-</blockquote>
-</li>
-<li>jmeter直接通过指令在nongui模式下进行压力性能测试并输出静态页面报告</li>
-<li><a href="http://mindmap.4ye.me/B3KpV0ot" target="_blank" rel="external">http://mindmap.4ye.me/B3KpV0ot</a></li>
-<li><code>jmeter -n -t &lt;test JMX file&gt; -l &lt;test log file&gt; -e -o &lt;Path to output folder&gt;</code></li>
-</ul>
-
-          
+<p>  jmeter -n -t [jmx file] -l [results file] -e -o [Path to output folder]<br>&amp; adapt Java Heap to your test requirements:<br>   Modify HEAP=”-Xms512m -Xmx512m” in the JMeter batch file<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/01/Jmeter使用Tips/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -779,33 +768,20 @@
 
       
         
-          
-            <h1 id="敏捷开发下测试的处境"><a href="#敏捷开发下测试的处境" class="headerlink" title="敏捷开发下测试的处境"></a>敏捷开发下测试的处境</h1><p>从传统模式到敏捷开发，产品或项目的迭代增多，很有可能达到每两周就会有一个版本。虽然没有达到每天部署3~4个版本的devops开发模式，但这个时候测试的压力依然陡然增大，既没有那么多的时间写完善的用例，更做不到每个版本都进行完整的回归测试。以前的同事便是在敏捷开发环境下测试某电信运营商相关的金融类app。她经常会遇到即使上线，缺陷也不断的涌现。有些在测试时已经修复的问题，在生产环境又再次出现；或者之前修复的问题，下次测试又再次出现。测试到最后经常顾此失彼，疲于奔命。这时候，测试如果仅仅只是在部署后才参与到产品或项目中，就会越来越累。测试需要肩负起软件质量控制的重任。</p>
+          <h1 id="敏捷开发下测试的处境"><a href="#敏捷开发下测试的处境" class="headerlink" title="敏捷开发下测试的处境"></a>敏捷开发下测试的处境</h1><p>从传统模式到敏捷开发，产品或项目的迭代增多，很有可能达到每两周就会有一个版本。虽然没有达到每天部署3~4个版本的devops开发模式，但这个时候测试的压力依然陡然增大，既没有那么多的时间写完善的用例，更做不到每个版本都进行完整的回归测试。以前的同事便是在敏捷开发环境下测试某电信运营商相关的金融类app。她经常会遇到即使上线，缺陷也不断的涌现。有些在测试时已经修复的问题，在生产环境又再次出现；或者之前修复的问题，下次测试又再次出现。测试到最后经常顾此失彼，疲于奔命。这时候，测试如果仅仅只是在部署后才参与到产品或项目中，就会越来越累。测试需要肩负起软件质量控制的重任。</p>
 <h1 id="测试遇到的问题"><a href="#测试遇到的问题" class="headerlink" title="测试遇到的问题"></a>测试遇到的问题</h1><ul>
 <li>测试不参与产品或项目的需求评审，无法对产品或项目做测试计划</li>
 <li>即使参与到需求评审，但是没有把控需求的可测试性</li>
 <li>版本构建快，无法把控版本构建</li>
 <li>测试不了解产品或项目内部流程，无法针对性的编写更有效、更精简的用例</li>
-<li>测试人力不足，版本迭代快速，无法进行全面的回归测试</li>
-</ul>
-<h1 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h1><p>测试左移、测试右移的概念可以参见<a href="http://www.epubit.com.cn/article/1401" target="_blank" rel="external">项目实施DevOps时，我们是如何做测试的</a></p>
-<blockquote>
-<p>Laurent提出一个测试左移和右移的概念:</p>
-<p>测试左移，就是指在开发阶段之前定义测试。</p>
-<p>测试右移，就是直接在生产环境中监控，并且实时获取用户反馈。</p>
-</blockquote>
-<hr>
-<h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="需求到任务到用例的转化"><a href="#需求到任务到用例的转化" class="headerlink" title="需求到任务到用例的转化"></a>需求到任务到用例的转化</h2><h2 id="用例的编写"><a href="#用例的编写" class="headerlink" title="用例的编写"></a>用例的编写</h2><h3 id="用例从概括到逐步细化"><a href="#用例从概括到逐步细化" class="headerlink" title="用例从概括到逐步细化"></a>用例从概括到逐步细化</h3><p>刚有需求但没有原型设计，或者需求不明确，用例往往是没法写具体的。所以这时候可以先概括的写，甚至就是把需求描述的功能点写到用例。当设计出来，需求不断明确后，用例就可以逐步细化。就像画画，先勾勒一个轮廓，然后逐渐画细节。<br>敏捷开发，拥抱变化。需求的变化相较于传统模式越来越多，所以用例也需要跟着及时更新。为了提高编写用例的效率，使用一个好的用例管理平台比用Excel等工具要好。不管是给上级看到工作成果也好，还是方便其他测试接手也好，甚至评价分析测试用例覆盖率都是很有帮助的。</p>
-<h3 id="点-》线-》面，用例精简tmq"><a href="#点-》线-》面，用例精简tmq" class="headerlink" title="点-》线-》面，用例精简tmq"></a>点-》线-》面，用例精简tmq</h3><p>写用例采用一种点-》线-》面的方式。以添加用户为例。添加用户这是一个功能点。点击添加用户按钮，输入用户信息，点击确定，提示添加成功。这个功能看似流程走完了，其实不能保证所有数据入库正确。这时加入一个功能点，查询用户。查询该用户，在查询结果看不到刚添加的用户，可能是添加用户功能出现了问题。如果查询到用户，用户记录也显示正确了，但同样不能保证所有数据入库正确了。这时再加入用户登录功能点。如果登录不了，或者登录后用户数据显示与添加时不符，还有可能是添加用户时出现的问题。所以功能点不是孤立的，应该用业务串起来，这就是线。如果在添加用户时，设置该用户是用户A的好友。则添加用户成功后，还要登录用户A，查看用户A的好友列表是否有该用户。这就是在添加用户后的另一条分支，也可以说是另一条线。每个业务逻辑会产生多条线，线越来越多，就形成了面。</p>
-<h2 id="把控版本构建"><a href="#把控版本构建" class="headerlink" title="把控版本构建"></a>把控版本构建</h2><h3 id="会用代码提交工具，查看提交代码内容，确定测试大致范围"><a href="#会用代码提交工具，查看提交代码内容，确定测试大致范围" class="headerlink" title="会用代码提交工具，查看提交代码内容，确定测试大致范围"></a>会用代码提交工具，查看提交代码内容，确定测试大致范围</h3><p>每次构建或者部署一个测试版本，仅针对修改的部分做测试而不是做回归测试。可以通过查看开发提交记录确定提交的代码是不是都在ReleaseNote上体现了，还是会“夹杂一些私活”，最后没有测试到。对于SCM是git或者SVN的，可以使用sourcetree这个代码查看提交工具。掌握了代码提交工具的使用，可以查看提交代码的内容。可以通过查看提交的描述判断这次提交修改的部分是那些功能。大部分后台服务都是用Java编写的。而后台Java服务大都遵循MVC分层。所以代码文件的名字的后缀来判断这次提交修改的部分是那些功能。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">**Util.java 工具类 </div><div class="line">**service.java 相对具体的业务逻辑服务层类 </div><div class="line">**manager.java 通用业务处理层类 </div><div class="line">**controller.java 控制器类，对访问控制进行转发</div><div class="line">**DAO.java 数据访问层类</div><div class="line">**Model.java model类 </div><div class="line">*.properties 配置文件</div><div class="line">*.xml 配置文件</div></pre></td></tr></table></figure></p>
-<p>大部分服务也会遵循分层领域模型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">**DO.java（Data Object）：与数据库表结构一一对应，通过DAO层向上传输数据源对象。</div><div class="line">**DTO.java（Data Transfer Object）：数据传输对象，Service和Manager向外传输的对象。</div><div class="line">**BO.java（Business Object）：业务对象。可以由Service层输出的封装业务逻辑的对象。</div><div class="line">**VO.java（View Object）：显示层对象，通常是Web向模板渲染引擎层传输的对象。</div></pre></td></tr></table></figure>
-<p>**表示省略的具体的类名。比如LoginController.java。可以知道这个控制器是用来负责处理登录业务。</p>
-<h3 id="持续集成工具的使用"><a href="#持续集成工具的使用" class="headerlink" title="持续集成工具的使用"></a>持续集成工具的使用</h3><p>持续集成环境的搭建可能我们不关心，但是使用应该是要了解一下的。如果持续集成环境的构建不是无中断的，就是说，构建时服务可能会有短暂时间的不可访问，这取决于测试环境架构或部署脚本的编写。比如突然访问不了测试环境，以为环境出了问题，其实也许只是开发在重新构建测试服务应用。了解了CI工具的使用，可以尽快确定是构建导致的访问不了还是真的出了问题。建议在测试环境由测试人员负责点击构建的工作，一方面可以了解构建时整个CI工具做了那些工作，构建时出了问题也可以及时看到。另一方面可以把控版本的构建，在必要的时候进行控制。比如在确定开发确实提交了相关修改时，再做构建，毕竟提交代码也是会花费一定时间的，而构建一次会花更多的时间，所以尽量减少无意义的构建。</p>
-<h2 id="代码质量管理"><a href="#代码质量管理" class="headerlink" title="代码质量管理"></a>代码质量管理</h2><h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><p>很多公司可能不太注意代码规范。但是代码规范与产品代码质量有着直接的关系。代码规范很重要的一点是代码的可读性。提高了代码的可读性，自己更容易理解，结对开发的同伴也更容易理解。这样的代码由于清晰易理解，所以更不容易出错。一旦出错后也更容易找到问题所在。好理解的代码在出错后自己或者同伴更愿意去找问题，而不是对不容易理解的代码面露难色。可读性高的代码开发也更愿意去优化重构，形成良性循环。</p>
-<h3 id="代码审核"><a href="#代码审核" class="headerlink" title="代码审核"></a>代码审核</h3><h3 id="sonarqube与sonarlint"><a href="#sonarqube与sonarlint" class="headerlink" title="sonarqube与sonarlint"></a>sonarqube与sonarlint</h3><p>逻辑语句的嵌套（if while）</p>
-<h2 id="unit-test-与-BDD"><a href="#unit-test-与-BDD" class="headerlink" title="unit test 与 BDD"></a>unit test 与 BDD</h2><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2>
-          
+<li>测试人力不足，版本迭代快速，无法进行全面的回归测试
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/24/精准测试理解与总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -975,38 +951,14 @@
 
       
         
-          
-            <p>PostMan 方便了开发和测试进行接口测试，这里总结几个常见的使用方法。</p>
-<h1 id="环境变量分组"><a href="#环境变量分组" class="headerlink" title="环境变量分组"></a>环境变量分组</h1><img src="/2018/01/23/PostMan使用总结/environment.png" alt="分组" title="分组">
-<img src="/2018/01/23/PostMan使用总结/环境变量2.png" alt="每组包含多个变量和值" title="每组包含多个变量和值">
-<p>可以看到PostMan是支持变量分组的。这样可以开发、测试、生产环境的变量个分一个组，各组中都会用到相同的参数就可以放到全局变量里。<br>举个栗子<br>测试的接口有get也有post，都是restful的接口。如下一个post接口的body参数：<br><em>接口地址：<a href="http://192.168.1.1/sendPDF" target="_blank" rel="external">http://192.168.1.1/sendPDF</a></em><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"systemId"</span>:<span class="string">"bb01"</span>,</div><div class="line"><span class="attr">"curTime"</span>:<span class="string">"1231231233"</span>,</div><div class="line"><span class="attr">"sign"</span>:<span class="string">"12312312313"</span>,</div><div class="line"><span class="attr">"fileInfoList"</span>:[</div><div class="line">&#123;</div><div class="line"><span class="attr">"fileId"</span>:<span class="string">"PostManTest001"</span>,</div><div class="line"><span class="attr">"creatorId"</span>:<span class="string">"li001"</span>,</div><div class="line"><span class="attr">"fileType"</span>:<span class="string">"002"</span>,</div><div class="line"><span class="attr">"fileName"</span>:<span class="string">"PostManTest001.pdf"</span>,</div><div class="line"><span class="attr">"fileData"</span>:<span class="string">"JVBERi0xLjMKJf////8KMSAwIG9iago8PCAvVGl0bGUgKENoYW5nZSB0aGUgTXlTUUwgVGVtcG9yYXJ5IEZpbGVzIERpcmVjdG9yeSkKL0NyZWF0b3IgKFByYXduIDEuMC4wKQovUHJvZHVjZXIgKFByYXduIDEuMC4wKQovQ3JlYXRpb25EYXRlIChEOjIwMTUxMDMwMTU1MzI0KzAxJzAwJykKL01vZERhdGUgKEQ6MjAxNTEwMzAxNTUzMjQrMDEnMDAnKQo..."</span>,</div><div class="line">&#125;]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<ul>
-<li><p>很明显这是一个发送PDF文件的接口。其中systemId不仅在这个接口，也出现在其他多个接口。在一次连续请求时，这个参数是要相同的，表明访问的系统id。将这个systemId的值用变量代替，可以在systemId变动时，不用每个接口的修改这个值。PostMan在参数使用变量的方法是双括号包裹变量名，比如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;systemid&#125;&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>接口地址不同开发环境使用不同的IP，则可以用把接口地址加入变量：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://&#123;&#123;host&#125;&#125;/sendPDF</div></pre></td></tr></table></figure>
-</li>
-<li><p>curTime参数需要传时间戳，则可以使用PostMan内置的时间戳变量，但PostMan里的时间戳不是以毫秒计的，所以可以在后面加000来补全。</p>
-</li>
-<li>fileData要传一个文档的base64字符串。文档再小，字符串其实都很大。如果直接复制到body里，PostMan的输入框在滚动时会非常慢，甚至卡死。所以把这种大数据量的值放到变量里是再好不过了。</li>
-<li>fileId是不可以重复，我们希望每次请求，fileId都会变化与之前不同。一种做法就是把时间戳或者随机数加进去。但是时间戳和随机数都是比较随机的，如果需要有顺序的自增的话，可以使用一个fileNum变量，然后在pre-request-Script里自增这个变量：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> docNum = postman.getGlobalVariable(<span class="string">"docNum"</span>);</div><div class="line">    docNum++;</div><div class="line">    postman.setGlobalVariable(<span class="string">"docNum"</span>, docNum);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>注意：这里的使用的语法算是Older style of writing Postman tests，可以使用编辑框右边的snippets获取最新的语法风格。</p>
-<ul>
-<li>sign参数传的是前一步getToken接口获取到的token值。getToken接口的返回值如下：<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"returnCode"</span>: <span class="string">"001"</span>,</div><div class="line">    <span class="attr">"token"</span>: <span class="string">"6e19d34c7f104452bc02e1ed617cfb44"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这样可以在getToken返回数据后，在Tests环节做个判断：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> jsonData = pm.response.json();</div><div class="line"><span class="keyword">if</span>(jsonData.returnCode == <span class="string">'001'</span>)&#123;</div><div class="line">    pm.globals.set(<span class="string">"token"</span>, jsonData.token);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
-<li>当返回结果数据量过大，建议使用preview显示返回的结果。否则可能导致PostMan卡顿或卡死。<img src="/2018/01/23/PostMan使用总结/Preview.png" alt="数据量大用preview" title="数据量大用preview">
-</li>
-</ul>
-<h1 id="关于PostMan"><a href="#关于PostMan" class="headerlink" title="关于PostMan"></a>关于PostMan</h1><p>众所周知，PostMan有两个版本。一个是插件版，就是chrome浏览器的插件。我这里用的桌面版。其实桌面版也是使用chrome V8引擎的。桌面版是基于Electron这个框架开发的。而Electron是一个用html和javascrpt开发桌面应用的项目。Electron提供了很好的跨平台、可移植、热更新和快速开发等特性，是非常好的一款桌面应用开发框架。很多出名的桌面工具是基于他，如Atom，VSCode等等。Electron项目是由GitHub的一位中国开发大神zcbenz主导的。具体可以参考他在知乎上的<a href="https://www.zhihu.com/question/36292298/answer/102418523" target="_blank" rel="external">回答</a>。<br><img src="/2018/01/23/PostMan使用总结/memory%20usage.png" alt="内存占用大" title="内存占用大"></p>
-<p>在使用PostMan的过程中会发现，占用的系统内存很大。这可能是Electron项目的通病，用过Atom或者VSCode就知道，这些Editor内存的占用和NotePad++根本不是一个量级的，跟Eclipse这样的IDE有的一拼。不过可能国外开发者的PC配置普遍比较高，内存的优化看来一直不是重点。。。<br>所以，我给出的建议就是尽量使用完就关闭PostMan，反正所有变量都会保存，即使PostMan关闭了。桌面版的PostMan还会自动更新，时刻保持最新的状态。</p>
-
-          
+          <p>PostMan 方便了开发和测试进行接口测试，这里总结几个常见的使用方法。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/23/PostMan使用总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1176,55 +1128,18 @@
 
       
         
-          
-            <p>这里总结了几个Sahi使用中可能经常遇到的问题</p>
+          <p>这里总结了几个Sahi使用中可能经常遇到的问题</p>
 <h1 id="frame、iframe的处理"><a href="#frame、iframe的处理" class="headerlink" title="frame、iframe的处理"></a>frame、iframe的处理</h1><p>在selenium里面，跨frame或者iframe是需要用switchto这样的方法进入frame或者iframe，才能获取到在frame或者iframe里面的元素，如果要回来则还要跳回来。。。<strong>而在Sahi完全不用考虑跨frame和iframe的问题。</strong></p>
 <hr>
 <h1 id="session隔离的妙用"><a href="#session隔离的妙用" class="headerlink" title="session隔离的妙用"></a>session隔离的妙用</h1><p>我们知道，一个浏览器的多个页面是共享session，一旦登录一个账号，之前登录的账号就会被替代。而通过Sahi的dashboard打开的浏览器，session是隔离的。也就是说可以通过Sahi用不同的账号登录同一个被测网站，这对我们测试不同角色账户的权限操作、交易统计等会大有益处，再也不用频繁的登录注销了。</p>
 <hr>
-<h1 id="如何进行浏览器类型配置"><a href="#如何进行浏览器类型配置" class="headerlink" title="如何进行浏览器类型配置"></a>如何进行浏览器类型配置</h1><p>Sahi可以通过配置来支持对不同的浏览器代理。</p>
-<p><img src="http://img.blog.csdn.net/20170309225800457?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="增加或修改浏览器类型设置"></p>
-<p>在浏览器类型里给出了一些浏览器的默认配置，可根据实际浏览器安装路径配置路径，配置的路径（path）一定要正确，否则在dashboard里不会显示对应浏览器的图标。配置文件里的 options的值最好不要修改，否则可能会出一些问题。</p>
-<hr>
-<h1 id="页面下载的文件被拦截"><a href="#页面下载的文件被拦截" class="headerlink" title="页面下载的文件被拦截"></a>页面下载的文件被拦截</h1><p>在使用Sahi的时候，会发现当页面有下载文件的链接，想要下载什么文件的时候，页面闪了一下就没有了，仿佛什么都没有发生，根本无法选择下载的路径。其实这是被Sahi拦截了，Sahi为了回放的方便自动下载文件到了sahi/userdata/temp/download路径下了。这个时候如果你想操作下载的文件，可以通过三个API去处理。</p>
-<p><strong>_lastDownloadFileName()</strong> 可以返回最后一个下载的文件名。</p>
-<p><strong>_saveDownloadAs($path)</strong> 可以允许你将下载的文件另存为指定的路径</p>
-<p><strong>_clearLastDownloadedFileName()</strong> 清除最后下载的文件名</p>
-<p>如果页面的本意不是下载而是获取文档并显示在页面，却又被Sahi给拦截了。那么可以在 <strong>sahi/userdata/config/download_urls.txt</strong> 的配置文件里增加下载的链接来屏蔽Sahi的拦截。比如下载链接是<a href="http://www.sahitest.com/demo/testsaveas.pdf" target="_blank" rel="external">http://www.sahitest.com/demo/testsaveas.pdf</a> ，则可以在配置文件里添加该路径。路径的编写也支持正则表达式。</p>
-<p><img src="http://img.blog.csdn.net/20170311003148890?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="下载文件路径规避"></p>
-<p>如果不想拦截所有某一种文件格式的文件，可以在 <strong>download_contenttypes.txt</strong> 配置文件里删除对应的文件格式。比如不想拦截PDF格式的文件，可以删除 <strong>application/pdf</strong> 这个来达到效果。</p>
-<p><img src="http://img.blog.csdn.net/20170311003211937?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="下载文件类型规避"></p>
-<p>详细说明，可查看官网：</p>
-<h1 id="JavaScript模态框的处理"><a href="#JavaScript模态框的处理" class="headerlink" title="JavaScript模态框的处理"></a>JavaScript模态框的处理</h1><p>录制脚本的时候可能会遇到页面弹出模态框。比如说是confirm弹框，发现录制后的脚本会出现_expectConfirm()这样的函数出现。</p>
-<p><img src="http://img.blog.csdn.net/20170312151433220?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="模态框_expectConfirm()"></p>
-<p>而回放的时候看不到模态框弹出就执行下一步了。这是因为Sahi认为这些弹框会影响自动化的执行，所以屏蔽了。但是Sahi又提供了相关的API来控制这些弹框的执行走向。比如说confirm框，Sahi默认选择OK（确定），想要弹框时选择Cancel（取消）的话，可以用_expectConfirm()方法来控制。</p>
-<p><img src="http://img.blog.csdn.net/20170312151352407?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="confirm框"></p>
-<p>下面的语句就是弹框时选择Cancel。</p>
-<p>  <code>_expectConfirm(false);</code></p>
-<p>  更多相关API请戳<a href="http://sahipro.com/docs/sahi-apis/javascript-dialogs.html" target="_blank" rel="external">这里</a>。</p>
-<hr>
-<h1 id="全局运行速度设置"><a href="#全局运行速度设置" class="headerlink" title="全局运行速度设置"></a>全局运行速度设置</h1><p>  Sahi里面是可以修改回放时的速度。有时候回放时为了查清脚本执行失败的原因，太快会看不清楚，可以减慢回放的速度，如果觉得回放执行时间太长，则可以加快速度。默认配置是每一步间隔100ms。可以在安装路径下的config文件下的sahi.properties里修改配置，修改后重启Sahi生效。</p>
-<p>  <code>Time (in milliseconds) delay between steps script.time_between_steps=100</code></p>
-<hr>
-<h1 id="录制脚本模式java和sahi"><a href="#录制脚本模式java和sahi" class="headerlink" title="录制脚本模式java和sahi"></a>录制脚本模式java和sahi</h1><p>  由于Sahi支持java和JavaScript，脚本录制也提供了两种方式，可以修改成java的controller。默认是使用Sahi的controller。这个也可以在安装路径下的config文件下的sahi.properties里修改配置，修改后重启Sahi生效。</p>
-<pre><code>`# Specifies the controller to be used
-# Takes java, ruby and sahi as valid values; default is sahi
-# Set this to java for recorder in java mode.
-controller.mode=sahi `
-</code></pre><p><img src="http://img.blog.csdn.net/20170309223456476?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="sahiController"></p>
-<p><img src="http://img.blog.csdn.net/20170309223523416?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="java的Controller"></p>
-<hr>
-<h1 id="异常关闭Sahi后导致浏览器访问不了网页"><a href="#异常关闭Sahi后导致浏览器访问不了网页" class="headerlink" title="异常关闭Sahi后导致浏览器访问不了网页"></a>异常关闭Sahi后导致浏览器访问不了网页</h1><p>使用Sahi有时候会遇到，Sahi关闭后，无法通过浏览器访问网络了。试了不同的浏览器也访问不了网络。原因是因为Sahi异常关闭，Sahi代理设置没有回滚导致的。我们知道，Sahi需要修改系统或者浏览器的代理设置才能注入Sahi的脚本到浏览器，以便Sahi进行录制和回放的功能。<strong>这也是Sahi为什么不用像Selenium那样下载那么多浏览器对应的webdriver的原因：通过对不同浏览器进行代理，注入JavaScript的脚本来操作浏览器行为。</strong> 这是Sahi的优势，同样也造就了Sahi会出现没有成功回滚代理设置而导致无法上网的问题。</p>
-<p>如果通过Sahi的dashboard打开的是Firefox或者Chrome浏览器，不会产生上述的问题，因为这时候打开的这两种浏览器是使用隔离的配置文件。也就是说，这时候在Sahi外打开Firefox、Chrome、IE这些浏览器，不会通过Sahi的代理。</p>
-<p>然而通过Sahi的dashboard打开的IE浏览器，是修改了系统的代理服务器，所有依赖系统代理的浏览器，访问网络的时候都会经过Sahi的代理。</p>
-<p>如果这时候关闭了sahi启动时打开的命令窗口，而不是先关闭所有的IE浏览器，再关闭Sahi的dashboard，则会导致上述问题的发生。这两个操作正是回滚系统代理设置的环节。</p>
-<p><img src="http://img.blog.csdn.net/20170309215354256?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="错误的关闭方法"></p>
-<p>解决的办法也很简单，就是打开Sahi后，通过Sahi dashboard打开IE浏览器，然后关闭IE浏览器，再关闭Sahi dashboard。</p>
-<p><img src="http://img.blog.csdn.net/20170309215528178?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMjk2NDk5NDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="正常操作和回滚操作"></p>
-<p>关于访问不了网页官方网站还有详细说明，可自行查看。<a href="http://sahipro.com/docs/troubleshooting/proxy-issues.html#Cannot%20connect%20to%20internet%20when%20Sahi%20is%20not%20running" target="_blank" rel="external">地址</a></p>
-<div>作者：baidu_29649941发表于2017/3/9 23:22:36<a href="http://blog.csdn.net/baidu_29649941/article/details/60783690" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：423评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/60783690#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/09/原-Sahi-使用技巧4-iframe、下载文件、模态框、访问不了网页的处理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1394,108 +1309,15 @@ controller.mode=sahi `
 
       
         
-          
-            <h1 id="基于sahi-pro-excelframework自动化测试框架设计"><a href="#基于sahi-pro-excelframework自动化测试框架设计" class="headerlink" title="基于sahi pro excelframework自动化测试框架设计"></a>基于sahi pro excelframework自动化测试框架设计</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><h3 id="1-1-开发背景"><a href="#1-1-开发背景" class="headerlink" title="1.1.开发背景"></a>1.1.开发背景</h3><p>电子印章系统需要进行自动化测试功能，且需要一种易于开发、维护、使用的自动化测试工具。Sahi pro版本相比开源版本已经自带excelframework，既直接通过excel文件执行自动化测试用例。</p>
-<h3 id="1-2-建设目标"><a href="#1-2-建设目标" class="headerlink" title="1.2.建设目标"></a>1.2.建设目标</h3><p>目标1：普通测试员通过编写excel测试模板，生成自动化测试用例，直接执行自动化测试用例，实现自动化测试。</p>
-<p>目标2：测试开发员可以灵活的修改、扩展、完善自动化测试框架。</p>
-<p>目标3：测试开发员可以所见即所得、高效、快速的编写完善自动化测试框架。</p>
-<h3 id="1-3-假定和约束"><a href="#1-3-假定和约束" class="headerlink" title="1.3.假定和约束"></a>1.3.假定和约束</h3><p>本版本设计开发必须遵循JavaScript和Sahi脚本的开发规范。</p>
-<h2 id="2-框架流程设计"><a href="#2-框架流程设计" class="headerlink" title="2.框架流程设计"></a>2.框架流程设计</h2><h3 id="2-1-测试框架"><a href="#2-1-测试框架" class="headerlink" title="2.1.测试框架"></a>2.1.测试框架</h3><p>测试框架由四层架构组成：sahiproexcelframework，业务逻辑层，页面对象库，基础控件库。</p>
-<p>Sahiproexcelframework：将测试步骤（关键字）和测试数据直接保存在excel里，实现数据与脚本分离。由于excelframework需要调用方法而不是对象，所以需要一个中间层做把业务逻辑层的对象转换成方法。</p>
-<p>业务逻辑层：可以在这里编写可重用的方法，这些方法中执行模拟手工测试的功能。该层的方法可以被测试用例调用。</p>
-<p>页面对象库：用来获取、存储页面对象。每个页面对象也许包含多个控件对象，该层对象可以被业务逻辑层调用。</p>
-<p>基础控件库：封装基础的页面控件对象。对于操作复杂的页面控件再进行封装以方便使用，该层对象可以被页面对象库调用。</p>
-<p>图1. 测试框架图</p>
-<p><img src="http://img.blog.csdn.net/20160626120107608" alt="架构图"></p>
-<h2 id="3-框架使用说明"><a href="#3-框架使用说明" class="headerlink" title="3.框架使用说明"></a>3.框架使用说明</h2><h3 id="3-1-Excel模板说明"><a href="#3-1-Excel模板说明" class="headerlink" title="3.1.Excel模板说明"></a>3.1.Excel模板说明</h3><p>Excel模板作为描述自动化测试用例、测试步骤、测试数据的载体，严格按照模板编写将会避免很多可能出现的错误。脚本在执行的时候默认读取Excel模板里的sheet1内的数据，按照从上到下的顺序逐行执行关键字对应的脚本。所以可以在excel里新建其他sheet，但是不要修改sheet1的名字或删除sheet1，否则会导致无法执行脚本。</p>
-<p><img src="http://img.blog.csdn.net/20160626121539128" alt="这里写图片描述"></p>
-<p>Excel模板里的每一行代表一个测试步骤，多行可以组成一个测试用例。</p>
-<p><img src="http://img.blog.csdn.net/20160626121613488" alt="这里写图片描述"></p>
-<p>现对sheet1内的数据列的含义和使用做如下说明：</p>
-<p>Comments（描述）：该列可以录入对该测试步骤的描述用来标记这一步骤，该列可以为空。</p>
-<p>Tags（标签）：该列可以用标签对测试用例进行标记，在执行脚本时可有选择性的执行用例。所以仅在测试用例第一个测试步骤上些标签。如脚本执行时只执行smoke标签的用例，没有用标签标记的用例便不会执行。</p>
-<p>TestCase（测试用例）：该列可以录入测试用例名用来标记测试用例，由于多个步骤组成一个测试用例，无需再每一行都写测试用例名，仅在第一个测试步骤上写测试用例名，否则框架会认为每一行都是一个测试用例。</p>
-<p>KeyWord（关键字）：该列为必填项，框架根据该列的关键字进行脚本执行。所以关键字必须填写正确，具体可以参考excel模板里“api说明”的sheet页。</p>
-<p>argumentN：关键字后面对应的是输入参数，也就是测试数据，具体关键字对应的参数含义可以参考excel模板里“api说明”的sheet页。</p>
-<p><img src="http://img.blog.csdn.net/20160626121854377" alt="这里写图片描述"></p>
-<p>基于excel模板的脚本执行方法有两个，一个是在页面用sahi控制器执行excel模板的xlsx文件，具体操作可以参考sahi官网上的使用文档（<a href="http://sahipro.com/docs/using-sahi/sahi-controller.html#Playback" target="_blank" rel="external">http://sahipro.com/docs/using-sahi/sahi-controller.html#Playback</a> Tab）。</p>
-<p>另一种方法是通过testrunner来执行，具体操作可以参考sahi官网上的使用文档（<a href="http://sahipro.com/docs/using-sahi/playback-desktop.html#Playback" target="_blank" rel="external">http://sahipro.com/docs/using-sahi/playback-desktop.html#Playback</a> via testrunner）。</p>
-<h3 id="3-2-脚本开发"><a href="#3-2-脚本开发" class="headerlink" title="3.2.脚本开发"></a>3.2.脚本开发</h3><p>由于脚本的高度开放性，该框架也是可以进行修改和扩展的。基于已有的基础控件库、页面对象库对业务逻辑层进行扩展，新增、修改业务逻辑层相关的业务逻辑，达到快速开发的目的。当基础控件库或者页面对象库中没有需要的控件或者对象时，可以自行添加需要的基础控件或者页面对象。</p>
-<p>目前框架包括的文件有：</p>
-<p>1.xxx.xlsx–excel模板，用来编写测试步骤、用例，输入测试数据。</p>
-<p>2.apis.sah–sahi脚本api注释文件，放在编程目录下时可给出代码自动补全（非必需）。</p>
-<p>3.baseWidget.sah–基础控件库，可自行添加基础控件，且尽可能遵循所见即所得的原则封装基础控件。比如一个按钮控件，可以这样写：</p>
-<pre><code>&lt;span class=&quot;hljs-comment&quot;&gt;//button控件&lt;/span&gt;
-&lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $Button = &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($elem)&lt;/span&gt; {&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $button
-    &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (_isVisible(_button(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/.*&quot;&lt;/span&gt; + $elem + &lt;span class=&quot;hljs-string&quot;&gt;&quot;.*/&quot;&lt;/span&gt;))) {
-        $button = _button(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/.*&quot;&lt;/span&gt; + $elem + &lt;span class=&quot;hljs-string&quot;&gt;&quot;.*/&quot;&lt;/span&gt;)
-    } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (_isVisible(_span(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/.*&quot;&lt;/span&gt; + $elem + &lt;span class=&quot;hljs-string&quot;&gt;&quot;.*/&quot;&lt;/span&gt;))) {
-        $button = _span(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/.*&quot;&lt;/span&gt; + $elem + &lt;span class=&quot;hljs-string&quot;&gt;&quot;.*/&quot;&lt;/span&gt;)
-    } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
-        visibleWidget($button)
-    }
-
-    &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.click = &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-params&quot;&gt;()&lt;/span&gt; {&lt;/span&gt;
-        &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; ($button != &lt;span class=&quot;hljs-literal&quot;&gt;null&lt;/span&gt;) {
-            _click($button)
-        }
-    }
-}`&lt;/pre&gt;
-
-4.Pages.sah–页面对象库，可自行添加页面对象。比如一个查询页面，可以这样写：
-
-&lt;pre class=&quot;prettyprint&quot;&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;//查询印章界面&lt;/span&gt;
-&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;queryPage&lt;/span&gt; &lt;span class=&quot;hljs-params&quot;&gt;()&lt;/span&gt; {&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$SdateS = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Datebox(&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;从&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$SdateE = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Datebox(&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;从&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$mediaNo = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Textbox(&lt;span class=&quot;hljs-string&quot;&gt;&quot;介质编号&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$queryBtn = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Button(&lt;span class=&quot;hljs-string&quot;&gt;&quot;查询&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$readBtn = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Button(&lt;span class=&quot;hljs-string&quot;&gt;&quot;读取&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$SApp = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $ComboBox(&lt;span class=&quot;hljs-string&quot;&gt;&quot;印章应用&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$SState = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $ComboBox(&lt;span class=&quot;hljs-string&quot;&gt;&quot;印章状态&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$CName = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Textbox(&lt;span class=&quot;hljs-string&quot;&gt;&quot;证书名称&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$SName = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Textbox(&lt;span class=&quot;hljs-string&quot;&gt;&quot;印章名称&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$CTNo = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Textbox(&lt;span class=&quot;hljs-string&quot;&gt;&quot;证书信任服务号&quot;&lt;/span&gt;)
-        &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.$record = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; $Record(&lt;span class=&quot;hljs-string&quot;&gt;&quot;listtable&quot;&lt;/span&gt;)
-}`&lt;/pre&gt;
-
-5.SealManageTasks.sah–业务逻辑层，目前仅包含印章管理的新增、更新、注销、续期、查询相关逻辑。可自行扩展和修改业务逻辑。比如一个查询的操作，可以这样写：
-
-&lt;pre class=&quot;prettyprint&quot;&gt;`&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;SealManager&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;()&lt;/span&gt; {&lt;/span&gt;
-&lt;span class=&quot;hljs-comment&quot;&gt;//查询印章&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;.query = &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-params&quot;&gt;($CNameStr, $SNameStr, $SStateStr, $SAppStr, $mediaNoStr, $CTNoStr, $SdateSStr, $SdateEStr, $Rows, $RecordsCount)&lt;/span&gt; {&lt;/span&gt;
-        &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $page = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; queryPage()
-            $page.$CName.setValue($CNameStr)
-            $page.$SName.setValue($SNameStr)
-            &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; ($page.$CTNo.getValue() != &lt;span class=&quot;hljs-literal&quot;&gt;null&lt;/span&gt; &amp;amp;&amp;amp; $page.$CTNo.getValue() != &lt;span class=&quot;hljs-string&quot;&gt;&quot;&quot;&lt;/span&gt;) {
-                $CTNo.setValue($CTNoStr)
-            } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
-                readCTNo($page.$readBtn, $page.$CTNo)
-            }
-
-            $page.$mediaNo.setValue($mediaNoStr)
-            $page.$SdateS.setValue($SdateSStr)
-            $page.$SdateE.setValue($SdateEStr)
-
-            $page.$SState.select($SStateStr)
-            $page.$SApp.select($SAppStr)
-            $page.$queryBtn.click()
-            $recordCount = $page.$record.getRecordsCount()
-            _log(&lt;span class=&quot;hljs-string&quot;&gt;&quot;查询到&quot;&lt;/span&gt; + $recordCount + &lt;span class=&quot;hljs-string&quot;&gt;&quot;条记录&quot;&lt;/span&gt;)
-            assertQuery($Rows, $RecordsCount)
-    }
-}`&lt;/pre&gt;
-
-6.SealManageTests.sah–框架中间层，将业务逻辑层的行为封装成excelframework可识别的函数。比如一个查询印章的函数，可以这样写：
-
-&lt;pre class=&quot;prettyprint&quot;&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;//查询印章&lt;/span&gt;
-&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;querySeal&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($CNameStr, $SNameStr, $SStateStr, $SAppStr, $mediaNoStr, $CTNoStr, $SdateSStr, $SdateEStr, $Rows, $RecordsCount)&lt;/span&gt; {&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; SealManager.query($CNameStr, $SNameStr, $SStateStr, $SAppStr, $mediaNoStr, $CTNoStr, $SdateSStr, $SdateEStr, $Rows, $RecordsCount)
-}
-</code></pre><div>作者：baidu_29649941发表于2016/6/26 12:24:16<a href="http://blog.csdn.net/baidu_29649941/article/details/51747712" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：1137评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/51747712#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-
-          
+          <h1 id="基于sahi-pro-excelframework自动化测试框架设计"><a href="#基于sahi-pro-excelframework自动化测试框架设计" class="headerlink" title="基于sahi pro excelframework自动化测试框架设计"></a>基于sahi pro excelframework自动化测试框架设计</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h2><h3 id="1-1-开发背景"><a href="#1-1-开发背景" class="headerlink" title="1.1.开发背景"></a>1.1.开发背景</h3><p>电子印章系统需要进行自动化测试功能，且需要一种易于开发、维护、使用的自动化测试工具。Sahi pro版本相比开源版本已经自带excelframework，既直接通过excel文件执行自动化测试用例。</p>
+<h3 id="1-2-建设目标"><a href="#1-2-建设目标" class="headerlink" title="1.2.建设目标"></a>1.2.建设目标</h3>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/06/26/原-基于sahi的UI自动化测试框架/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1643,23 +1465,15 @@ controller.mode=sahi `
 
       
         
-          
-            <p>作为从事IT行业的人员，相信对于“虚拟机”这个词是再熟悉不过了。学会使用虚拟机对测试和生活都是许多好处的。这里的学会，不仅仅学会安装一个虚拟机的过程，而是更深入的把虚拟机应用到工作生活中去提高效率。</p>
-<h1 id="技巧一：备份虚拟机镜像"><a href="#技巧一：备份虚拟机镜像" class="headerlink" title="技巧一：备份虚拟机镜像"></a>技巧一：备份虚拟机镜像</h1><p>首先一点就是不要把时间花在重复安装虚拟系统上，而是应该备份常用的虚拟机系统，在需要的时候立刻拿出来使用。比如说装好一个纯净版的win732位的系统，打固实压缩包备份，到用的时候立刻解压缩就可以用。 为了方便windows平台下的兼容性测试，可以备份xp以及win7，win8，win10的32位系统和64位系统。不太建议使用微软官方的虚拟机，首先是官方的虚拟机镜像是英文版的，其次需要激活，还有就是比自己打的压缩包体积大很多 </p>
-<p><img src="http://img.blog.csdn.net/20160626104939667" alt="win732位虚拟机压缩包"></p>
-<h1 id="技巧二：同时运行多个虚拟机。"><a href="#技巧二：同时运行多个虚拟机。" class="headerlink" title="技巧二：同时运行多个虚拟机。"></a>技巧二：同时运行多个虚拟机。</h1><p>1.从这里就可以体现出虚拟机的优势来了。在同一台电脑上安装多系统固然是最真实的环境，但是无法同时运行多个系统的问题导致必须不断的重启进行系统的切换。发现一个测试用例在这个系统测过，那个系统没测过，重启；突然想到一个没有覆盖到的测试用例，在这个系统测完后重启；发现需要重复确认这个用例在那个系统运行的效果，重启。。。问题会很多，效率自然就不高。用虚拟机进行兼容性测试，多系统同时运行，不用重启主机系统，虽然虚拟机模拟的不是最真实的，但是可以说，在虚拟机里发现的缺陷，在主机环境下同样会出现。所以用虚拟机做测试已经可以尽可能的模拟真实环境了。这样便可以大大提高测试效率。有人会说，内存够用么。这里就要合理设置虚拟机的内存占用。xp给个512M，win7的32位给个1G，win10的64位给个2G，加上宿主机的占用，8G内存的机器是够用的。系统的瓶颈会出现在磁盘而不是内存，但是固态硬盘和组raid基本不会出现在公司的办公主机里，所以只能呵呵了。</p>
-<h1 id="技巧三：快照神器"><a href="#技巧三：快照神器" class="headerlink" title="技巧三：快照神器"></a>技巧三：快照神器</h1><p><img src="http://img.blog.csdn.net/20160626105342731" alt="虚拟机快照管理器"> </p>
-<p>虚拟机配合快照，可以做出很多惊人的事情。 </p>
-<p>1.实验某些可能不安全的软件。在安装该软件前，先做一个快照。如果软件有病毒或者觉得没有保留的必要时，恢复到之前的快照。这里如果是要查毒，建议不要开启共享文件夹，因为病毒有可能通过共享感染到你的宿主机的文件系统。 </p>
-<p>2.使用没有破解的正版软件。安装完该软件后，做一个快照。该软件的试用期快到的时候，恢复快照，多数的软件会回到刚安装后的状态，试用期又满格了。 </p>
-<p>3.安装很多大型的但不是很常用的软件。比如我经常用的办公工具就是WPS，只有在测试有关msoffice的插件时可能用到，我又不想让巨大的msoffice占用我宝贵的c盘空间，即使设置安装msoffice是在其他盘。所以，在虚拟机安装好msoffice后做一个快照。想用msoffice时，恢复这个快照即可。我就见过把visual studio 2010安装到虚拟机里的开发人员在宿主机的eclipse上写java代码。。。好在eclipse算是绿色版的。 </p>
-<p>4.还有一个场景是需要测试软件在安装的时候是否会被杀毒软件等报警告提示。不需要在本地系统上安装所有要测试的杀毒软件（也许这些软件本身存在冲突），在虚拟机里分别做这些杀软的快照，测试哪个就恢复哪个快照，不会有冲突且环境纯净，也就是说，完全可以在初始环境的快照后建立这些快照。 </p>
-<p>虚拟机使用注意事项：</p>
-<h2 id="一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。"><a href="#一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。" class="headerlink" title="一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。"></a>一）除非很紧急且磁盘空间足够大，不要在虚拟机运行的时候打快照。在虚拟系统运行的时候打快照，会把这时刻的内存状态也会保存下来。关闭虚拟系统后打的快照占用磁盘空间更小。在打快照前，建议先对磁盘做一次压缩。</h2><h2 id="二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。"><a href="#二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。" class="headerlink" title="二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。"></a>二）在虚拟机设置里，尽量开启vt-x，提高虚拟机运行的效率。</h2><p><img src="http://img.blog.csdn.net/20160626105431716" alt="这里写图片描述"></p>
-<h2 id="三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。"><a href="#三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。" class="headerlink" title="三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。"></a>三）联网使用win8和win10虚拟机时，建议关闭win8和win10的自动更新服务。在联网状态下，win8和win10会自动下载并安装更新，虚拟机在运行时会不知不觉的占用很多磁盘空间。很多时候win8的自动更新服务是win8虚拟机运行卡的罪魁祸首。</h2><h2 id="四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。"><a href="#四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。" class="headerlink" title="四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。"></a>四）如果是双显卡时，建议使用独立显卡来提高运行虚拟机的效率。现在的虚拟机软件基本都能较好的使用显卡的性能。在独立显卡控制面板里修改全局设置为高性能GPU。</h2><p><img src="http://img.blog.csdn.net/20160922223851367" alt="这里写图片描述"> </p>
-<p>总结：虚拟机很好，赶快安装使用：）好吧，这么草率的结尾，是因为我现在已经很困了-o-</p>
-<div>作者：baidu_29649941发表于2016/6/25 1:00:27<a href="http://blog.csdn.net/baidu_29649941/article/details/51550194" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：1152评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/51550194#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-          
+          <p>作为从事IT行业的人员，相信对于“虚拟机”这个词是再熟悉不过了。学会使用虚拟机对测试和生活都是许多好处的。这里的学会，不仅仅学会安装一个虚拟机的过程，而是更深入的把虚拟机应用到工作生活中去提高效率。</p>
+<h1 id="技巧一：备份虚拟机镜像"><a href="#技巧一：备份虚拟机镜像" class="headerlink" title="技巧一：备份虚拟机镜像"></a>技巧一：备份虚拟机镜像</h1><p>首先一点就是不要把时间花在重复安装虚拟系统上，而是应该备份常用的虚拟机系统，在需要的时候立刻拿出来使用。比如说装好一个纯净版的win732位的系统，打固实压缩包备份，到用的时候立刻解压缩就可以用。 为了方便windows平台下的兼容性测试，可以备份xp以及win7，win8，win10的32位系统和64位系统。不太建议使用微软官方的虚拟机，首先是官方的虚拟机镜像是英文版的，其次需要激活，还有就是比自己打的压缩包体积大很多<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/06/25/原-虚拟机，提高测试的效率/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1829,54 +1643,20 @@ controller.mode=sahi `
 
       
         
-          
-            <p>虽然sahi pro版本有一个excelframework，但是在sahi os被省掉了，所以自己就写了一个超简单的excel测试框架，各位可以在此基础上做更多的个人定制。</p>
+          <p>虽然sahi pro版本有一个excelframework，但是在sahi os被省掉了，所以自己就写了一个超简单的excel测试框架，各位可以在此基础上做更多的个人定制。</p>
 <pre><code>首先要让sahi os可以使用excel api ，可以看[这里](http://download.csdn.net/detail/baidu_29649941/9256781)
 
 这个框架的逻辑就是首先用sahi脚本写好函数，然后将函数名及参数放到excel里，通过读取excel顺序执行写好的函数。这样测试开发写好函数及函数使用说明，就可以交给功能测试。功能测试根据自己的测试用例在excel里组成测试流程进行自动化测试。
 
 excel模板定义如下：
-</code></pre><table><br><thead><br><tr><br>  <th align="left">函数名</th><br>  <th align="center">参数1</th><br>  <th align="center">参数2</th><br>  <th align="center">参数3</th><br></tr><br></thead><br><tbody><tr><br>  <td align="left">add</td><br>  <td align="center">345</td><br>  <td align="center">hehe</td><br>  <td align="center">kaka</td><br></tr><br><tr><br>  <td align="left">query</td><br>  <td align="center">one</td><br>  <td align="center">two</td><br>  <td align="center">three</td><br></tr><br><tr><br>  <td align="left">delete</td><br>  <td align="center">four</td><br>  <td align="center">me</td><br>  <td align="center">five</td><br></tr><br></tbody></table>
-
-<p>框架代码如下：</p>
-<pre><code>&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;excelFramework&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($excel, $sheet)&lt;/span&gt; {&lt;/span&gt;
-    &lt;span class=&quot;hljs-comment&quot;&gt;//返回一个数据表的二维数组，不带标题行，也就是第0行&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $excel = _readExcelFile($excel, $sheet);
-    &lt;span class=&quot;hljs-comment&quot;&gt;//循环读取每一行，将每行的数据组成执行函数，通过eval()执行&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $i = &lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;; $i &amp;lt; $excel.length; $i++) {
-    &lt;span class=&quot;hljs-comment&quot;&gt;//通过buildFunction方法获取组成的函数&lt;/span&gt;
-        &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $F = buildFunction($excel, $i);
-        _log($F);
-        &lt;span class=&quot;hljs-comment&quot;&gt;//执行组成的函数&lt;/span&gt;
-        &lt;span class=&quot;hljs-built_in&quot;&gt;eval&lt;/span&gt;($F);
-    }
-}   `&lt;/pre&gt;
-
-&lt;pre class=&quot;prettyprint&quot;&gt;`&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;buildFunction&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($excel, $rowindex)&lt;/span&gt; {&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $f;
-    &lt;span class=&quot;hljs-comment&quot;&gt;//新建一个数组&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $ar = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;hljs-built_in&quot;&gt;Array&lt;/span&gt;();
-    &lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $i = &lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;; $i &amp;lt; $excel[$rowindex].length; $i++) {
-        &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; ($excel[$rowindex][$i] != &lt;span class=&quot;hljs-literal&quot;&gt;null&lt;/span&gt;&amp;amp;&amp;amp;$excel[$rowindex][$i]!=&lt;span class=&quot;hljs-string&quot;&gt;&quot;&quot;&lt;/span&gt;) {
-            &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $arg = &lt;span class=&quot;hljs-string&quot;&gt;&quot;&apos;&quot;&lt;/span&gt; + $excel[$rowindex][$i] + &lt;span class=&quot;hljs-string&quot;&gt;&quot;&apos;&quot;&lt;/span&gt;;
-            &lt;span class=&quot;hljs-comment&quot;&gt;//将函数的参数放到数组里&lt;/span&gt;
-            $ar.push($arg);
-        }
-    }
-    &lt;span class=&quot;hljs-comment&quot;&gt;//用逗号分隔把读到的参数组成字符串&lt;/span&gt;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;var&lt;/span&gt; $args = $ar.join(&lt;span class=&quot;hljs-string&quot;&gt;&quot;,&quot;&lt;/span&gt;);
-    &lt;span class=&quot;hljs-comment&quot;&gt;//最后把第0列的函数名与参数组合成完整的函数&lt;/span&gt;
-    $f = $excel[$rowindex][&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;] + &lt;span class=&quot;hljs-string&quot;&gt;&quot;(&quot;&lt;/span&gt; + $args + &lt;span class=&quot;hljs-string&quot;&gt;&quot;)&quot;&lt;/span&gt;;
-    &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; $f;
-}`&lt;/pre&gt;
-
-在sahi脚本里添加上面两段代码，执行excelFramwork方法，如：
-
-&lt;pre class=&quot;prettyprint&quot;&gt;`excelFramework(&lt;span class=&quot;hljs-string&quot;&gt;&quot;readExcelFile.xls&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;Sheet1&quot;&lt;/span&gt;);
-</code></pre><p>这样便会一行一行顺序执行自定义的函数实现简单的自动化。</p>
-<div>作者：baidu_29649941发表于2015/12/3 21:59:28<a href="http://blog.csdn.net/baidu_29649941/article/details/50166941" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：816评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/50166941#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-
-          
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/12/03/原-Sahi简单excel测试框架/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2046,18 +1826,17 @@ excel模板定义如下：
 
       
         
-          
-            <p>##<br>Sahi Pro - Sahi APIs 概述</p>
-<p><span style="font-family:arial;line-height:16.7999992370605px;">Sahi的API的大致可分为三类。</span></p>
+          <p>##<br>Sahi Pro - Sahi APIs 概述</p>
+<p>Sahi的API的大致可分为三类。</p>
 <p>###<br><a class="headinganchor2" style="text-decoration:none;color:rgb(74,127,35);padding-top:50px;margin-top:-50px;padding-left:300px;margin-left:-300px;clear:both;display:block;border:0px;">浏览器访问API</a></p>
-<p><span style="font-family:arial;line-height:16.7999992370605px;">浏览器访问API帮助访问浏览器上的网页元素。</span><br><span style="font-family:arial;line-height:16.7999992370605px;">Sahi通过代理注入这些API到浏览器。</span></p>
-<p>###<br><a class="headinganchor2" style="text-decoration:none;color:rgb(74,127,35);padding-top:50px;margin-top:-50px;padding-left:300px;margin-left:-300px;clear:both;display:block;border:0px;">浏览器操作API</a></p>
-<p><span style="font-family:arial;line-height:16.7999992370605px;">浏览器操作API在浏览器上执行操作，如鼠标点击，打键盘</span><br><span style="font-family:arial;line-height:16.7999992370605px;">和断言网页元素的状态。</span></p>
-<p>###<br><a class="headinganchor2" style="text-decoration:none;color:rgb(74,127,35);padding-top:50px;margin-top:-50px;padding-left:300px;margin-left:-300px;clear:both;display:block;border:0px;">其他的API</a></p>
-<p><span style="font-family:arial;line-height:16.7999992370605px;">其他的API，帮助处理异常，操作文件和数据库等。</span></p>
-<div>作者：baidu_29649941发表于2015/9/26 11:18:52<a href="http://blog.csdn.net/baidu_29649941/article/details/48750325" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：534评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/48750325#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-
-          
+<p><span style="font-family:arial;line-height:16.7999992370605px;">浏览器访问API帮助访问浏览器上的网页元素。</span><br><span style="font-family:arial;line-height:16.7999992370605px;">Sahi通过代理注入这些API到浏览器。</span><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/09/26/译-Sahi-Pro-Sahi-APIs-概述/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2227,9 +2006,8 @@ excel模板定义如下：
 
       
         
-          
-            <p>##<br>Sahi Pro - Sahi访问API基础知识</p>
-<p>##<br><a href="file:///D:/sahi/htdocs/docs%20-%20%E5%89%AF%E6%9C%AC/sahi-apis/accessor-api-basics.html#Overview" target="_blank" rel="external">概述</a></p>
+          <p>##<br>Sahi Pro - Sahi访问API基础知识</p>
+<p>##<br><a href="file:///D:/sahi/htdocs/docs%20-%20%E5%89%AF%E6%9C%AC/sahi-apis/accessor-api-basics.html#Overview">概述</a></p>
 <p><span style="font-family:arial; line-height:16.7999992370605px">浏览器访问API帮助访问网页元素。</span></p>
 <p><span style="font-family:arial; line-height:16.7999992370605px">他们在浏览器上被执行，而不是在代理上。</span></p>
 <p><span style="font-family:arial; line-height:16.7999992370605px">它们可以被用作浏览器操作API的参数。</span></p>
@@ -2237,97 +2015,14 @@ excel模板定义如下：
 <ul>
 <li>标识符在不同的情况下，可以是一个数字索引或指定的属性。</li>
 <li>标识符不仅可以是数&#20540;的，还可以是一个字符串或一个JavaScript正则表达式。</li>
-<li>标识符可以是一串字符后跟着在方括号里的索引组成的字符串。</li>
-</ul>
-<p>##<br><a href="file:///D:/sahi/htdocs/docs%20-%20%E5%89%AF%E6%9C%AC/sahi-apis/accessor-api-basics.html#Identifying unique element" target="_blank" rel="external">标识唯一元素</a></p>
-<p><span style="font-family:arial; line-height:16.7999992370605px">举个栗子,</span></p>
-<pre><code>&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;a&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt; &lt;/span&gt;&lt;span class=&quot;atn&quot; style=&quot;color:rgb(102,0,102)&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;atv&quot; style=&quot;color:rgb(182,43,40)&quot;&gt;&amp;quot;http://sahi.co.in&amp;quot;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt; &lt;/span&gt;&lt;span class=&quot;atn&quot; style=&quot;color:rgb(102,0,102)&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;atv&quot; style=&quot;color:rgb(182,43,40)&quot;&gt;&amp;quot;sahi_link&amp;quot;&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;Link to Sahi website&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;`&lt;/pre&gt;
-&lt;span style=&quot;font-family:arial; line-height:16.7999992370605px&quot;&gt;可以通过以下方式来表示：&lt;/span&gt;
-
-&lt;table style=&quot;width:899px; border:1px solid rgb(239,239,239); border-collapse:collapse; color:rgb(0,0,0); font-family:arial; font-size:12px; line-height:16.7999992370605px&quot;&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;lit&quot; style=&quot;color:rgb(0,102,102)&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-在页面中使用索引;假设它是在页面上的第13个链接。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;sahi_link&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-使用id字符串&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;/.*_link/&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-使用正则表示的id&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;Link
- to Sahi website&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-使用可见的文本的字符串&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;/Link
- to .* website/&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-使用正则表示的可见文本&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;/Link
- to .* website/&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-使用正则表示的可见文本&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;sahi_link&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;})&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-使用代表id的关联数组&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;sahiText&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;/Link
- to .*/&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;})&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-使用代表可见文本的正则表达式的关联数组&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-`&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;low&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;sahiText&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;/Link.*/&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;})&lt;/span&gt;`&lt;/td&gt;
-&lt;td style=&quot;font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top&quot;&gt;
-使用代表多个属性的关联数组，比如className 和 sahiText&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-##
-[在类&amp;#20284;的元素里识别元素](file:///D:/sahi/htdocs/docs%20-%20%E5%89%AF%E6%9C%AC/sahi-apis/accessor-api-basics.html#Identifying element among similar elements)
-
-&lt;span style=&quot;font-family:arial; line-height:16.7999992370605px&quot;&gt;举个栗子,&lt;/span&gt;
-
-&lt;pre style=&quot;&quot;&gt;`&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;table&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;td&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;User One&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;td&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt; &lt;/span&gt;&lt;span class=&quot;atn&quot; style=&quot;color:rgb(102,0,102)&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;atv&quot; style=&quot;color:rgb(182,43,40)&quot;&gt;&amp;quot;del1&amp;quot;&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt; &lt;/span&gt;&lt;span class=&quot;atn&quot; style=&quot;color:rgb(102,0,102)&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;atv&quot; style=&quot;color:rgb(182,43,40)&quot;&gt;&amp;quot;/deleteUser?id=1&amp;quot;&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;td&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;User Two&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;td&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt; &lt;/span&gt;&lt;span class=&quot;atn&quot; style=&quot;color:rgb(102,0,102)&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;atv&quot; style=&quot;color:rgb(182,43,40)&quot;&gt;&amp;quot;del2&amp;quot;&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt; &lt;/span&gt;&lt;span class=&quot;atn&quot; style=&quot;color:rgb(102,0,102)&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;atv&quot; style=&quot;color:rgb(182,43,40)&quot;&gt;&amp;quot;/deleteUser?id=2&amp;quot;&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;tag&quot; style=&quot;color:rgb(0,0,136)&quot;&gt;&amp;lt;/table&amp;gt;&lt;/span&gt;
-</code></pre><p><span style="font-family:arial; line-height:16.7999992370605px">在这个表&#26684;里有两个删除链接并且可能会有更多。</span></p>
-<table style="width:899px; border:1px solid rgb(239,239,239); border-collapse:collapse; color:rgb(0,0,0); font-family:arial; font-size:12px; line-height:16.7999992370605px"><br><tbody><br><tr><br><td style="font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top"><br><code>&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;delete&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;</code></td><br><td style="font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top"><br>指向第一个删除链接。这就像是<code>&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;delete[0]&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;</code></td><br></tr><br><tr><br><td style="font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top"><br><code>&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;delete[1]&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;</code></td><br><td style="font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top"><br>指向第二删除链接;请注意，索引从0开始</td><br></tr><br><tr><br><td style="font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top"><br><code>&lt;span class=&quot;pln&quot; style=&quot;color:rgb(75,8,138)&quot;&gt;_link&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;str&quot; style=&quot;color:rgb(170,17,17)&quot;&gt;&amp;quot;/del/[1]&amp;quot;&lt;/span&gt;&lt;span class=&quot;pun&quot; style=&quot;color:rgb(221,0,0)&quot;&gt;)&lt;/span&gt;</code></td><br><td style="font-family:arial; line-height:1.4; border-right-width:1px; border-right-style:solid; border-right-color:rgb(239,239,239); border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(239,239,239); padding:10px; margin:0px; vertical-align:top"><br>指向第二删除链接;请注意，索引从0开始</td><br></tr><br></tbody><br></table>
-
-<div class="danger" style="">只要网页是静态的，使用索引就可以工作正常，但不建议用于动态应用，<br><br>因为当网页改变的时候，它使得脚本失败。</div><br><div>作者：baidu_29649941发表于2015/9/25 16:54:51<a href="http://blog.csdn.net/baidu_29649941/article/details/48734857" target="_blank" rel="external"> 原文链接 </a></div><div> 阅读：585评论：0<a href="http://blog.csdn.net/baidu_29649941/article/details/48734857#commentstarget =" target="_blank" rel="external">查看评论 </a> </div>
-
-          
+<li>标识符可以是一串字符后跟着在方括号里的索引组成的字符串。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/09/25/译-Sahi访问API基础知识（上）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

@@ -91,7 +91,7 @@
 首先要让sahi os可以使用excel api ，可以看[这里](http://download.csdn.net/detail/baidu_29649941/9256781)
 
 这个框架的逻辑就是首先用sahi脚本写好函数">
-<meta property="og:updated_time" content="2018-01-17T14:51:41.272Z">
+<meta property="og:updated_time" content="2018-02-02T16:16:07.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[原]Sahi简单excel测试框架">
 <meta name="twitter:description" content="虽然sahi pro版本有一个excelframework，但是在sahi os被省掉了，所以自己就写了一个超简单的excel测试框架，各位可以在此基础上做更多的个人定制。
@@ -425,7 +425,8 @@
 这个框架的逻辑就是首先用sahi脚本写好函数，然后将函数名及参数放到excel里，通过读取excel顺序执行写好的函数。这样测试开发写好函数及函数使用说明，就可以交给功能测试。功能测试根据自己的测试用例在excel里组成测试流程进行自动化测试。
 
 excel模板定义如下：
-</code></pre><table><br><thead><br><tr><br>  <th align="left">函数名</th><br>  <th align="center">参数1</th><br>  <th align="center">参数2</th><br>  <th align="center">参数3</th><br></tr><br></thead><br><tbody><tr><br>  <td align="left">add</td><br>  <td align="center">345</td><br>  <td align="center">hehe</td><br>  <td align="center">kaka</td><br></tr><br><tr><br>  <td align="left">query</td><br>  <td align="center">one</td><br>  <td align="center">two</td><br>  <td align="center">three</td><br></tr><br><tr><br>  <td align="left">delete</td><br>  <td align="center">four</td><br>  <td align="center">me</td><br>  <td align="center">five</td><br></tr><br></tbody></table>
+</code></pre><a id="more"></a>
+<table><br><thead><br><tr><br>  <th align="left">函数名</th><br>  <th align="center">参数1</th><br>  <th align="center">参数2</th><br>  <th align="center">参数3</th><br></tr><br></thead><br><tbody><tr><br>  <td align="left">add</td><br>  <td align="center">345</td><br>  <td align="center">hehe</td><br>  <td align="center">kaka</td><br></tr><br><tr><br>  <td align="left">query</td><br>  <td align="center">one</td><br>  <td align="center">two</td><br>  <td align="center">three</td><br></tr><br><tr><br>  <td align="left">delete</td><br>  <td align="center">four</td><br>  <td align="center">me</td><br>  <td align="center">five</td><br></tr><br></tbody></table>
 
 <p>框架代码如下：</p>
 <pre><code>&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;excelFramework&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;($excel, $sheet)&lt;/span&gt; {&lt;/span&gt;
