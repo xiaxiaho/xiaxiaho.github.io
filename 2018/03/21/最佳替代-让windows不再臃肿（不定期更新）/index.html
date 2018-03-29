@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="腹黑兔的逆袭">
 <meta property="og:description" content="引言想来已经有4年没有重装这台老旧的笔记本的Win7系统了。期间来来回回也安装卸载了许多软件工具。现在系统的响应速度，排除配置的影响，和公司半年前新装的Win10系统差不多，没有明显的变慢。回想以前，为了追求更快的系统速度，边了解系统边实践。从XP时代的精简版系统到回归原版系统加禁用服务，从Ghost备份到WIM备份再到ESD备份，从机械硬盘到固态硬盘，从老毛桃到微PE。最后发现，诸多方法可以小幅">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-25T16:12:53.999Z">
+<meta property="og:updated_time" content="2018-03-27T15:15:06.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最佳替代-让Windows不再臃肿（不定期更新）">
 <meta name="twitter:description" content="引言想来已经有4年没有重装这台老旧的笔记本的Win7系统了。期间来来回回也安装卸载了许多软件工具。现在系统的响应速度，排除配置的影响，和公司半年前新装的Win10系统差不多，没有明显的变慢。回想以前，为了追求更快的系统速度，边了解系统边实践。从XP时代的精简版系统到回归原版系统加禁用服务，从Ghost备份到WIM备份再到ESD备份，从机械硬盘到固态硬盘，从老毛桃到微PE。最后发现，诸多方法可以小幅">
@@ -375,7 +375,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  677
+                  964
                 </span>
               
 
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -412,14 +412,21 @@
       
 
       
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>想来已经有4年没有重装这台老旧的笔记本的Win7系统了。期间来来回回也安装卸载了许多软件工具。现在系统的响应速度，排除配置的影响，和公司半年前新装的Win10系统差不多，没有明显的变慢。回想以前，为了追求更快的系统速度，边了解系统边实践。从XP时代的精简版系统到回归原版系统加禁用服务，从Ghost备份到WIM备份再到ESD备份，从机械硬盘到固态硬盘，从老毛桃到微PE。最后发现，诸多方法可以小幅度的提升系统的“寿命”，但是这些方法的积累则会让系统的“寿命”大大延长。<br>Windows系统重装以前一直是我频繁在做的事情。因为Windows系统在用一段时间后，便会“不由自主”的变慢，然后“异常卡顿”，最后“死机”，再然后就要重装了。而重装对于很多电脑小白可以说是很头疼的事情。这里的“电脑小白”不仅指的是不怎么用电脑的人（而且现在这样的人也越来越少了），还包括经常使用电脑甚至已此为生的IT从业人员，比如程序员。不要以为程序员会敲代码就一定会装系统、装机这些活。撇开世俗的偏见，我们也许可以从源头找找为什么Windows系统再使用一段时间后会越来越慢，而诸如像Linux、MacOS这类系统就不会如此明显。<br><a id="more"></a><br>轻量 不写注册表 管家 快捷 工欲善其事，必先利其器</p>
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>想来已经有4年没有重装这台老旧的笔记本的Win7系统了。期间来来回回也安装卸载了许多软件工具。现在系统的响应速度，排除配置的影响，和公司半年前新装的Win10系统差不多，没有明显的变慢。回想以前，为了追求更快的系统速度，边了解系统边实践。从XP时代的精简版系统到回归原版系统加禁用服务，从Ghost备份到WIM备份再到ESD备份，从机械硬盘到固态硬盘，从老毛桃到微PE。最后发现，诸多方法可以小幅度的提升系统的“寿命”，但是这些方法的积累则会让系统的“寿命”大大延长。<br>Windows系统重装以前一直是我频繁在做的事情。因为Windows系统在用一段时间后，便会“不由自主”的变慢，然后“异常卡顿”，最后“死机”，再然后就要重装了。而重装对于很多电脑小白可以说是很头疼的事情。这里的“电脑小白”不仅指的是不怎么用电脑的人（而且现在这样的人也越来越少了），还包括经常使用电脑甚至已此为生的IT从业人员，比如程序员。不要以为程序员会敲代码就一定会装系统、装机这些活。撇开世俗的偏见，我们或许可以从源头找找为什么Windows系统在使用一段时间后会越来越慢，而诸如像Linux、MacOS这类系统就不会如此明显。<br><a id="more"></a><br>轻量 不写注册表 管家 快捷 工欲善其事，必先利其器</p>
 <h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><ul>
-<li>系统安装在机械硬盘<br>optene技术，固态达到内存的速度，内存达到片内缓存的速度</li>
+<li>系统安装在机械硬盘–“扼住了命运的咽喉”</li>
+<li>过多的系统服务（系统本身和安装的软件）</li>
+<li>长期不更新系统</li>
 <li>下载了有病毒木马的软件</li>
-<li>安装了破解软件</li>
+<li>安装了流氓软件</li>
 <li>安装了各种卫士管家</li>
-<li>过多的系统服务（系统本身和安装的软件）<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1></li>
+</ul>
+<p>这也许是导致系统缓慢的最重要的原因之一。从个人PC出现以来，硬盘一直是整个电脑系统中的瓶颈。尤其是机械硬盘的瞬时读写速度太慢。刚装系统时，系统服务、第三方软件服务等还不多，占用的硬盘IO还尚且可以应付。所以新装的系统总是让人觉得挺快的。但是随着安装的软件的增多，服务的增多，好多人反映，我的CPU利用率不高呀，内存也没满呀，为什么电脑这么慢呢。其实，即使电脑在闲置状态的时候，也是有很多后台进程在运行，占用硬盘IO的。看看硬盘灯闪烁的频率吧，如果灯一直亮着，也许硬盘在疯狂的读写。。。硬盘跟不上内存的速度，内存又跟不上片内缓存的速度。<br>optene技术，固态达到内存的速度，内存达到片内缓存的速度</p>
+<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><ul>
 <li>SSD的使用</li>
+</ul>
+<p>这也许是让老电脑起死回生的最佳法门</p>
+<ul>
 <li>系统的优化，禁用服务</li>
 <li>保持系统的更新，还有功能的更新</li>
 <li>减少可能影响系统速度的软件的安装</li>
@@ -431,34 +438,42 @@
 <thead>
 <tr>
 <th style="text-align:center">软件</th>
+<th style="text-align:center">描述</th>
 <th style="text-align:center">不用安装</th>
-<th style="text-align:center">官网</th>
+<th style="text-align:center">下载</th>
 <th style="text-align:center">类型</th>
+<th style="text-align:center">推荐指数</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:center">$1600</td>
-<td style="text-align:center">$1600</td>
+<td style="text-align:center"><a href="#Everything">Everything</a></td>
+<td style="text-align:center">Windows系统下文件搜索的扛把子</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center"><a href="https://www.voidtools.com/" target="_blank" rel="noopener">官网</a></td>
+<td style="text-align:center">效率</td>
+<td style="text-align:center">★★★★★</td>
 </tr>
 <tr>
 <td style="text-align:center">col 2 is</td>
-<td style="text-align:center">centered</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center"></td>
 <td style="text-align:center">$12</td>
-<td style="text-align:center">$1600</td>
+<td style="text-align:center"><a href="">镜像</a></td>
+<td style="text-align:center">★★★★☆</td>
 </tr>
 <tr>
 <td style="text-align:center">zebra stripes</td>
-<td style="text-align:center">are neat</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center"></td>
 <td style="text-align:center">$1</td>
 <td style="text-align:center">$1600</td>
+<td style="text-align:center">★★★☆☆</td>
 </tr>
 </tbody>
 </table>
-<p>#everything 绿色</p>
-<p>#DBeaver 绿色</p>
+<p><span id="Everything"></span></p>
+<h1 id="Everything"><a href="#Everything" class="headerlink" title="Everything"></a>Everything</h1><p>#DBeaver 绿色</p>
 <p>#SharpDevelop 绿色</p>
 <p>#node 绿色</p>
 <p>#dism++ 绿色</p>
@@ -707,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原因"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法"><span class="nav-number">3.</span> <span class="nav-text">方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原因"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法"><span class="nav-number">3.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Everything"><span class="nav-number">4.</span> <span class="nav-text">Everything</span></a></li></ol></div>
             
 
           </div>
