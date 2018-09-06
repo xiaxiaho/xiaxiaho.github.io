@@ -286,6 +286,206 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiaxiaho.github.io/2018/09/01/巧用hfs快速安装安卓测试包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiaxiaho">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="腹黑兔的逆袭">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/01/巧用hfs快速安装安卓测试包/" itemprop="url">巧用hfs快速安装安卓测试包</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-01T16:14:50+08:00">
+                2018年 9月 1日
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/测试/" itemprop="url" rel="index">
+                    <span itemprop="name">测试</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/测试/安卓/" itemprop="url" rel="index">
+                    <span itemprop="name">安卓</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/测试/安卓/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  961
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="HFS是什么"><a href="#HFS是什么" class="headerlink" title="HFS是什么"></a>HFS是什么</h1><p>HFS(http file server)是一个轻量简洁，开箱即用的局域网共享软件。只需要简单的几个步骤。就可以很快的搭建起一个基于http的文件服务器。通过将文件或者文件夹，添加到服务器上共享，再通过网页访问的方式，获取共享的文件。服务器软件仅仅是一个exe文件。随开随用随关。比windows自带的共享方式更加简便易用。</p>
+<h1 id="为什么用到HFS"><a href="#为什么用到HFS" class="headerlink" title="为什么用到HFS"></a>为什么用到HFS</h1><p>之前公司所搭建的安卓项目持续集成只能做到打出一个对应的安卓测试包，但是没有办法帮你把测试包安装到手机上面。加上手机有多种型号，各种测试机。当测试的时候需要将测试包逐一的部署。那怎么部署呢。最初的想法是通过用usb线连接的方式。但是这种方式，把测试包放到不同的手机上，则需要多次连接电脑。加上不同的手机用的不同的接口的线，有时候找到对应的数据线也不太容易。所以这种方式实在称不上优雅。而且不同手机，不同的安卓系统，文件管理器也不一样。有时候手机如果安装的软件比较多，找起来文件管理器来也是比较麻烦。而且电脑USB口数量是有限的。如果只有一个可用端USB口，要换手机的时候，这时手机除非拔下来，否则就不能插另外一个手机了。而且插上USB线又不太好移动。</p>
+<p>这时候想到用无线的方式。本来是想用文件管理器自带的远程管理，也就是在手机上开一个FTP服务器把手机文件系统共享出来。但是并不是所有手机的文件管理器都支持FTP服务器，而且手机文件系统层次多，拷贝起来也是要打开多层文件夹在粘贴，还是不便。</p>
+<p>有没有办法能不能自己做一个服务，把测试安装包自动推送到手机上。貌似IOS是有TestFlight这样的工具的，但是需要连接外网。由于是第一次测试移动APP。对安卓系统了解不多。我也不知道有什么对应的推送软件或者服务。这时候就想到了以前用过，但是很久没有用的hfs。他解决了安装包的下载问题。但是没有解决主动推送加提醒的问题。如果使用hfs。就可以通过浏览器。几乎所有的手机系统都会把浏览器放在显眼的位置。所以比较好找。把同样的一个apk，传到不同的手机上。同时是通过无线的方式。也不用去用usb线连接。大大减少了部署测试包的时间。</p>
+<p>启动hfs之后。添加要共享的文件和文件夹。这样不同的手机通过浏览器就可以访问相同的地址。获取到测试的安装包</p>
+<p>如何解决？发现问题截图在手机上传到电脑的问题呢。一种方式是通过手机跟电脑通过蓝牙传输文件。但是蓝牙传送速度没那么快。还有或者是安装在，手机上有，微信等一些聊天工具共享出来。但是毕竟是测试机，也不会轻易登录自己的，社交软件。所以目前发现最好的办法就是。用hfs的上传功能。以前以为hfs是没有上传功能的。最近才发现，只是这个上传功能藏得比较深。不是那么好找。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://xiaxiaho.github.io/2018/03/21/最佳替代-让windows不再臃肿（不定期更新）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -371,7 +571,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  603
+                  810
                 </span>
               
 
@@ -387,7 +587,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -956,13 +1156,6 @@
       
         
           <h1 id="敏捷开发下测试的处境"><a href="#敏捷开发下测试的处境" class="headerlink" title="敏捷开发下测试的处境"></a>敏捷开发下测试的处境</h1><p>从传统模式到敏捷开发，产品或项目的迭代增多，很有可能达到每两周就会有一个版本。虽然没有达到每天部署3~4个版本的devops开发模式，但这个时候测试的压力依然陡然增大，既没有那么多的时间写完善的用例，更做不到每个版本都进行完整的回归测试。以前的同事便是在敏捷开发环境下测试某电信运营商相关的金融类app。她经常会遇到即使上线，缺陷也不断的涌现。有些在测试时已经修复的问题，在生产环境又再次出现；或者之前修复的问题，下次测试又再次出现。测试到最后经常顾此失彼，疲于奔命。这时候，测试如果仅仅只是在部署后才参与到产品或项目中，就会越来越累。测试需要肩负起软件质量控制的重任。</p>
-<h1 id="测试遇到的问题"><a href="#测试遇到的问题" class="headerlink" title="测试遇到的问题"></a>测试遇到的问题</h1><ul>
-<li>测试不参与产品或项目的需求评审，无法对产品或项目做测试计划</li>
-<li>即使参与到需求评审，但是没有把控需求的可测试性</li>
-<li>版本构建快，无法把控版本构建</li>
-<li>测试不了解产品或项目内部流程，无法针对性的编写更有效、更精简的用例</li>
-<li>测试人力不足，版本迭代快速，无法进行全面的回归测试</li>
-</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/24/精准测试理解与总结/#more" rel="contents">
@@ -1878,186 +2071,6 @@ excel模板定义如下：
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiaxiaho.github.io/2015/09/26/译-Sahi-Pro-Sahi-APIs-概述/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiaxiaho">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="腹黑兔的逆袭">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/09/26/译-Sahi-Pro-Sahi-APIs-概述/" itemprop="url">[译]Sahi Pro - Sahi APIs 概述</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-26T11:18:52+08:00">
-                2015年 9月 26日
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Sahi总结/" itemprop="url" rel="index">
-                    <span itemprop="name">Sahi总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  141
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>##<br>Sahi Pro - Sahi APIs 概述</p>
-<p>Sahi的API的大致可分为三类。</p>
-<p>###<br><a class="headinganchor2" style="text-decoration:none;color:rgb(74,127,35);padding-top:50px;margin-top:-50px;padding-left:300px;margin-left:-300px;clear:both;display:block;border:0px;">浏览器访问API</a></p>
-<p><span style="font-family:arial;line-height:16.7999992370605px;">浏览器访问API帮助访问浏览器上的网页元素。</span><br><span style="font-family:arial;line-height:16.7999992370605px;">Sahi通过代理注入这些API到浏览器。</span><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/09/26/译-Sahi-Pro-Sahi-APIs-概述/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2108,7 +2121,7 @@ excel模板定义如下：
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2119,7 +2132,7 @@ excel模板定义如下：
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
